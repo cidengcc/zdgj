@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+.cw{width:1240px; margin:0 auto;}
+/*header*/
+
+.header{width:100%;height:90px;}
+.header a.logo{width:250px;height:90px; overflow:hidden;}
+.header ul.nav{margin-right:80px;}
+.header ul.nav li{float:left;width:105px; position:relative;z-index:21}
+.header ul.nav li a.tit{display:block;line-height:90px;height:90px;  text-align:center;font-size:16px;color:#949494; text-decoration:none;}
+.header ul.nav li a.tit:hover,.header ul.nav li a.tit.cur{background:url(../images/commom/nav_tit_bg.jpg)/*tpa=http://www.jhecn.com/images/commom/nav_tit_bg.jpg*/ no-repeat left bottom;color:#000;}
+.header ul.nav li .dropdown{ position:absolute;padding:15px 60px;background:url(../images/commom/dropdown_black.png)/*tpa=http://www.jhecn.com/images/commom/dropdown_black.png*/ repeat;font-size:14px;color:#fff;display:none;}
+.header ul.nav li .dropdown em{font-size:12px;padding:0 15px;}
+.header ul.nav li .dropdown a{font-size:14px;color:#fff; text-decoration:none;}
+.header ul.nav li .dropdown a:hover{color:#be1d1a; opacity:1;}
+.header .share{padding-top:27px;width:120px;padding-left:30px;}
+.header .share a{width:40px!important;height:40px!important;padding:0;margin:0 10px;}
+.header .share a.bds_tsina{background:url(../images/commom/icon_1.png)/*tpa=http://www.jhecn.com/images/commom/icon_1.png*/ no-repeat;}
+.header .share a.bds_weixin{background:url(../images/commom/icon_2.png)/*tpa=http://www.jhecn.com/images/commom/icon_2.png*/ no-repeat;}
+.header .share a.weixin{background:url(../images/commom/icon_2.png)/*tpa=http://www.jhecn.com/images/commom/icon_2.png*/ no-repeat; position:relative;}
+.header .share a.weixin:hover{background:url(../images/commom/icon_2_h.png)/*tpa=http://www.jhecn.com/images/commom/icon_2_h.png*/ no-repeat;}
+.header .share a.weixin img{ position:absolute;top:63px;display:none;left:-55px;z-index:20}
+.header .share a.tmall{background:url(../images/commom/icon_3.png)/*tpa=http://www.jhecn.com/images/commom/icon_3.png*/ no-repeat;}
+.header .share a.tmall:hover{background:url(../images/commom/icon_3_h.png)/*tpa=http://www.jhecn.com/images/commom/icon_3_h.png*/ no-repeat;}
+
+.rightTool{ position:fixed;right:0;top:35%;z-index:50;width:76px;}
+.rightTool ul li{width:76px;height:76px; position:relative;float:left; }
+.rightTool ul li a img{display:block;}
+.rightTool ul li .box{display:none}
+.rightTool ul li .box .tl{ position: absolute;right:0;top:0;display:inlnie-block;width:76px;height:56px;background:#be1d1a;font-size:15px; text-decoration:none;color:#fff; text-align:center;padding-top:20px;}
+.rightTool ul li .box .lx{ position:absolute;right:76px;bottom:0;display:inline-block;width:131px;height:63px;background:#be1d1a; text-align:center;padding-top:22px;}
+.rightTool ul li .box .lx h3{font-size:14px;color:#fff;}
+.rightTool ul li .box .lx h4{font-size:15px;font-weight:bold;color:#fff;}
+.rightTool ul li .box .scan{ position: absolute;right:0;top:0;display:inlnie-block;width:76px;height:48px;background:#be1d1a; text-decoration:none;font-size:15px;color:#fff; text-align:center;padding-top:28px;}
+.rightTool ul li .box .wx{ position:absolute;right:76px;bottom:0;display:inline-block;width:132px;height:136px;background:#be1d1a; text-align:center;padding-top:16px;}
+
+footer{border-top:2px solid #ededed;padding:20px 0;}
+.foot01{ text-align:center; position:relative;z-index:26}
+.foot01 a{font-size:14px;color:#464041; text-decoration:none;}
+.foot01 a:hover{color:#be1d1a;}
+.foot01 span{display:inline;width:1px;height:18px;background:url(../images/commom/foot.jpg)/*tpa=http://www.jhecn.com/images/commom/foot.jpg*/ no-repeat center;padding:0 20px;*zoom:1;}
+footer h3.copyRight{font-size:14px;line-height:24px;color:#adaaab; text-align:center;padding:10px 0;}
+
+.foot01 .orderBy{background:#fff;display:none; position:absolute;top:-70px;width:96px; text-align:center;line-height:30px;left:713px;border-left:1px solid #eee;border-right:1px solid #eee;border-top:1px solid #eee}
+.foot01 .orderBy a{display:block;color:#666;font-size:14px;}
+.foot01 .orderBy a:hover{color:#be1d1a;}

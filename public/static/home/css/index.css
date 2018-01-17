@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+/*index*/
+
+.indexBanner{height:738px;width:100%; position:relative;min-width:1270px;}
+.indexBanner .flexslider{width:100%;min-width:1270px;}
+.indexBanner .slides{min-width:1270px;}
+.indexBanner .slides li{height:738px;width:100%;min-width:1270px; text-align:center;}
+.indexBanner .slides li a{ text-decoration:none;}
+.indexBanner .slides li .bannerBox{padding-top:300px;display:none;}
+.indexBanner .slides li h5{font-size:45px;color:#fff;}
+.indexBanner .slides li h4{font-size:20px;color:#fff;}
+.indexBanner .shop{ position:absolute;top:0;left:0;right:0;z-index:13}
+
+.indexNews{height:34px;padding:13px 0 13px 40px;background:url(../images/index/indexnews.png)/*tpa=http://www.jhecn.com/images/index/indexnews.png*/ no-repeat 7px center;}
+.indexNews a.link{font-size:14px;color:#666; text-decoration:underline;line-height:34px;}
+.indexNews a.link:hover{color:#be1d1a}
+.indexNews span{color:#999;font-size:14px;line-height:34px;padding:0 25px;}
+.indexNews a.more{width:70px;height:32px; display:inline-block;border:1px solid #cdcdcd;background:#dfe0e5;line-height:32px; text-align:center;font-size:14px; text-decoration:none;color:#322b5b;border-radius:20px;display:none;}
+.indexNews a.more:hover{background:#be1d1a;color:#fff;border:1px solid #be1d1a;}
+.indexBody{padding-bottom:40px;width:100%;}
+.indexBody .Design{width:314px;height:270px;background:url(../images/index/design.jpg)/*tpa=http://www.jhecn.com/images/index/design.jpg*/ no-repeat;}
+.indexBody .Design a{display:block;padding-left:30px;padding-top:35px;height:235px; text-decoration:none;}
+.indexBody .Design a p{font-size:26px;color:#fff;background:url(../images/index/desg.jpg)/*tpa=http://www.jhecn.com/images/index/desg.jpg*/ no-repeat left top;padding:5px 0;}
+.indexBody .Design a h4{font-size:14px;color:#be1d1a;}
+.indexBody .Design a h5{font-size:20px;color:#fff;padding-top:20px;padding-bottom:80px;}
+.indexBody .Design a h6{padding-left:15px;background:url(../images/index/des.png)/*tpa=http://www.jhecn.com/images/index/des.png*/ no-repeat left center;}
+.indexBody .Design a h6 span{font-size:13px;color:#fff; text-decoration:underline;}
+.indexBody .Design:hover a h6 span{color:#be1d1a;}
+.indexBody .change{width:885px;height:270px;}
+.indexBody .change .change_body{ position:relative;height:270px;background:#000;}
+.indexBody .change .change_body .con{width:20%;height:270px;float:left;position:absolute;top:0;z-index:10;}
+.indexBody .change .change_body .con a{display:block;width:100%;height:100%; text-decoration:none;}
+.indexBody .change .change_body .con.opa{opacity:0.6;}
+.indexBody .change .change_body .con.cur{z-index:1000;opacity:1 !important;}
+.indexBody .change .change_body .con.c_1{background:url(../images/index/index01.jpg)/*tpa=http://www.jhecn.com/images/index/index01.jpg*/ no-repeat left center;left:0;}
+.indexBody .change .change_body .con.c_2{background:url(../images/index/index02.jpg)/*tpa=http://www.jhecn.com/images/index/index02.jpg*/ no-repeat left center;left:177px;}
+.indexBody .change .change_body .con.c_3{background:url(../images/index/index03.jpg)/*tpa=http://www.jhecn.com/images/index/index03.jpg*/ no-repeat left center;left:354px;}
+.indexBody .change .change_body .con.c_4{background:url(../images/index/index04.jpg)/*tpa=http://www.jhecn.com/images/index/index04.jpg*/ no-repeat left center;left:531px;}
+.indexBody .change .change_body .con.c_5{background:url(../images/index/index05.jpg)/*tpa=http://www.jhecn.com/images/index/index05.jpg*/ no-repeat left center;left:708px;}
+.indexBody .change .change_body .con .txt{padding-left:20%;padding-top:30px;padding-bottom:20px;}
+.indexBody .change .change_body .con .txt h6{font-size:18px;font-weight:bold;}
+.indexBody .change .change_body .con .txt h4{font-size:12px;}
+.indexBody .change .change_body .con h5{margin-left:20%;height:28px;display:inline-block;width:27px;}
+
+.indexBody .change .change_body .con.c_1 .txt{padding-left:20%;color:#fff;}
+.indexBody .change .change_body .con.c_2 .txt{color:#fff;}
+.indexBody .change .change_body .con.c_3 .txt{color:#fff;}
+.indexBody .change .change_body .con.c_4 .txt{color:#fff;}
+.indexBody .change .change_body .con.c_5 .txt{color:#fff;}
+
+.indexBody .change .change_body .con.c_1:hover .txt{padding-left:10%;}
+.indexBody .change .change_body .con.c_2:hover .txt{padding-left:10%;}
+.indexBody .change .change_body .con.c_3:hover .txt{padding-left:10%;}
+.indexBody .change .change_body .con.c_4:hover .txt{padding-left:10%;}
+.indexBody .change .change_body .con.c_5:hover .txt{padding-left:10%;}
+
+.indexBody .change .change_body .con.c_1 h5{background:url(../images/index/line01.jpg)/*tpa=http://www.jhecn.com/images/index/line01.jpg*/ no-repeat left center;}
+.indexBody .change .change_body .con.c_2 h5{background:url(../images/index/line02.jpg)/*tpa=http://www.jhecn.com/images/index/line02.jpg*/ no-repeat left center;}
+.indexBody .change .change_body .con.c_3 h5{background:url(../images/index/line03.jpg)/*tpa=http://www.jhecn.com/images/index/line03.jpg*/ no-repeat left center;}
+.indexBody .change .change_body .con.c_4 h5{background:url(../images/index/line04.jpg)/*tpa=http://www.jhecn.com/images/index/line04.jpg*/ no-repeat left center;}
+.indexBody .change .change_body .con.c_5 h5{background:url(../images/index/line05.jpg)/*tpa=http://www.jhecn.com/images/index/line05.jpg*/ no-repeat left center;}
+.indexBody .change .change_body .con:hover h5{background:url(../images/index/h5_line.png)/*tpa=http://www.jhecn.com/images/index/h5_line.png*/ no-repeat left center;margin-left:15px;}
+.indexBody .more{width:41px;height:270px;background:#be1d1a; text-align:center; text-decoration:none;}
+.indexBody .more h4{font-size:24px;font-weight:bold;color:#fff; padding:25px 0 20px;}
+.indexBody .more h5{font-size:14px;font-weight:bold;line-height:22px;color:#fff;}

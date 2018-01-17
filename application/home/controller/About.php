@@ -9,12 +9,13 @@ class About extends Base
 {
     public function index()
     {
-        $a  = new \app\home\model\About();
-        $b = $a->select();
-        $this->assign('b',$b);
         return $this->fetch();
     }
-    public function honor()
+    public function honnor()
+    {
+        return $this->fetch();
+    }
+    public function culture()
     {
         return $this->fetch();
     }

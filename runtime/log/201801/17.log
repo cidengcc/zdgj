@@ -1178,3 +1178,3133 @@ Method [ <user> public method case_detail ] {
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
+[ 2018-01-17T23:32:16+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.127101s][吞吐率：7.87req/s] [内存消耗：1,615.69kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 32
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'gongsi',
+  4 => 'list1',
+  5 => 'list2',
+  6 => 'typeArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043600s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.012325s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000659s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.011595s ]
+[ sql ] [ SQL ] SELECT * FROM `about` WHERE  `aboutID` = 1 LIMIT 1    [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `articles` [ RunTime:0.011657s ]
+[ sql ] [ SQL ] SELECT * FROM articles a LEFT JOIN article_img i ON a.article_imgID = i.article_imgID  WHERE  a.orderby = 1  [ RunTime:0.003080s ]
+[ sql ] [ SQL ] SELECT * FROM articles a LEFT JOIN article_img i ON a.article_imgID = i.article_imgID  ORDER BY a.orderby asc LIMIT 8   [ RunTime:0.000672s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:16+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.019519s][吞吐率：51.23req/s] [内存消耗：680.15kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:16+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.017831s][吞吐率：56.08req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:17+08:00 ] 127.0.0.1 127.0.0.1 GET /home/news/index.html
+[ log ] zdgj.me/home/news/index.html [运行时间：0.052040s][吞吐率：19.22req/s] [内存消耗：1,657.23kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'news',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\News.php 10 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\news\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002794s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.016431s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.008239s ]
+[ sql ] [ SQL ] SELECT * FROM `about`  [ RunTime:0.000324s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:17+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.014782s][吞吐率：67.65req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:17+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.014785s][吞吐率：67.64req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:18+08:00 ] 127.0.0.1 127.0.0.1 GET /home/cases/index.html
+[ log ] zdgj.me/home/cases/index.html [运行时间：0.055389s][吞吐率：18.05req/s] [内存消耗：1,567.41kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cases',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/home/news/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Cases.php 20 - 41
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\cases\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'type',
+  4 => 'list',
+  5 => 'typeArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003479s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.015745s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `articles` [ RunTime:0.009274s ]
+[ sql ] [ SQL ] SELECT * FROM articles a LEFT JOIN article_img i ON a.article_imgID = i.article_imgID  WHERE  a.type = 1 ORDER BY a.orderby asc  [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `articles` WHERE  `articlesID` < 9   [ RunTime:0.000426s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:18+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.015572s][吞吐率：64.22req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:18+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.014981s][吞吐率：66.75req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:20+08:00 ] 127.0.0.1 127.0.0.1 GET /home/about/index.html
+[ log ] zdgj.me/home/about/index.html [运行时间：0.050314s][吞吐率：19.88req/s] [内存消耗：1,658.77kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'about',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/home/cases/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\About.php 10 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\about\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002802s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.014832s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.009631s ]
+[ sql ] [ SQL ] SELECT * FROM `about`  [ RunTime:0.000333s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:20+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.018388s][吞吐率：54.38req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:20+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.016474s][吞吐率：60.70req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:20+08:00 ] 127.0.0.1 127.0.0.1 GET /home/index/index.html
+[ log ] zdgj.me/home/index/index.html [运行时间：0.091933s][吞吐率：10.88req/s] [内存消耗：1,471.67kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 32
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'gongsi',
+  4 => 'list1',
+  5 => 'list2',
+  6 => 'typeArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003374s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.038281s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000613s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.014780s ]
+[ sql ] [ SQL ] SELECT * FROM `about` WHERE  `aboutID` = 1 LIMIT 1    [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `articles` [ RunTime:0.009269s ]
+[ sql ] [ SQL ] SELECT * FROM articles a LEFT JOIN article_img i ON a.article_imgID = i.article_imgID  WHERE  a.orderby = 1  [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT * FROM articles a LEFT JOIN article_img i ON a.article_imgID = i.article_imgID  ORDER BY a.orderby asc LIMIT 8   [ RunTime:0.000374s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:20+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.017198s][吞吐率：58.15req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:20+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.014630s][吞吐率：68.35req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:21+08:00 ] 127.0.0.1 127.0.0.1 GET /home/cases/index.html
+[ log ] zdgj.me/home/cases/index.html [运行时间：0.047843s][吞吐率：20.90req/s] [内存消耗：1,441.96kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cases',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/home/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Cases.php 20 - 41
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\cases\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'type',
+  4 => 'list',
+  5 => 'typeArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002788s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.015067s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `articles` [ RunTime:0.009400s ]
+[ sql ] [ SQL ] SELECT * FROM articles a LEFT JOIN article_img i ON a.article_imgID = i.article_imgID  WHERE  a.type = 1 ORDER BY a.orderby asc  [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT * FROM `articles` WHERE  `articlesID` < 9   [ RunTime:0.000298s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:21+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.019653s][吞吐率：50.88req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:21+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.017670s][吞吐率：56.59req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:21+08:00 ] 127.0.0.1 127.0.0.1 GET /home/service/index.html
+[ log ] zdgj.me/home/service/index.html [运行时间：0.055668s][吞吐率：17.96req/s] [内存消耗：1,670.36kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'service',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/home/cases/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Service.php 10 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\service\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002887s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.014994s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.011362s ]
+[ sql ] [ SQL ] SELECT * FROM `about`  [ RunTime:0.000222s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:21+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.017041s][吞吐率：58.68req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:21+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.015726s][吞吐率：63.59req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:21+08:00 ] 127.0.0.1 127.0.0.1 GET /home/contact/index.html
+[ log ] zdgj.me/home/contact/index.html [运行时间：0.060619s][吞吐率：16.50req/s] [内存消耗：1,535.84kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'contact',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/home/service/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Contact.php 10 - 20
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\contact\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'list1',
+  4 => 'list2',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002705s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.015212s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.008111s ]
+[ sql ] [ SQL ] SELECT * FROM `about` WHERE  `aboutID` IN (1,2)    [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `contact` [ RunTime:0.010271s ]
+[ sql ] [ SQL ] SELECT * FROM `contact` WHERE  `contactID` IN (1,2,3,5,8)       [ RunTime:0.000290s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:22+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.015400s][吞吐率：64.94req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:32:22+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.012717s][吞吐率：78.63req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:36:55+08:00 ] 127.0.0.1 127.0.0.1 GET /home/contact/index.html
+[ log ] zdgj.me/home/contact/index.html [运行时间：0.084313s][吞吐率：11.86req/s] [内存消耗：1,412.49kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'contact',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/home/service/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Contact.php 10 - 20
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\contact\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'list1',
+  4 => 'list2',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002998s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.023141s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.016225s ]
+[ sql ] [ SQL ] SELECT * FROM `about` WHERE  `aboutID` IN (1,2)    [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `contact` [ RunTime:0.016594s ]
+[ sql ] [ SQL ] SELECT * FROM `contact` WHERE  `contactID` IN (1,2,3,5,8)       [ RunTime:0.000299s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:36:55+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.018265s][吞吐率：54.75req/s] [内存消耗：680.16kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:36:55+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.012558s][吞吐率：79.63req/s] [内存消耗：680.16kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:37:02+08:00 ] 127.0.0.1 127.0.0.1 GET /home/
+[ log ] zdgj.me/home/ [运行时间：0.078021s][吞吐率：12.82req/s] [内存消耗：1,471.19kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 32
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'gongsi',
+  4 => 'list1',
+  5 => 'list2',
+  6 => 'typeArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002851s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.022551s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.015421s ]
+[ sql ] [ SQL ] SELECT * FROM `about` WHERE  `aboutID` = 1 LIMIT 1    [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `articles` [ RunTime:0.015405s ]
+[ sql ] [ SQL ] SELECT * FROM articles a LEFT JOIN article_img i ON a.article_imgID = i.article_imgID  WHERE  a.orderby = 1  [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT * FROM articles a LEFT JOIN article_img i ON a.article_imgID = i.article_imgID  ORDER BY a.orderby asc LIMIT 8   [ RunTime:0.000433s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:37:02+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.015153s][吞吐率：65.99req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:37:02+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.013324s][吞吐率：75.05req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:37:06+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.082370s][吞吐率：12.14req/s] [内存消耗：1,469.39kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 32
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'gongsi',
+  4 => 'list1',
+  5 => 'list2',
+  6 => 'typeArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005011s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.022699s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.016470s ]
+[ sql ] [ SQL ] SELECT * FROM `about` WHERE  `aboutID` = 1 LIMIT 1    [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `articles` [ RunTime:0.017587s ]
+[ sql ] [ SQL ] SELECT * FROM articles a LEFT JOIN article_img i ON a.article_imgID = i.article_imgID  WHERE  a.orderby = 1  [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT * FROM articles a LEFT JOIN article_img i ON a.article_imgID = i.article_imgID  ORDER BY a.orderby asc LIMIT 8   [ RunTime:0.000399s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:37:06+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.018169s][吞吐率：55.04req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:37:06+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.012673s][吞吐率：78.91req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:37:09+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.082083s][吞吐率：12.18req/s] [内存消耗：1,469.39kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 32
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'gongsi',
+  4 => 'list1',
+  5 => 'list2',
+  6 => 'typeArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002876s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.026691s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.015521s ]
+[ sql ] [ SQL ] SELECT * FROM `about` WHERE  `aboutID` = 1 LIMIT 1    [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `articles` [ RunTime:0.016593s ]
+[ sql ] [ SQL ] SELECT * FROM articles a LEFT JOIN article_img i ON a.article_imgID = i.article_imgID  WHERE  a.orderby = 1  [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SELECT * FROM articles a LEFT JOIN article_img i ON a.article_imgID = i.article_imgID  ORDER BY a.orderby asc LIMIT 8   [ RunTime:0.000463s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:37:09+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.015541s][吞吐率：64.35req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:37:09+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zdgj.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.015660s][吞吐率：63.86req/s] [内存消耗：679.79kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/static/index/css/metinfo.css',
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:41:44+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.093717s][吞吐率：10.67req/s] [内存消耗：1,419.94kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 23
+}
+
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.046542s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.017658s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000362s ]
+[ error ] [0]模板文件不存在:E:\PHP\project\zdgj\public/../application/home\view\index\index.html[E:\PHP\project\zdgj\thinkphp\library\think\view\driver\Think.php:78]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:42:14+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.067468s][吞吐率：14.82req/s] [内存消耗：1,329.67kb] [文件加载：37]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 25
+}
+
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005799s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.032399s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000464s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:42:28+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.079723s][吞吐率：12.54req/s] [内存消耗：1,419.94kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 23
+}
+
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004205s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.027546s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000389s ]
+[ error ] [0]模板文件不存在:E:\PHP\project\zdgj\public/../application/home\view\index\index.html[E:\PHP\project\zdgj\thinkphp\library\think\view\driver\Think.php:78]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:46:40+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.075963s][吞吐率：13.16req/s] [内存消耗：1,419.94kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 23
+}
+
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004195s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.026601s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.001017s ]
+[ error ] [0]模板文件不存在:E:\PHP\project\zdgj\public/../application/home\view\index\index.html[E:\PHP\project\zdgj\thinkphp\library\think\view\driver\Think.php:78]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:46:42+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.071933s][吞吐率：13.90req/s] [内存消耗：1,419.94kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 23
+}
+
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004683s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.036367s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000349s ]
+[ error ] [0]模板文件不存在:E:\PHP\project\zdgj\public/../application/home\view\index\index.html[E:\PHP\project\zdgj\thinkphp\library\think\view\driver\Think.php:78]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:46:49+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.055451s][吞吐率：18.03req/s] [内存消耗：1,419.94kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 23
+}
+
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003867s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.019918s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000475s ]
+[ error ] [0]模板文件不存在:E:\PHP\project\zdgj\public/../application/home\view\index\index.html[E:\PHP\project\zdgj\thinkphp\library\think\view\driver\Think.php:78]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:36+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.144070s][吞吐率：6.94req/s] [内存消耗：1,533.43kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 23
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082779s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.020635s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000319s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:36+08:00 ] 127.0.0.1 127.0.0.1 GET /images/commom/h_wx.jpg
+[ log ] zdgj.me/images/commom/h_wx.jpg [运行时间：0.029631s][吞吐率：33.75req/s] [内存消耗：679.70kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'commom',
+    2 => 'h_wx.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:36+08:00 ] 127.0.0.1 127.0.0.1 GET /images/commom/h_wx.jpg
+[ log ] zdgj.me/images/commom/h_wx.jpg [运行时间：0.019377s][吞吐率：51.61req/s] [内存消耗：679.70kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'commom',
+    2 => 'h_wx.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:36+08:00 ] 127.0.0.1 127.0.0.1 GET /static.meiqia.com/dist/meiqia-1.js
+[ log ] zdgj.me/static.meiqia.com/dist/meiqia-1.js [运行时间：0.019260s][吞吐率：51.92req/s] [内存消耗：679.73kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static.meiqia.com',
+    1 => 'dist',
+    2 => 'meiqia-1.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:36+08:00 ] 127.0.0.1 127.0.0.1 GET /ImgUpload/201608/2016083004192088609.jpg
+[ log ] zdgj.me/ImgUpload/201608/2016083004192088609.jpg [运行时间：0.018871s][吞吐率：52.99req/s] [内存消耗：679.78kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ImgUpload',
+    1 => '201608',
+    2 => '2016083004192088609.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:36+08:00 ] 127.0.0.1 127.0.0.1 GET /ImgUpload/201712/2017122610003920149.jpg
+[ log ] zdgj.me/ImgUpload/201712/2017122610003920149.jpg [运行时间：0.016327s][吞吐率：61.25req/s] [内存消耗：679.78kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ImgUpload',
+    1 => '201712',
+    2 => '2017122610003920149.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:36+08:00 ] 127.0.0.1 127.0.0.1 GET /ImgUpload/201608/2016083004205616950.jpg
+[ log ] zdgj.me/ImgUpload/201608/2016083004205616950.jpg [运行时间：0.015041s][吞吐率：66.49req/s] [内存消耗：679.78kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ImgUpload',
+    1 => '201608',
+    2 => '2016083004205616950.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:36+08:00 ] 127.0.0.1 127.0.0.1 GET /ImgUpload/201608/2016083003292986210.jpg
+[ log ] zdgj.me/ImgUpload/201608/2016083003292986210.jpg [运行时间：0.016402s][吞吐率：60.97req/s] [内存消耗：679.78kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ImgUpload',
+    1 => '201608',
+    2 => '2016083003292986210.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:36+08:00 ] 127.0.0.1 127.0.0.1 GET /ImgUpload/201608/2016083006021711526.jpg
+[ log ] zdgj.me/ImgUpload/201608/2016083006021711526.jpg [运行时间：0.031631s][吞吐率：31.61req/s] [内存消耗：679.78kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ImgUpload',
+    1 => '201608',
+    2 => '2016083006021711526.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:37+08:00 ] 127.0.0.1 127.0.0.1 GET /images/commom/ico_1.png
+[ log ] zdgj.me/images/commom/ico_1.png [运行时间：0.016150s][吞吐率：61.92req/s] [内存消耗：679.70kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'commom',
+    2 => 'ico_1.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:37+08:00 ] 127.0.0.1 127.0.0.1 GET /images/commom/ico_2.png
+[ log ] zdgj.me/images/commom/ico_2.png [运行时间：0.023296s][吞吐率：42.93req/s] [内存消耗：679.70kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'commom',
+    2 => 'ico_2.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:37+08:00 ] 127.0.0.1 127.0.0.1 GET /images/commom/ico_3.png
+[ log ] zdgj.me/images/commom/ico_3.png [运行时间：0.026648s][吞吐率：37.53req/s] [内存消耗：679.70kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'commom',
+    2 => 'ico_3.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:37+08:00 ] 127.0.0.1 127.0.0.1 GET /images/commom/code.jpg
+[ log ] zdgj.me/images/commom/code.jpg [运行时间：0.025370s][吞吐率：39.42req/s] [内存消耗：679.70kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'commom',
+    2 => 'code.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:48:37+08:00 ] 127.0.0.1 127.0.0.1 GET /images/commom/ico_4.png
+[ log ] zdgj.me/images/commom/ico_4.png [运行时间：0.021143s][吞吐率：47.30req/s] [内存消耗：679.70kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'commom',
+    2 => 'ico_4.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:52:38+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.198693s][吞吐率：5.03req/s] [内存消耗：1,533.55kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 23
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.106139s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.036124s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000372s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:52:39+08:00 ] 127.0.0.1 127.0.0.1 GET /static.meiqia.com/dist/meiqia-1.js
+[ log ] zdgj.me/static.meiqia.com/dist/meiqia-1.js [运行时间：0.019185s][吞吐率：52.12req/s] [内存消耗：680.05kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static.meiqia.com',
+    1 => 'dist',
+    2 => 'meiqia-1.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:19+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.063850s][吞吐率：15.66req/s] [内存消耗：1,581.09kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 23
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002925s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.025698s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000430s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:20+08:00 ] 127.0.0.1 127.0.0.1 GET /static.meiqia.com/dist/meiqia-1.js
+[ log ] zdgj.me/static.meiqia.com/dist/meiqia-1.js [运行时间：0.018647s][吞吐率：53.63req/s] [内存消耗：680.05kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static.meiqia.com',
+    1 => 'dist',
+    2 => 'meiqia-1.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:21+08:00 ] 127.0.0.1 127.0.0.1 GET /home/about/index.html
+[ log ] zdgj.me/home/about/index.html [运行时间：0.067182s][吞吐率：14.88req/s] [内存消耗：1,534.88kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'about',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\About.php 10 - 13
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\about\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003434s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.029500s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000308s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:21+08:00 ] 127.0.0.1 127.0.0.1 GET /home/css/reset.min.css
+[ log ] zdgj.me/home/css/reset.min.css [运行时间：0.034508s][吞吐率：28.98req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'css',
+    2 => 'reset.min.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:21+08:00 ] 127.0.0.1 127.0.0.1 GET /home/js/jquery.easing.1.3.js
+[ log ] zdgj.me/home/js/jquery.easing.1.3.js [运行时间：0.016233s][吞吐率：61.60req/s] [内存消耗：682.16kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'js',
+    2 => 'jquery.easing.1.3.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:21+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/icon.png
+[ log ] zdgj.me/home/images/icon.png [运行时间：0.015182s][吞吐率：65.87req/s] [内存消耗：682.12kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'icon.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/css/common.css
+[ log ] zdgj.me/home/css/common.css [运行时间：0.027529s][吞吐率：36.33req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'css',
+    2 => 'common.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/css/page.css
+[ log ] zdgj.me/home/css/page.css [运行时间：0.021503s][吞吐率：46.51req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'css',
+    2 => 'page.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/js/lib/jquery.min.js
+[ log ] zdgj.me/home/js/lib/jquery.min.js [运行时间：0.024588s][吞吐率：40.67req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'js',
+    2 => 'lib',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/css/layout.css
+[ log ] zdgj.me/home/css/layout.css [运行时间：0.020800s][吞吐率：48.08req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'css',
+    2 => 'layout.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/js/lib/prefixfree.min.js
+[ log ] zdgj.me/home/js/lib/prefixfree.min.js [运行时间：0.016737s][吞吐率：59.75req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'js',
+    2 => 'lib',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/commom/ico_1.png
+[ log ] zdgj.me/home/images/commom/ico_1.png [运行时间：0.017406s][吞吐率：57.45req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'commom',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/commom/ico_3.png
+[ log ] zdgj.me/home/images/commom/ico_3.png [运行时间：0.019898s][吞吐率：50.26req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'commom',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/commom/h_wx.jpg
+[ log ] zdgj.me/home/images/commom/h_wx.jpg [运行时间：0.039410s][吞吐率：25.37req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'commom',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/commom/code.jpg
+[ log ] zdgj.me/home/images/commom/code.jpg [运行时间：0.026398s][吞吐率：37.88req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'commom',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/commom/logo.png
+[ log ] zdgj.me/home/images/commom/logo.png [运行时间：0.043697s][吞吐率：22.88req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'commom',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/commom/ico_2.png
+[ log ] zdgj.me/home/images/commom/ico_2.png [运行时间：0.068577s][吞吐率：14.58req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'commom',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/favicon.ico
+[ log ] zdgj.me/home/favicon.ico [运行时间：0.022710s][吞吐率：44.03req/s] [内存消耗：682.09kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/commom/ico_4.png
+[ log ] zdgj.me/home/images/commom/ico_4.png [运行时间：0.051452s][吞吐率：19.44req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'commom',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/js/jquery.easing.1.3.js
+[ log ] zdgj.me/home/js/jquery.easing.1.3.js [运行时间：0.016806s][吞吐率：59.50req/s] [内存消耗：682.16kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'js',
+    2 => 'jquery.easing.1.3.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/commom/h_wx.jpg
+[ log ] zdgj.me/home/images/commom/h_wx.jpg [运行时间：0.021713s][吞吐率：46.06req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'commom',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/commom/ico_1.png
+[ log ] zdgj.me/home/images/commom/ico_1.png [运行时间：0.032601s][吞吐率：30.67req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'commom',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/commom/logo.png
+[ log ] zdgj.me/home/images/commom/logo.png [运行时间：0.047359s][吞吐率：21.12req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'commom',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/commom/ico_2.png
+[ log ] zdgj.me/home/images/commom/ico_2.png [运行时间：0.036530s][吞吐率：27.37req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'commom',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/commom/ico_3.png
+[ log ] zdgj.me/home/images/commom/ico_3.png [运行时间：0.017091s][吞吐率：58.51req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'commom',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/commom/ico_4.png
+[ log ] zdgj.me/home/images/commom/ico_4.png [运行时间：0.020788s][吞吐率：48.10req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'commom',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /static.meiqia.com/dist/meiqia-1.js
+[ log ] zdgj.me/static.meiqia.com/dist/meiqia-1.js [运行时间：0.032590s][吞吐率：30.68req/s] [内存消耗：679.80kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static.meiqia.com',
+    1 => 'dist',
+    2 => 'meiqia-1.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/about/banner.jpg
+[ log ] zdgj.me/home/images/about/banner.jpg [运行时间：0.031273s][吞吐率：31.98req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'about',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:26+08:00 ] 127.0.0.1 127.0.0.1 GET /index.htm
+[ log ] zdgj.me/index.htm [运行时间：0.012266s][吞吐率：81.53req/s] [内存消耗：680.07kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index.htm',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120; _gat=1',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:37+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.135806s][吞吐率：7.36req/s] [内存消耗：1,432.09kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120; _gat=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 23
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.068554s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.033598s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000289s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:55:37+08:00 ] 127.0.0.1 127.0.0.1 GET /static.meiqia.com/dist/meiqia-1.js
+[ log ] zdgj.me/static.meiqia.com/dist/meiqia-1.js [运行时间：0.021789s][吞吐率：45.90req/s] [内存消耗：680.05kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static.meiqia.com',
+    1 => 'dist',
+    2 => 'meiqia-1.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120; _gat=1',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:57:17+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.062093s][吞吐率：16.10req/s] [内存消耗：1,577.09kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 23
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004302s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.025577s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000383s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:57:17+08:00 ] 127.0.0.1 127.0.0.1 GET /static.meiqia.com/dist/meiqia-1.js
+[ log ] zdgj.me/static.meiqia.com/dist/meiqia-1.js [运行时间：0.018150s][吞吐率：55.10req/s] [内存消耗：680.05kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static.meiqia.com',
+    1 => 'dist',
+    2 => 'meiqia-1.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:57:53+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.129094s][吞吐率：7.75req/s] [内存消耗：1,565.09kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120; _gat=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 23
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.067525s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.019742s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000392s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:57:54+08:00 ] 127.0.0.1 127.0.0.1 GET /static.meiqia.com/dist/meiqia-1.js
+[ log ] zdgj.me/static.meiqia.com/dist/meiqia-1.js [运行时间：0.022213s][吞吐率：45.02req/s] [内存消耗：680.05kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static.meiqia.com',
+    1 => 'dist',
+    2 => 'meiqia-1.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120; _gat=1',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:58:19+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.101365s][吞吐率：9.87req/s] [内存消耗：1,573.09kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 23
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048128s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.016401s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000308s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:58:20+08:00 ] 127.0.0.1 127.0.0.1 GET /static.meiqia.com/dist/meiqia-1.js
+[ log ] zdgj.me/static.meiqia.com/dist/meiqia-1.js [运行时间：0.029419s][吞吐率：33.99req/s] [内存消耗：680.05kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static.meiqia.com',
+    1 => 'dist',
+    2 => 'meiqia-1.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:59:30+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] zdgj.me/ [运行时间：0.062935s][吞吐率：15.89req/s] [内存消耗：1,432.09kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\Index.php 19 - 23
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004414s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.029832s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000336s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:59:30+08:00 ] 127.0.0.1 127.0.0.1 GET /static.meiqia.com/dist/meiqia-1.js
+[ log ] zdgj.me/static.meiqia.com/dist/meiqia-1.js [运行时间：0.020671s][吞吐率：48.38req/s] [内存消耗：680.05kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static.meiqia.com',
+    1 => 'dist',
+    2 => 'meiqia-1.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:59:34+08:00 ] 127.0.0.1 127.0.0.1 GET /home/about/index.html
+[ log ] zdgj.me/home/about/index.html [运行时间：0.066638s][吞吐率：15.01req/s] [内存消耗：1,578.41kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'about',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120; _gat=1',
+  'referer' => 'http://zdgj.me/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zdgj\application\home\controller\About.php 10 - 13
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zdgj\public/../application/home\view\about\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003949s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.031508s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000455s ]
+
+---------------------------------------------------------------
+[ 2018-01-17T23:59:34+08:00 ] 127.0.0.1 127.0.0.1 GET /static.meiqia.com/dist/meiqia-1.js
+[ log ] zdgj.me/static.meiqia.com/dist/meiqia-1.js [运行时间：0.016078s][吞吐率：62.20req/s] [内存消耗：679.80kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static.meiqia.com',
+    1 => 'dist',
+    2 => 'meiqia-1.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120; _gat=1',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-17T23:59:34+08:00 ] 127.0.0.1 127.0.0.1 GET /home/images/about/banner.jpg
+[ log ] zdgj.me/home/images/about/banner.jpg [运行时间：0.021218s][吞吐率：47.13req/s] [内存消耗：682.13kb] [文件加载：29]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'images',
+    2 => 'about',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'think_var=zh-cn; _ga=GA1.2.1806561141.1516204120; _gid=GA1.2.1476059514.1516204120; _gat=1',
+  'referer' => 'http://zdgj.me/home/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'zdgj.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zdgj\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

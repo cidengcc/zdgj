@@ -1,34 +1,612 @@
-{include file="pub/header" /}
 
-<section class="sidebar-v2__section">
-    <div class="section__head">
-        <div class="navbar sidebar-v2">
-            <div class="container-fluid" id="sidebar-v2__accordion">
-                <div class="navbar-header   ">
-                    <button type="button" class="navbar-toggle collapsed sidebar-v2__button btn" data-toggle="collapse" data-target="#sidebar-v2__list2" aria-expanded="false" data-parent="#sidebar-v2__accordion"> <span class="glyphicon glyphicon-menu-hamburger"></span> </button>
-                    <h1 class="dropdown-toggle sidebar-v2__h1 btn " data-toggle="collapse" data-target="#sidebar-v2__list3" data-parent="#sidebar-v2__accordion"> <button type="button" disabled="disabled"></button> <span>人才招聘 </span> </h1>
-                </div>
-                <div class="panel">
-                    <div class="collapse navbar-collapse" id="sidebar-v2__list2">
-                        <ul class="nav navbar-nav navbar-right" id="collapseTwo">
-                            <li class="on"><a href="{:url('Contact/index')}">联系我们</a></li>
-                            <li class="on"><a href="{:url('Contact/joinus')}">人才招聘</a></li>
-                        </ul>
-                    </div>
-                </div>
+
+<!DOCTYPE HTML>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+
+    <title>稼禾建设集团|建设部颁发甲级设计一级施工_别墅豪宅_星级酒店_办公楼_公寓住宅_软装设计</title><meta name='keywords' content='星级酒店,办公楼,软装设计,别墅设计,别墅装修,别墅装潢,别墅装饰,别墅装修设计,精装大宅,别墅装修效果图' /><meta name='description' content='稼禾建设集团是具备国家建设部颁发「建筑装饰施工一级资质」、「设计甲级资质」的国内装饰行业领军品牌，先后荣获“中国建筑装饰设计机构50强企业”、“中国建筑装饰30年专业化百强企业”、“中国建筑装饰绿色环保设计50强企业”等多项荣誉，服务热线400-992-3050。'/>
+    <meta name="author" content="上海艾睿信息科技有限公司提供技术支持,http://www.irealtech.com" />
+
+    <!-- Apple iOS and Android stuff -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="baidu-site-verification" content="5zEgA8kTz4" />
+    <link rel="icon" href="../favicon.ico" tppabs="http://www.jhecn.com/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../favicon.ico" tppabs="http://www.jhecn.com/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="/static/home/images/icon.png" tppabs="http://www.jhecn.com/images/icon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="/static/home/images/icon.png" tppabs="http://www.jhecn.com/images/icon.png" />
+    <link rel="apple-touch-startup-image" media="screen and (orientation: portrait)" href="/images/startup.png" />
+    <link rel="apple-touch-startup-image" media="screen and (orientation: landscape)" href="/images/startupL.png" /><link href="/static/home/css/reset.min.css" tppabs="http://www.jhecn.com/css/reset.min.css" type="text/css" rel="stylesheet" /><link href="/static/home/css/layout.css" tppabs="http://www.jhecn.com/css/layout.css" type="text/css" rel="stylesheet" /><link href="/static/home/css/common.css" tppabs="http://www.jhecn.com/css/common.css" type="text/css" rel="stylesheet" /><link href="/static/home/css/page.css" tppabs="http://www.jhecn.com/css/page.css" type="text/css" rel="stylesheet" />
+    <!--[if IE]><script src="/static/home/js/lib/html5.js" tppabs="http://www.jhecn.com/js/lib/html5.js"></script><![endif]-->
+    <!--[if lt IE 10]><script type="text/javascript" src="/static/home/js/lib/PIE.js" tppabs="http://www.jhecn.com/js/lib/PIE.js"></script><![endif]-->
+    <script type="text/javascript" src="/static/home/js/lib/jquery.min.js" tppabs="http://www.jhecn.com/js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/home/js/lib/prefixfree.min.js" tppabs="http://www.jhecn.com/js/lib/prefixfree.min.js"></script>
+    <script type="text/javascript" src="/static/home/js/jquery.easing.1.3.js" tppabs="http://www.jhecn.com/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".joblist li h5").click(function() {
+                var index = $(".joblist li h5").index($(this));
+                if ($(this).attr("class") == "cur") {
+                    $(this).removeClass("cur");
+                    $(this).next(".tabTxt").slideUp();
+                }
+                else {
+                    $(".joblist li h5").removeClass("cur");
+                    $(this).addClass("cur");
+                    $(".tabTxt").slideUp();
+                    $(this).next(".tabTxt").slideDown();
+                }
+            }).eq(0).click();
+        })
+    </script>
+    <title>
+
+    </title></head>
+<body>
+
+<script type="text/javascript">
+    $(function(){
+        $("ul.nav li").hover(function(){
+            $("ul.nav li .dropdown").stop(false,true);
+            $(this).find(".dropdown").fadeIn().animate({opacity:"0.7"},1000);
+            $(this).find(".tit").addClass("cur");
+        },function(){
+            $("ul.nav li .dropdown").stop(false,true);
+            $(this).find(".dropdown").fadeOut().animate({opacity:"1"},1000);
+            $(this).find(".tit").removeClass("cur");
+        });
+        $(".rightTool ul li").hover(function(){
+            $(".rightTool ul li .box").stop(false,true);
+            $(this).find(".box").fadeIn();
+        },function(){
+            $(".rightTool ul li .box").stop(false,true);
+            $(this).find(".box").fadeOut();
+        });
+        $("a.backTop").click(function(){
+            $('body,html').animate({scrollTop:0},1000);
+            return false;
+        });
+        $("a.weixin").click(function(){
+            $(this).find("img").toggle();
+        });
+    });
+</script>
+<header>
+    <div class="cw">
+        <div class="header">
+            <a href="../index.htm" tppabs="http://www.jhecn.com/" class="logo fl" title="稼禾建设"><img src="/static/home/images/commom/logo.png" tppabs="http://www.jhecn.com/images/commom/logo.png" /></a>
+            <div class="fr">
+                <ul class="nav fl">
+                    <li><a href="../index.htm" tppabs="http://www.jhecn.com/" class="tit">首页</a></li>
+                    <li>
+                        <a href="../about/index.htm" tppabs="http://www.jhecn.com/about/" class="tit">集团简介</a>
+                        <div class="dropdown" style="width:240px;left:-120px;">
+                            <a href="../about/default.aspx.htm" tppabs="http://www.jhecn.com/about/default.aspx">公司简介</a><em>/</em><a href="../about/honnor.aspx.htm" tppabs="http://www.jhecn.com/about/honnor.aspx">荣誉资质</a><em>/</em><a href="../about/culture.aspx.htm" tppabs="http://www.jhecn.com/about/culture.aspx">企业文化</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../news/index.htm" tppabs="http://www.jhecn.com/news/" class="tit">新闻&媒体</a>
+                        <div class="dropdown" style="width:160px;left:-80px;">
+                            <a href="../news/default.aspx.htm" tppabs="http://www.jhecn.com/news/default.aspx">新闻动态</a><em>/</em><a href="../news/default.aspx-cid=101.htm" tppabs="http://www.jhecn.com/news/default.aspx?cid=101">媒体报道</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../team/index.htm" tppabs="http://www.jhecn.com/team/" class="tit">联合设计</a>
+                        <div class="dropdown" style="width:260px;left:-140px;">
+                            <a href="../team/default.aspx.htm" tppabs="http://www.jhecn.com/team/default.aspx">设计院简介</a><em>/</em><a href="../team/team.aspx.htm" tppabs="http://www.jhecn.com/team/team.aspx">设计团队</a><em>/</em><a href="../team/design.aspx.htm" tppabs="http://www.jhecn.com/team/design.aspx">设计作品</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../case/index.htm" tppabs="http://www.jhecn.com/case/" class="tit">工程案例</a>
+                        <div class="dropdown" style="width:595px;left:-297px;">
+
+                            <a href="../case/caselist.aspx-cid=1.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=1">商业综合体</a>
+                            <em>/</em>
+
+                            <a href="../case/caselist.aspx-cid=2.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=2">星级酒店</a>
+                            <em>/</em>
+
+                            <a href="../case/caselist.aspx-cid=3.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=3">办公楼</a>
+                            <em>/</em>
+
+                            <a href="../case/caselist.aspx-cid=4.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=4">别墅豪宅</a>
+                            <em>/</em>
+
+                            <a href="../case/caselist.aspx-cid=5.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=5">精装公寓</a>
+                            <em>/</em>
+
+                            <a href="../case/caselist.aspx-cid=6.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=6">软装设计</a>
+
+
+
+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.htm" tppabs="http://www.jhecn.com/contact/" class="tit cur">关于我们</a>
+                        <div class="dropdown" style="width:160px;left:-80px;">
+                            <a href="job.aspx.htm" tppabs="http://www.jhecn.com/contact/job.aspx">人才招聘</a><em>/</em><a href="Default.aspx.htm" tppabs="http://www.jhecn.com/contact/Default.aspx">联系方式</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="share fl">
+                    <a href="javascript:;" class="weixin fl"><img src="/static/home/images/commom/h_wx.jpg" tppabs="http://www.jhecn.com/images/commom/h_wx.jpg" /></a><a href="" class="tmall fl"></a></div>
             </div>
         </div>
     </div>
-</section>
-<div class="met_clear"></div>
-<article class="sidebar-v2__article">
-    <div class="met_article">
-        <div class="met_editor met_module1">
-            {$join}
-            <div class="clear"></div>
+    </div>
+</header>
+
+<div class="rightTool">
+    <ul>
+        <li>
+            <a href="javascript:void(0)" onclick="_MEIQIA('showPanel')"><img src="/static/home/images/commom/ico_1.png" tppabs="http://www.jhecn.com/images/commom/ico_1.png" /></a>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="/static/home/images/commom/ico_2.png" tppabs="http://www.jhecn.com/images/commom/ico_2.png" /></a>
+            <div class="box">
+                <a href="javascript:;" class="tl">联系<br />方式</a>
+                <div class="lx">
+                    <h3>全国免费热线</h3>
+                    <h4>021-60524066</h4>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="/static/home/images/commom/ico_3.png" tppabs="http://www.jhecn.com/images/commom/ico_3.png" /></a>
+            <div class="box">
+                <a href="javascript:;" class="scan">扫一扫</a>
+                <div class="wx">
+                    <img src="/static/home/images/commom/code.jpg" tppabs="http://www.jhecn.com/images/commom/code.jpg" />
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;" class="backTop"><img src="/static/home/images/commom/ico_4.png" tppabs="http://www.jhecn.com/images/commom/ico_4.png" /></a>
+        </li>
+    </ul>
+</div>
+
+
+
+<!-- Banner -->
+<div class="pageBanner" style="background:url(/static/home/images/contact/banner.jpg)/*tpa=http://www.jhecn.com/images/contact/banner.jpg*/ no-repeat center;"></div>
+
+<!-- 面包屑 -->
+<div id="Crumb">
+    <div class="cw">
+        <a href="../index.htm" tppabs="http://www.jhecn.com/" class="home"></a><em>></em><a href="index.htm" tppabs="http://www.jhecn.com/contact/">关于我们</a><em>></em><span>联系方式</span>
+    </div>
+</div>
+
+
+<div class="cw">
+    <div class="pageBody clearfix">
+
+        <script type="text/javascript">
+            $(function(){
+                $(".navList ul li:last-child").css("border-bottom","none");
+            });
+        </script>
+        <div class="pageNav fr">
+            <div class="navList">
+                <div class="Tit">
+                    <h4>关于我们</h4>
+                    <span></span>
+                </div>
+                <ul>
+                    <li>
+                        <a href="job.aspx.htm" tppabs="http://www.jhecn.com/contact/job.aspx" class="cur">人才招聘</a>
+                    </li>
+                    <li>
+                        <a href="Default.aspx.htm" tppabs="http://www.jhecn.com/contact/Default.aspx" class="">联系方式</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="pageInfo">
+                <div class="top">
+                    <h5>brand</h5>
+                    <h4>服务热线</h4>
+                </div>
+                <div class="txt">
+                    <h6>上海稼禾</h6>
+                    <h4>021-34687911</h4>
+                    <h5>上海市闵行区合川路3050号</h5>
+                </div>
+                <div class="txt">
+                    <h6>南京稼禾</h6>
+                    <h4>025-83218885</h4>
+                    <h5>南京市秦淮区中华路50号<br />江苏国际经贸大厦20楼</h5>
+                </div>
+                <div class="txt">
+                    <h6>400热线</h6>
+                    <h4>400-992-3050</h4>
+                </div>
+
+            </div>
+        </div>
+        <div class="mainBody fl">
+            <h2 class="label">人才招聘 <em>/</em> <span>Talent recruitment</span></h2>
+            <div class="jobBody">
+                <h2>我们深知，企业的发展进步离不开人才持续进驻。为此，我们在确保提供优厚薪酬待遇之外，也将为员工提供优质发展平台，如果你已准备好迎接挑战，放开去追求你的事业理想，请将申请资料连同个人履历发送邮件至：<a href="mailto:yaoliang@jhecn.com">yaoliang@jhecn.com</a>
+                </h2>
+                <ul class="joblist">
+
+                    <li>
+                        <h5><span>客服专员（助理）</span>工作地点：上海</h5>
+                        <div class="tabTxt">
+                            <h4>职位描述  Job Description</h4>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                1、通过QQ、微信、旺旺、400电话的形式，提供咨询反馈服务；
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                2、集团pc官网、微信微博、SNS、天猫店铺等客服（用户运营）工作；
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                3、熟悉office办公软件操作；
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                4、普通话标准，<span class=" ueditor_underline" style="outline:0px;text-decoration:underline;">形象气质佳</span>，性格开朗正能量，做事讲究逻辑方法；
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                5、具备良好的应变能力、沟通能力及判断能力，能协助上级处理紧急及重要问题。
+                            </p>
+                            <h4>任职资格  Qualifications</h4>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span style="line-height:1.5;">1、</span><span class=" ueditor_underline" style="line-height:1.5;outline:0px;text-decoration:underline;">妹子优先，生活服务&amp;O2O&amp;电商服务类工作背景优先</span><span style="line-height:1.5;">；</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                2、大专及以上学历，至少一年以上客服相关工作经验（优秀应届毕业生可放宽条件）；
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                3、接待并跟进处理客户的售后订单，维护良好的客户关系；
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                4、与公司相关部门紧密配合，协调沟通，提升服务水平与用户体验。
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                5、<span class="" style="outline:0px;">好方法来源于你有很多方法，撸起袖子去做问题一个个解决，</span><span class=" ueditor_underline" style="outline:0px;text-decoration:underline;">主动成长，你懂得。</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+	<span class=" ueditor_underline" style="outline:0px;text-decoration:underline;"><br style="outline:0px;" />
+</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">备注：提交应聘简历时 请附上作品集 提高审核通过率。</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <br class="" style="outline:0px;" />
+                                优先获得面试机会，请加用人部门微信：daxiahuoyuanyi，备注【姓名与面试岗位】信息。
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h5><span>文案策划</span>工作地点：上海</h5>
+                        <div class="tabTxt">
+                            <h4>职位描述  Job Description</h4>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                1、为集团公司宣传提供文字创意，如新闻稿件、单页海报、创意软媒、品牌文案等；
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                2、能独立完成项目需求创意推广落地，推广文案、话题事件策划、品牌包装、公司形象包装、宣传资料创意等（可落地）；
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                3、负责官方微信、微博的内容策划制作及对外媒体平台的策划维护；
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">4</span>、具备良好的数据分析思维，通过活动提高用户转化率，进而提升公司产品的用户数量及活跃度；
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">5</span>、策划打造公司品牌形象的广告活动及形式设计，提升公司品牌知名度和传播性。
+                            </p>
+                            <h4>任职资格  Qualifications</h4>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="line-height:1.5;outline:0px;">1</span><span style="line-height:1.5;">、</span><span class="" style="line-height:1.5;outline:0px;">全日制本科及以上学历，中文、新闻、传播、公共关系等相关专业优先；</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">2、生活服务&amp;装饰装修行业优先；</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                3、熟悉互联网行业，具有2年以上互联网文案策划经验，以文案策划和品牌运营为主，线下活动为辅最佳；
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">4</span>、具有良好的文案策划执行力和控制力，擅长写作不同类型的文案（可以是段子类、娱乐类、生活方式等）；
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">5</span>、<span class=" ueditor_underline" style="outline:0px;text-decoration:underline;">情商高，做事有标准，具备高度责任感与良好职业素养</span>；
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">6</span><span class="" style="outline:0px;">、<span class="" style="outline:0px;">面试时请携带相关作品；</span></span>
+                            </p>
+                            <p class="MsoListParagraph" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">7、好方法来源于你有很多方法，撸起袖子去做,问题一个个解决，</span><span class=" ueditor_underline" style="outline:0px;text-decoration:underline;">主动成长</span><span class="" style="outline:0px;"><span class=" " style="outline:0px;">，你懂得</span>。</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <br />
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">备注：提交应聘简历时 请附上作品集 提高审核通过率。</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <br class="" style="outline:0px;" />
+                                优先获得面试机会，请加用人部门微信：daxiahuoyuanyi，备注【姓名与面试岗位】信息。
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h5><span>天猫店长</span>工作地点：上海</h5>
+                        <div class="tabTxt">
+                            <h4>职位描述  Job Description</h4>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">1</span><span class="" style="outline:0px;">、</span>熟练掌握天猫等主流电商平台的运营模式，熟悉淘宝数据分析，<span class="" style="outline:0px;">SEO</span>化，<span class="" style="outline:0px;">PV/UV</span>转化，直通车、钻展等；
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">2</span><span class="" style="outline:0px;">、独立负责店铺活动策划和数据分析；负责店铺的运营和管理，每日、周、月监控的数据：营销数据、交易数据、商品管理、顾客管理；</span>
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">3</span><span class="" style="outline:0px;">、制定优化单双周，月度，季度营销策略计划；</span>
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">4</span><span class="" style="outline:0px;">、定期进行营销数据分析、竞品分析，完善和调整计划；</span>
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">5</span><span class="" style="outline:0px;">、有着良好的表达能力，有一定撰写文案的实力；</span>
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">6</span><span class="" style="outline:0px;">、有强烈的敬业精神和团队合作意识并具有较强的学习能力。</span>
+                            </p>
+                            <h4>任职资格  Qualifications</h4>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="line-height:1.5;outline:0px;">1、</span><span class="" style="line-height:1.5;outline:0px;">大专以上学历，了解天猫或京东或淘宝运营规则，有<span class="" style="outline:0px;">3</span>年及以上电商零售平台运营经验；</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">2</span><span class="" style="outline:0px;">、熟悉天猫3年营销规则、网络营销和电子商务运作模式，有淘宝营销活动策划经验优先；</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">3</span><span class="" style="outline:0px;">、逻辑思维能力强，良好的数据分析能力和项目计划能力；</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">4</span><span class="" style="outline:0px;">、工作细致认真，有耐心，有团队合作精神。</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">5、</span><span class="" style="outline:0px;">好方法来源于你有很多方法，撸起袖子去做问题一个个解决，<span class=" ueditor_underline" style="outline:0px;text-decoration:underline;">主动成长，你懂得.</span></span>
+                            </p>
+                            <p style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <br />
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;"></span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">备注：提交应聘简历时 请附上作品集 提高审核通过率。</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <br class="" style="outline:0px;" />
+                                优先获得面试机会，请加用人部门微信：daxiahuoyuanyi，备注【姓名与面试岗位】信息。
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h5><span>SEO</span>工作地点：上海</h5>
+                        <div class="tabTxt">
+                            <h4>职位描述  Job Description</h4>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">1、负责公司网站的seo优化，提出相关优化方案。 &nbsp;</span>
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">2、评估、分析网站的关键词，提升网站关键词的搜索排名。 &nbsp;</span>
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">3、研究和监控竞争对手和搜索引擎的做法和变化，及时提出调整方案。&nbsp;</span>
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">4、跟踪和分析引入的SEO流量以及相关关键词的排名，形成阶段性数据报告并提出后续优化方案。 &nbsp;</span>
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">5、不断开拓网站的外部链接，提升网站PR值、alexa排名。 &nbsp;</span>
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">6、负责对内容、构架及代码等进行优化。注重内链外链的建设，分析搜索引擎流量，有效支持运营产品发展。 &nbsp;</span>
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <br />
+                            </p>
+                            <h4>任职资格  Qualifications</h4>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span style="line-height:1.5;">1、大专以上学历，3年以上的同等职位经验。 &nbsp;</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">2、精通SEO原理及策略，掌握Google、baidu等搜索引擎的基本排名规律，并精通以上各类搜索引擎的优化，包括站内优化、站外优化及内外部链接优化，并有成功案例。 &nbsp;</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">3、熟悉网站建设的相应技术（对于Web服务器、Apache、域名、Unix等名词不陌生，并了解它们的工作原理，熟悉HTML、PHP、CSS等页面语言，精通HTML者为佳）。 &nbsp;</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">4、有快速的学习能力，能持续关注搜索引擎的发展及最新动向。&nbsp;</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">5、根据网站不同产品制定关键字策略，协调推广专员进行实施，并进行监控，对方案不断进行持续调优。 &nbsp;</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">6、拥有丰富的外链获取经验，能够快速高效的获得优质外链资源。</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">7、</span><span class="" style="outline:0px;">好方法来源于你有很多方法，撸起袖子去做问题一个个解决，<span class=" ueditor_underline" style="outline:0px;text-decoration:underline;">主动成长，你懂得.</span></span>
+                            </p>
+                            <p style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+	<span class="" style="outline:0px;"><span class=" ueditor_underline" style="outline:0px;text-decoration:underline;"><br style="outline:0px;" />
+</span></span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;"></span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">备注：提交应聘简历时 请附上作品集 提高审核通过率。</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <br class="" style="outline:0px;" />
+                                优先获得面试机会，请加用人部门微信：daxiahuoyuanyi，备注【姓名与面试岗位】信息。
+                            </p>
+                            <div>
+                                <br />
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h5><span>品牌主管</span>工作地点：上海</h5>
+                        <div class="tabTxt">
+                            <h4>职位描述  Job Description</h4>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">1、</span><span class="" style="outline:0px;">根据集团公司发展及战略目标，组织制定月、季度、年度品牌建设方案（可落地），进一步</span>提升公司品牌影响力和美誉度；
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                2、参与审定市场部运营推广、预算报价、媒介渠道等策略研究并监督效果；
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                3、负责集团公司品牌策划，企业VI标识系列更新迭代，确保品牌形象的统一传播；&nbsp;
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                4、负责优化部门的组织架构、职责分工、绩效管理和品牌推广费用的整体控制工作，确保精简高效；
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                5、统筹&amp;把关&amp;攥写品牌文化、人物对话、工程案例、新闻活动、活动报告等稿件；
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                6、管理、培养部门员工，制定公司各部门品牌建设OKR考核机制并监管。
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <br />
+                            </p>
+                            <p class="" style="outline:0px;margin-top:1em;margin-bottom:1em;color:#777777;font-family:&quot;font-size:14px;line-height:22px;white-space:normal;background-color:#FAFAFA;">
+                                <br />
+                            </p>
+                            <h4>任职资格  Qualifications</h4>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span style="line-height:1.5;">1、全日制本科及以上学历，新闻、传播、公共关系等相关专业优先；</span>
+                            </p>
+                            <p class="MsoListParagraph" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+	<span class="" style="outline:0px;">2、3年以上相关品牌管理经验，有品牌策划、营销顾问、4A广告公司或公关公司工作背景优先；<br style="outline:0px;" />
+</span>
+                            </p>
+                            <p class="MsoListParagraph" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                3、具备优秀的文案编辑和撰写能力，文字功底扎实、感染力强，熟练掌握深度稿件攥写技巧；
+                            </p>
+                            <p class="MsoListParagraph" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                4、具备积极主动的学习钻研精神，有较强的发散思维，对品牌建设和口碑营销有独到的分析和拓展能力；
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">5、良好的形象气质，注重个人修养，品行端正，有创业精神，较强的理解力、沟通和谈判能力，能承受较强的工作压力；</span>
+                            </p>
+                            <p class="MsoListParagraph" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                6、具有广泛的媒体、代理商资源，优秀的人际交往能力，熟悉各类广告投放的效果评估和结算方式；
+                            </p>
+                            <p class="MsoListParagraph" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                7、熟练使用excel、PPT等工具。
+                            </p>
+                            <p class="MsoListParagraph" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">8</span><span class="" style="outline:0px;">、好方法来源于你有很多方法，撸起袖子去做</span><span class="" style="outline:0px;">,</span><span class="" style="outline:0px;">问题一个个解决，<span class=" " style="outline:0px;">主动成长，你懂得</span>。</span>
+                            </p>
+                            <p class="MsoListParagraph" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+	<span class="" style="outline:0px;"><br style="outline:0px;" />
+</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;"></span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <span class="" style="outline:0px;">备注：提交应聘简历时 请附上作品集 提高审核通过率。</span>
+                            </p>
+                            <p class="" style="margin-top:1em;margin-bottom:1em;white-space:normal;outline:0px;color:#777777;font-family:&quot;font-size:14px;line-height:22px;background-color:#FAFAFA;">
+                                <br class="" style="outline:0px;" />
+                                优先获得面试机会，请加用人部门微信：daxiahuoyuanyi，备注【姓名与面试岗位】信息。
+                            </p>
+                        </div>
+                    </li>
+
+
+
+
+                </ul>
+
+
+            </div>
         </div>
     </div>
-</article>
-<div class="met_clear"></div>
 
-{include file="pub/footer" /}
+</div>
+
+
+<script type='text/javascript'>
+    $(function(){
+        $("a.order").click(function(){
+            $(".orderBy").toggle();
+        });
+    });
+</script>
+<footer>
+    <div class="cw">
+        <div class="foot01">
+            <a href="../map/policy.aspx.htm" tppabs="http://www.jhecn.com/map/policy.aspx">隐私政策</a><span></span><a href="../map/provision.aspx.htm" tppabs="http://www.jhecn.com/map/provision.aspx">服务条款</a><span></span><a href="../map/report.aspx.htm" tppabs="http://www.jhecn.com/map/report.aspx">举报投诉</a><span></span><a href="../map/index.htm" tppabs="http://www.jhecn.com/map/">网站地图</a><span></span><!--<a href="">分支机构</a><span></span>--><a href="javascript:;" class="order">分支机构</a><span></span><a href="index.htm" tppabs="http://www.jhecn.com/contact/">联系我们</a>
+            <div class="orderBy">
+                <a href="">梧桐邦家装</a><a href="">尊御软装</a>
+            </div>
+        </div>
+        <h3 class="copyRight">上海稼禾装饰工程设计有限公司版权所有 2016.All rights reserved. 浙ICP备12027075号</h3>
+    </div>
+</footer>
+
+<script type="text/javascript">
+    window._pt_lt = new Date().getTime();
+    window._pt_sp_2 = [];
+    _pt_sp_2.push('setAccount,72bdf52c');
+    var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    (function() {
+        var atag = document.createElement('script'); atag.type = 'text/javascript'; atag.async = true;
+        atag.src = _protocol + 'js.ptengine.cn/72bdf52c.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(atag, s);
+    })();
+</script>
+<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = '../../static.meiqia.com/dist/meiqia-1.js'/*tpa=http://static.meiqia.com/dist/meiqia.js*/;
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', 30202);
+
+    _MEIQIA('withoutBtn');
+</script>
+<script type='text/javascript'>
+
+    _MEIQIA('withoutBtn');
+    _MEIQIA('init');
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82999346-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>
