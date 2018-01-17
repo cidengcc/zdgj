@@ -1,0 +1,55 @@
+{include file="pub/header" /}
+  <section class="sidebar-v2__section">
+   <div class="section__head"> 
+    <div class="navbar sidebar-v2"> 
+     <div class="container-fluid" id="sidebar-v2__accordion"> 
+      <div class="navbar-header   "> 
+       <button type="button" class="navbar-toggle collapsed sidebar-v2__button btn" data-toggle="collapse" data-target="#sidebar-v2__list2" aria-expanded="false" data-parent="#sidebar-v2__accordion"> <span class="glyphicon glyphicon-menu-hamburger"></span> </button> 
+       <h1 class="dropdown-toggle sidebar-v2__h1 btn " data-toggle="collapse" data-target="#sidebar-v2__list3" data-parent="#sidebar-v2__accordion"> <button type="button" disabled="disabled"></button> <span>案例展示 </span> </h1> 
+      </div> 
+      <div class="panel"> 
+       <div class="collapse navbar-collapse" id="sidebar-v2__list2"> 
+        <ul class="nav navbar-nav navbar-right" id="collapseTwo">
+         {foreach $type as $vo}
+         <li><a href="{:url('cases/index',array('type'=>$vo.type))}">{$typeArr[$vo.type]}</a></li>
+         {/foreach}
+
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <div class="met_clear"></div> 
+  <article class="sidebar-v2__article"> 
+   <div class="met_article"> 
+    <div class="product-v2"> 
+     <ul class="product-v2__list list-unstyled">
+      {foreach $list as $vo}
+      <li class="col-lg-3 col-md-4 col-sm-6 v2-mtb15"> <a href="{:url('cases/case_detail',array('articlesID'=>$vo.articlesID))}" title="{$vo.title}" target="_self"> <img src="{$vo.url}" />
+       <!--x="600" y="500"--> </a>
+       <div class="product-v2__list__box v2-ac product-v2__dg">
+        <h2>{$vo.title}</h2>
+        <ol class="list-unstyled v2-ac v2-mt15">
+         <li class="col-xs-4"><em>面积</em><span>{$vo.area}m&sup2;</span></li>
+         <li class="col-xs-4"><em>地址</em><span>中国</span></li>
+         <li class="col-xs-4"><em>风格</em><span>现代</span></li>
+        </ol>
+        <p class="v2-mt15 v2-lc"><i>●</i>{$vo.describe}...</p>
+        <a href="{:url('cases/case_detail',array('articlesID'=>$vo.articlesID))}" title="{$vo.title}" class="v2-mt15" target="_self">查看详情<i class="glyphicon glyphicon-menu-right"></i></a>
+       </div>
+      </li>
+
+      {/foreach}
+
+     </ul> 
+     <div class="met_clear"></div> 
+     <div class="met_pager">
+       第一页&nbsp;上一页&nbsp;下一页&nbsp;尾页&nbsp;8条/页&nbsp;共1页/8条&nbsp;当前第1页&nbsp; 
+     </div> 
+    </div> 
+   </div> 
+  </article> 
+  <div class="met_clear"></div>
+  {include file="pub/footer" /}

@@ -1,0 +1,107 @@
+{include file="pub/header" /}
+<section class="sidebar-v2__section">
+ <div class="section__head">
+  <div class="navbar sidebar-v2">
+   <div class="container-fluid" id="sidebar-v2__accordion">
+    <div class="navbar-header   ">
+     <button type="button" class="navbar-toggle collapsed sidebar-v2__button btn" data-toggle="collapse" data-target="#sidebar-v2__list2" aria-expanded="false" data-parent="#sidebar-v2__accordion"> <span class="glyphicon glyphicon-menu-hamburger"></span> </button>
+     <h1 class="dropdown-toggle sidebar-v2__h1 btn " data-toggle="collapse" data-target="#sidebar-v2__list3" data-parent="#sidebar-v2__accordion"> <button type="button" disabled="disabled"></button> <span>案例展示 </span> </h1>
+    </div>
+    <div class="panel">
+     <div class="collapse navbar-collapse" id="sidebar-v2__list2">
+      <ul class="nav navbar-nav navbar-right" id="collapseTwo">
+       {foreach $type as $vo}
+       <li><a href="{:url('cases/index',array('type'=>$vo.type))}">{$typeArr[$vo.type]}</a></li>
+       {/foreach}
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+<div class="met_clear"></div>
+<article class="sidebar-v2__article">
+   <div class="met_article"> 
+    <div id="showproduct"> 
+     <div class="pshow v2-ac showproduct-v2__main"> 
+      <div class="col-sm-6 showproduct-v2__left"> 
+       <div class="met_box"> 
+        <div class="met_imgshowbox showproduct-v2"> 
+         <div class="my-simple-gallery slides tab-content">
+          {foreach $img as $vo}
+
+          <figure class="tab-pane fade  in active " id="pro_{$vo.article_imgID}">
+           <a href="{$vo.url}"> <img src="{$vo.url}" alt="{$list.title}" />
+            <!--x="720" y="400"--> </a>
+           <figcaption>
+            会议室
+           </figcaption>
+          </figure>
+          {/foreach}
+
+         </div> 
+        </div>
+        <ul class="nav nav-pills showproduct-v2__list" role="tablist">
+         {foreach $img as $vo}
+
+         <li class="active"><a href="#pro_{$vo.article_imgID}}" role="tab" data-toggle="tab"><img src="{$vo.url}" alt="{$list.title}" width="70" height="70" />
+           <!--x="70" y="70"--></a></li>
+         {/foreach}
+
+        </ul> 
+       </div> 
+      </div> 
+      <div class="col-sm-6 showproduct-v2__right"> 
+       <div class="showproduct-v2__para"> 
+        <h1 class="showproduct-v2__para__h1">{$list.title}</h1>
+        <ul class="v2-list showproduct-v2__para__ul"> 
+         <li><span>面积</span>140m&sup2;</li> 
+         <li><span>地址</span>中国</li> 
+         <li><span>风格</span>现代</li> 
+        </ul>
+        <p class="desc">描述内容简介</p>
+        <p class="desc">{$list.describe}</p>
+       </div>
+      </div> 
+     </div> 
+     <div class="met_clear"></div> 
+     <ol class="met_nav v2-ac showproduct-v2__nav"> 
+      <li class="met_now"><a href="#mettab1">详细信息</a></li> 
+     </ol> 
+     <div class="met_nav_contbox"> 
+      <div class="met_editor ">
+       <div>
+        <p><span style="font-family: monospace; font-size: medium; white-space: pre-wrap;">&nbsp;&nbsp;{$list.content}</span></p>
+        <div id="metinfo_additional"></div>
+       </div>
+       <div class="met_clear"></div>
+      </div> 
+     </div> 
+     <div class="met_tools"> 
+      <div class="jiathis_style">
+       <span class="jiathis_txt">分享到：</span>
+       <a class="jiathis_button_icons_1"></a>
+       <a class="jiathis_button_icons_2"></a>
+       <a class="jiathis_button_icons_3"></a>
+       <a class="jiathis_button_icons_4"></a>
+       <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+      </div>
+      <script type="text/javascript" src="/static/index/js/jia.js?uid=1346378669840136" charset="utf-8"></script>
+      <span class="met_Clicks met_none">
+       <!--累计浏览次数--></span> 
+      <ul class="met_page">
+       {if condition="$list1"}
+       <li class="met_page_preinfo"><span>上一条</span><a href="{:url('cases/case_detail',array('articlesID'=>$list1.articlesID))}">{$list1.title}</a></li>
+       {/if}
+       {if condition="$list2"}
+       <li class="met_page_preinfo"><span>下一条</span><a href="{:url('cases/case_detail',array('articlesID'=>$list2.articlesID))}">{$list2.title}</a></li>
+       {/if}
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </article> 
+  <div class="met_clear"></div>
+
+  {include file="pub/footer" /}

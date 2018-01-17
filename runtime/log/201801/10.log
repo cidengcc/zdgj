@@ -1,0 +1,1719 @@
+[ 2018-01-10T00:02:00+08:00 ] 127.0.0.1 127.0.0.1 GET /home/about/honor.html
+[ log ] zd.me/home/about/honor.html [运行时间：0.049476s][吞吐率：20.21req/s] [内存消耗：1,533.95kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'about',
+    2 => 'honor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/about/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method honor ] {
+  @@ E:\PHP\project\zd\application\home\controller\About.php 17 - 20
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\about\honor.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000873s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.023554s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY imgID asc   [ RunTime:0.000403s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:02:00+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.017149s][吞吐率：58.31req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:02:00+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.019740s][吞吐率：50.66req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:02:41+08:00 ] 127.0.0.1 127.0.0.1 GET /home/about/honor.html
+[ log ] zd.me/home/about/honor.html [运行时间：0.054096s][吞吐率：18.49req/s] [内存消耗：1,380.72kb] [文件加载：46]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'about',
+    2 => 'honor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/about/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000740s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.021559s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order asc' at line 1[E:\PHP\project\zd\thinkphp\library\think\db\Connection.php:357]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:02:51+08:00 ] 127.0.0.1 127.0.0.1 GET /home/about/honor.html
+[ log ] zd.me/home/about/honor.html [运行时间：0.046570s][吞吐率：21.47req/s] [内存消耗：1,408.98kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'about',
+    2 => 'honor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/about/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method honor ] {
+  @@ E:\PHP\project\zd\application\home\controller\About.php 17 - 20
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\about\honor.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000943s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.020062s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000420s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:02:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.015258s][吞吐率：65.54req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:02:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.018053s][吞吐率：55.39req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:11+08:00 ] 127.0.0.1 127.0.0.1 GET /home/about/index.html
+[ log ] zd.me/home/about/index.html [运行时间：0.055969s][吞吐率：17.87req/s] [内存消耗：1,658.66kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'about',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/about/honor.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\About.php 10 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\about\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001402s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.014356s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.013050s ]
+[ sql ] [ SQL ] SELECT * FROM `about`  [ RunTime:0.000282s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:11+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.015498s][吞吐率：64.52req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:11+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.013557s][吞吐率：73.76req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:13+08:00 ] 127.0.0.1 127.0.0.1 GET /home/news/index.html
+[ log ] zd.me/home/news/index.html [运行时间：0.058572s][吞吐率：17.07req/s] [内存消耗：1,657.24kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'news',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/about/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\News.php 10 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\news\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000826s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.019703s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.012615s ]
+[ sql ] [ SQL ] SELECT * FROM `about`  [ RunTime:0.000298s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:13+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.013230s][吞吐率：75.59req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:13+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.017470s][吞吐率：57.24req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:16+08:00 ] 127.0.0.1 127.0.0.1 GET /home/cases/index.html
+[ log ] zd.me/home/cases/index.html [运行时间：0.057458s][吞吐率：17.40req/s] [内存消耗：1,585.80kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cases',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/news/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\Cases.php 10 - 15
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\cases\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000824s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.021731s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `articles` [ RunTime:0.012940s ]
+[ sql ] [ SQL ] SELECT * FROM `articles`  [ RunTime:0.000437s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:16+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.012097s][吞吐率：82.66req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:16+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.013861s][吞吐率：72.15req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:22+08:00 ] 127.0.0.1 127.0.0.1 GET /home/about/index.html
+[ log ] zd.me/home/about/index.html [运行时间：0.046848s][吞吐率：21.35req/s] [内存消耗：1,533.69kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'about',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/cases/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\About.php 10 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\about\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000842s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.012699s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.013453s ]
+[ sql ] [ SQL ] SELECT * FROM `about`  [ RunTime:0.000294s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:22+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.013229s][吞吐率：75.59req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:22+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.016419s][吞吐率：60.91req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:23+08:00 ] 127.0.0.1 127.0.0.1 GET /home/index/index.html
+[ log ] zd.me/home/index/index.html [运行时间：0.055143s][吞吐率：18.13req/s] [内存消耗：1,571.38kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/about/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\Index.php 9 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'gongsi',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000815s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.022412s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.012670s ]
+[ sql ] [ SQL ] SELECT * FROM `about` WHERE  `aboutID` = 1 LIMIT 1    [ RunTime:0.000373s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:23+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.011850s][吞吐率：84.39req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:23+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.017683s][吞吐率：56.55req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:26+08:00 ] 127.0.0.1 127.0.0.1 GET /home/contact/index.html
+[ log ] zd.me/home/contact/index.html [运行时间：0.070831s][吞吐率：14.12req/s] [内存消耗：1,535.74kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'contact',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\Contact.php 10 - 20
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\contact\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'list1',
+  4 => 'list2',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000756s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.019929s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.013892s ]
+[ sql ] [ SQL ] SELECT * FROM `about` WHERE  `aboutID` IN (1,2)    [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `contact` [ RunTime:0.013780s ]
+[ sql ] [ SQL ] SELECT * FROM `contact` WHERE  `contactID` IN (1,2,3,5,8)       [ RunTime:0.000379s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:26+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.012260s][吞吐率：81.56req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:26+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.015695s][吞吐率：63.71req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:26+08:00 ] 127.0.0.1 127.0.0.1 GET /home/service/index.html
+[ log ] zd.me/home/service/index.html [运行时间：0.069947s][吞吐率：14.30req/s] [内存消耗：1,670.25kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'service',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/contact/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\Service.php 10 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\service\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000973s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.018406s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000853s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.015128s ]
+[ sql ] [ SQL ] SELECT * FROM `about`  [ RunTime:0.000345s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:26+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.013893s][吞吐率：71.98req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:26+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.015406s][吞吐率：64.91req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:27+08:00 ] 127.0.0.1 127.0.0.1 GET /home/cases/index.html
+[ log ] zd.me/home/cases/index.html [运行时间：0.053177s][吞吐率：18.81req/s] [内存消耗：1,444.48kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'cases',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/service/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\Cases.php 10 - 15
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\cases\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000719s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.019577s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `articles` [ RunTime:0.012722s ]
+[ sql ] [ SQL ] SELECT * FROM `articles`  [ RunTime:0.000337s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:27+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.011734s][吞吐率：85.22req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:27+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.020000s][吞吐率：50.00req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:28+08:00 ] 127.0.0.1 127.0.0.1 GET /home/news/index.html
+[ log ] zd.me/home/news/index.html [运行时间：0.059628s][吞吐率：16.77req/s] [内存消耗：1,533.27kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'news',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/cases/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\News.php 10 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\news\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000899s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.021080s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.014290s ]
+[ sql ] [ SQL ] SELECT * FROM `about`  [ RunTime:0.000353s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:28+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.014222s][吞吐率：70.31req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:28+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.023281s][吞吐率：42.95req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:28+08:00 ] 127.0.0.1 127.0.0.1 GET /home/about/index.html
+[ log ] zd.me/home/about/index.html [运行时间：0.056233s][吞吐率：17.78req/s] [内存消耗：1,533.69kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'about',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/news/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\About.php 10 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\about\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000834s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.021725s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.013779s ]
+[ sql ] [ SQL ] SELECT * FROM `about`  [ RunTime:0.000318s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:28+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.016391s][吞吐率：61.01req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:28+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.016029s][吞吐率：62.39req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /home/index/index.html
+[ log ] zd.me/home/index/index.html [运行时间：0.055584s][吞吐率：17.99req/s] [内存消耗：1,430.38kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/about/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\Index.php 9 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\index\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'gongsi',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000816s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.021605s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000666s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.012141s ]
+[ sql ] [ SQL ] SELECT * FROM `about` WHERE  `aboutID` = 1 LIMIT 1    [ RunTime:0.000337s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.013890s][吞吐率：71.99req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.017183s][吞吐率：58.20req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /home/about/index.html
+[ log ] zd.me/home/about/index.html [运行时间：0.071936s][吞吐率：13.90req/s] [内存消耗：1,533.69kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'about',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\About.php 10 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\about\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011419s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.021225s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.014297s ]
+[ sql ] [ SQL ] SELECT * FROM `about`  [ RunTime:0.000347s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.013407s][吞吐率：74.59req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.015337s][吞吐率：65.20req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /home/news/index.html
+[ log ] zd.me/home/news/index.html [运行时间：0.057899s][吞吐率：17.27req/s] [内存消耗：1,533.27kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'news',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/about/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\News.php 10 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\news\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000792s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.020363s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.013654s ]
+[ sql ] [ SQL ] SELECT * FROM `about`  [ RunTime:0.000328s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.024443s][吞吐率：40.91req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.018071s][吞吐率：55.34req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:30+08:00 ] 127.0.0.1 127.0.0.1 GET /home/service/index.html
+[ log ] zd.me/home/service/index.html [运行时间：0.068332s][吞吐率：14.63req/s] [内存消耗：1,537.28kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'service',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/news/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\Service.php 10 - 16
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\service\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010350s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.021580s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.012759s ]
+[ sql ] [ SQL ] SELECT * FROM `about`  [ RunTime:0.000287s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:30+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.014649s][吞吐率：68.26req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:30+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.020837s][吞吐率：47.99req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:30+08:00 ] 127.0.0.1 127.0.0.1 GET /home/contact/index.html
+[ log ] zd.me/home/contact/index.html [运行时间：0.072607s][吞吐率：13.77req/s] [内存消耗：1,412.38kb] [文件加载：40]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'contact',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/home/service/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHP\project\zd\application\home\controller\Contact.php 10 - 20
+}
+
+[ info ] [ VIEW ] E:\PHP\project\zd\public/../application/home\view\contact\index.html [ array (
+  0 => 'img1',
+  1 => 'img2',
+  2 => 'img3',
+  3 => 'list1',
+  4 => 'list2',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000859s ] mysql:dbname=zd;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.021532s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `img_type` = 1 ORDER BY orderby asc   [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `about` [ RunTime:0.013101s ]
+[ sql ] [ SQL ] SELECT * FROM `about` WHERE  `aboutID` IN (1,2)    [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `contact` [ RunTime:0.014017s ]
+[ sql ] [ SQL ] SELECT * FROM `contact` WHERE  `contactID` IN (1,2,3,5,8)       [ RunTime:0.000326s ]
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:30+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff2
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff2 [运行时间：0.015865s][吞吐率：63.03req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-10T00:04:30+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/fonts/glyphicons-halflings-regular.woff
+[ log ] zd.me/static/index/fonts/glyphicons-halflings-regular.woff [运行时间：0.017395s][吞吐率：57.49req/s] [内存消耗：679.95kb] [文件加载：27]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://zd.me/static/index/css/metinfo.css',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'origin' => 'http://zd.me',
+  'connection' => 'close',
+  'host' => 'zd.me',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\PHP\project\zd\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

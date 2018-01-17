@@ -1,0 +1,84 @@
+{include file="pub/header" /}
+<section class="v2-product">
+    <div class="v2-title">
+        <h2 class="v2-title__h2 v2-inner v2-ac"> <span></span> </h2>
+    </div>
+    <div class="v2-inner v2-product__box">
+        <ul class="v2-list v2-ac">
+            {foreach $list1 as $vo}
+            <li class="col-lg-3 col-sm-6"> <a href="{:url('Cases/index',array('type'=>$vo.type))}" title="{$vo.title}" target="_self"> <img src="{$vo.url}" title="$typeArr[$vo.type]" alt="{$vo.title}" />
+                <!--x="400" y="200"--> <h2 class="v2-product__box__h2 v2-to"><i>+</i>{$typeArr[$vo.type]}</h2> </a> </li>
+            {/foreach}
+
+        </ul>
+        <a href="{:url('Cases/index')}" title="" class="v2-product__more"><span>SEE MORE</span></a>
+    </div>
+</section>
+<section class="v2-news">
+    <div class="v2-title">
+        <h2 class="v2-title__h2 v2-inner v2-ac"> <span>新闻资讯</span> <a href="about.html" title="新闻资讯">MORE</a> </h2>
+    </div>
+    <div class="v2-news__box v2-inner v2-ac">
+        <div class="col-sm-6 v2-news__left">
+            <a href="news_detail.html?23.html" title="低碳建筑首选天然石材 环保健康受欢迎" class="a-img" target="_self"> <img src="/static/index/images/201602241939008001.jpg" />
+                <!--x="600" y="240"--> </a>
+            <a href="news_detail.html?23.html" title="低碳建筑首选天然石材 环保健康受欢迎" class="a-title v2-ac" target="_self"> <span class="v2-to"><p>2016-01-20</p>低碳建筑首选天然石材 环保健康受欢迎</span> </a>
+            <p>所谓低碳经济，是指在可持续发展理念指导下，通过技术创新、制度创新、产业转型等多种手段，尽可能地减少煤炭石油等高碳能源消耗，减少排放，达到经济社会发展与生态环境保护双赢的一种经济发展形态。发展低碳经济，一方面是积极承担环境保护责任，完成国家节...</p>
+        </div>
+        <div class="col-sm-6 v2-news__right">
+            <div class="v2-news__right__box">
+                <a href="news_detail.html?24.html" title="装修公司黑幕！预算报价陷阱你中枪了没？" class="v2-news__right__a v2-ac" target="_self"> <i>02</i> <span> <h3 class="v2-to"><i>2016-02-24</i>装修公司黑幕！预算报价陷阱你中枪了没？</h3> <p class="v2-lc"> 装修新房，是很多业主既高兴又担心做的事情了。高兴的是，终于可以如愿拥有自己的房子，担心的是：自己没有...</p> </span> </a>
+                <a href="news_detail.html?23.html" title="低碳建筑首选天然石材 环保健康受欢迎" class="v2-news__right__a v2-ac" target="_self"> <i>03</i> <span> <h3 class="v2-to"><i>2016-01-20</i>低碳建筑首选天然石材 环保健康受欢迎</h3> <p class="v2-lc"> 所谓低碳经济，是指在可持续发展理念指导下，通过技术创新、制度创新、产业转型等多种手段，尽可能地减少煤...</p> </span> </a>
+                <a href="news_detail.html?22.html" title="将文化融入设计 以设计推动创新" class="v2-news__right__a v2-ac" target="_self"> <i>04</i> <span> <h3 class="v2-to"><i>2016-01-20</i>将文化融入设计 以设计推动创新</h3> <p class="v2-lc"> 2013年11月13日，装饰有限公司联合北京大学政府管理学院承办了“文化与设计”主题设计沙龙活动。此...</p> </span> </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="v2-case">
+    <div class="v2-title">
+        <h2 class="v2-title__h2 v2-inner v2-ac"> <span>案例展示</span> </h2>
+    </div>
+    <div class="v2-case__box v2-inner v2-ac">
+        <ul class="v2-list v2-ac">
+            {foreach $list2 as $vo}
+            <li class="col-lg-3 col-sm-6"> <a href="{:url('Cases/case_detail',array('articlesID'=>$vo.articlesID))}" class="v2-case__box__img" title="{$vo.title}" target="_self"> <img src="{$vo.url}" width="400" height="200" title="{$vo.title}" alt="{$vo.title}" /> </a> <a href="{:url('Cases/case_detail',array('articlesID'=>$vo.articlesID))}" class="v2-case__h2" title="{$vo.title}" target="_self"> <h2> {$vo.title} <i class="">+</i> </h2> <p>{$vo.content}</p> </a> </li>
+            {/foreach}
+        </ul>
+    </div>
+</section>
+<section class="v2-contact">
+    <div class="v2-title">
+        <h2 class="v2-title__h2 v2-inner v2-ac"> <span>关于我们</span> </h2>
+    </div>
+    <!--<div class="v2-inner v2-ac v2-contact__make">
+     ABOUT US
+    </div> -->
+    <div class="v2-inner v2-ac">
+        <div class="col-sm-8 col-xs-12 v2-ac v2-contact_right">
+            <h3 class="v2-to"><a href="#" title="公司简介">MORE +</a>公司简介</h3>
+            <div class="v2-contact--color">
+                <p>“装饰设计”是装饰集团旗下的一家子公司。2007年成立。公司主要从事展柜、会展方面的设计、研发、生产、于一体的专业品牌推广服务型企业。公司设有设计部、10000平米生产研发基地。</p>
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-12 v2-ac v2-contact_left">
+            <h3 class="v2-to">加入我们</h3>
+            <div class="v2-contact--color">
+                <p><span style="color: rgb(99, 99, 99); font-family: 'Microsoft YaHei', 华文细黑, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 22px;">也许您是一位资深设计师（效果图、施工图），这里会提供无数的机会和实现价值的平台。</span></p>
+            </div>
+        </div>
+        <div class="met_clear"></div>
+    </div>
+</section>
+<!--<section class="v2-link">
+    <div class="v2-title">
+        <h2 class="v2-title__h2 v2-inner v2-ac"> <span>友情链接</span> </h2>
+    </div>
+    <dl class="v2-inner">
+        <dd>
+            <div class="tem_txt">
+                <a href="" title="" target="_blank">跳转1</a>
+            </div>
+        </dd>
+    </dl>
+</section>-->
+{include file="pub/footer" /}
