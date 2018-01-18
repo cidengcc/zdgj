@@ -63,4 +63,31 @@ class Test extends Base
     {
         return $this->fetch();
     }
+
+    /**
+     * 编辑器
+     *
+     * @ author: ZUORENCI
+     * @ E-mail:904725327@qq.com
+     * @ date: 2018/1/18
+     * @access public|private|protected
+     * @param  mixed    name    comment
+     * @param  int    name    comment
+     * @param  string    name    comment
+     * @param  bool       name    comment
+     * @param  array   name    comment
+     * @return void|int|string|boolean|array        comment
+     */
+    public function editor(){
+        if(request()->isPost()){
+            $content = input('post.content');
+            $data['conten'] = $content;
+            $re = Db::name('news')->where('newID',1)->update($data);
+            dump($re);
+        }else{
+            $list = Db::name('news')->where('newID',1)->find();
+            $this->assign('list',$list);
+            return $this->fetch();
+        }
+    }
 }
