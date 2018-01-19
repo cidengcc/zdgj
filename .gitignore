@@ -1,3 +1,7 @@
 public/static/ImgUpload/
 runtime/
+<<<<<<< HEAD
 .idea/
+=======
+public/upload/image/
+>>>>>>> 5853bf9139e3ab0eab2ecdd9b50167f30a6f88dc
