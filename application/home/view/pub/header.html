@@ -1,10 +1,10 @@
 <header>
     <div class="cw">
         <div class="header">
-            <a href="index.htm" tppabs="http://www.jhecn.com/" class="logo fl" title="稼禾建设"><img src="/static/home/images/commom/logo.png" tppabs="http://www.jhecn.com/images/commom/logo.png" /></a>
+            <a href="{:url('Index/index')}" tppabs="http://www.jhecn.com/" class="logo fl" title="稼禾建设"><img src="/static/home/images/commom/logo.png" tppabs="http://www.jhecn.com/images/commom/logo.png" /></a>
             <div class="fr">
                 <ul class="nav fl">
-                    <li><a href="index.htm" tppabs="http://www.jhecn.com/" class="tit cur">首页</a></li>
+                    <li><a href="{:url('Index/index')}" tppabs="http://www.jhecn.com/" class="tit cur">首页</a></li>
                     <li>
                         <a href="{:url('About/index')}" tppabs="http://www.jhecn.com/about/" class="tit">集团简介</a>
                         <div class="dropdown" style="width:240px;left:-120px;">
@@ -24,29 +24,12 @@
                         </div>
                     </li>
                     <li>
-                        <a href="{:url('Cases/index')}" tppabs="http://www.jhecn.com/case/" class="tit">工程案例</a>
+                        <a href="{:url('Cases/index')}" class="tit">工程案例</a>
                         <div class="dropdown" style="width:595px;left:-297px;">
-
-                            <a href="{:url('Cases/case_class')}" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=1">商业综合体</a>
+                            {volist name="type" id="vo"}
+                            <a href="{:url('Cases/case_class')}">{$vo.name}</a>
                             <em>/</em>
-
-                            <a href="case/caselist.aspx-cid=2.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=2">星级酒店</a>
-                            <em>/</em>
-
-                            <a href="case/caselist.aspx-cid=3.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=3">办公楼</a>
-                            <em>/</em>
-
-                            <a href="case/caselist.aspx-cid=4.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=4">别墅豪宅</a>
-                            <em>/</em>
-
-                            <a href="case/caselist.aspx-cid=5.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=5">精装公寓</a>
-                            <em>/</em>
-
-                            <a href="case/caselist.aspx-cid=6.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=6">软装设计</a>
-
-
-
-
+                            {/volist}
                         </div>
                     </li>
                     <li>
@@ -63,3 +46,33 @@
     </div>
     </div>
 </header>
+
+<div class="rightTool">
+    <ul>
+        <li>
+            <a href="javascript:void(0)" onclick="_MEIQIA('showPanel')"><img src="/static/home/images/commom/ico_1.png" tppabs="http://www.jhecn.com/images/commom/ico_1.png" /></a>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="/static/home/images/commom/ico_2.png" tppabs="http://www.jhecn.com/images/commom/ico_2.png" /></a>
+            <div class="box">
+                <a href="javascript:;" class="tl">联系<br />方式</a>
+                <div class="lx">
+                    <h3>全国免费热线</h3>
+                    <h4>13385290909</h4>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;"><img src="/static/home/images/commom/ico_3.png" tppabs="http://www.jhecn.com/images/commom/ico_3.png" /></a>
+            <div class="box">
+                <a href="javascript:;" class="scan">扫一扫</a>
+                <div class="wx">
+                    <img src="/static/home/images/commom/code.jpg" tppabs="http://www.jhecn.com/images/commom/code.jpg" />
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;" class="backTop"><img src="/static/home/images/commom/ico_4.png" tppabs="http://www.jhecn.com/images/commom/ico_4.png" /></a>
+        </li>
+    </ul>
+</div>
