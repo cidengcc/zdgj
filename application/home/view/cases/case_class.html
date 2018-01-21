@@ -2,7 +2,7 @@
 
 <!DOCTYPE HTML>
 <html>
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>商业综合体</title><meta name="keywords" content="" /><meta name="description" content="" />
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>{$type_name}</title><meta name="keywords" content="" /><meta name="description" content="" />
 <!-- Apple iOS and Android stuff -->
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -76,134 +76,31 @@ $(function(){
 <!-- 面包屑 -->
 <div id="Crumb">
 	<div class="cw">
-		<a href="../index.htm" tppabs="http://www.jhecn.com/" class="home"></a><em>></em><a href="index.htm" tppabs="http://www.jhecn.com/case/">工程案例</a><em>></em><span>商业综合体</span>
+		<a href="../index.htm" tppabs="http://www.jhecn.com/" class="home"></a><em>></em><a href="index.htm" tppabs="http://www.jhecn.com/case/">工程案例</a><em>></em><span>{$type_name}</span>
 	</div>
 </div>
 
 <div class="cw">
 	<div class="pageBody case clearfix">
 	   <ul class="caseList">
-	       
+		   {volist name="list" id="vo"}
 	                <li>
-		               <a href="detail.aspx-cid=1&id=27.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=27">
-			              <img src="/static/ImgUpload/201608/2016082901460349913.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082901460349913.jpg">
-			              <div class="txt">浙江 · 正大集团城市中心F-b7-2地块</div>
+		               <a href="{:url('Cases/case_detail',array('articlesID'=>$vo['articlesID']))}">
+			              <img src="{$vo.url}">
+			              <div class="txt">{$vo.city} · {$vo.title}</div>
 			              <div class="box">
-				             <h6>浙江 · 正大集团城市中心F-b7-2地块</h6>
+				             <h6>{$vo.city} · {$vo.title}</h6>
 				             <h4></h4>
-					         <h5>浙江 · 正大集团城市中心F-b7-2地块</h5>
+					         <h5>{$vo.city} · {$vo.title}</h5>
 					         <span>查看案例</span>
 				          </div>
 			           </a>
 		           </li>
-	            
-	                <li>
-		               <a href="detail.aspx-cid=1&id=11.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=11">
-			              <img src="/static/ImgUpload/201608/201608291105539105.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/201608291105539105.jpg">
-			              <div class="txt">天津 · 泰达一中</div>
-			              <div class="box">
-				             <h6>天津 · 泰达一中</h6>
-				             <h4></h4>
-					         <h5>天津 · 泰达一中</h5>
-					         <span>查看案例</span>
-				          </div>
-			           </a>
-		           </li>
-	            
-	                <li>
-		               <a href="detail.aspx-cid=1&id=14.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=14">
-			              <img src="/static/ImgUpload/201608/2016082911205013723.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082911205013723.jpg">
-			              <div class="txt">重庆 · 东原 · D7整形医院</div>
-			              <div class="box">
-				             <h6>重庆 · 东原 · D7整形医院</h6>
-				             <h4></h4>
-					         <h5>重庆 · 东原 · D7整形医院</h5>
-					         <span>查看案例</span>
-				          </div>
-			           </a>
-		           </li>
-	            
-	                <li>
-		               <a href="detail.aspx-cid=1&id=12.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=12">
-			              <img src="/static/ImgUpload/201608/2016082911115067153.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082911115067153.jpg">
-			              <div class="txt">湖南 · 长沙奥克斯广场</div>
-			              <div class="box">
-				             <h6>湖南 · 长沙奥克斯广场</h6>
-				             <h4></h4>
-					         <h5>湖南 · 长沙奥克斯广场</h5>
-					         <span>查看案例</span>
-				          </div>
-			           </a>
-		           </li>
-	            
-	                <li>
-		               <a href="detail.aspx-cid=1&id=9.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=9">
-			              <img src="/static/ImgUpload/201608/2016082910555485991.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082910555485991.jpg">
-			              <div class="txt">安徽 · 合肥融侨悦城南区商业公共空间</div>
-			              <div class="box">
-				             <h6>安徽 · 合肥融侨悦城南区商业公共空间</h6>
-				             <h4></h4>
-					         <h5>安徽 · 合肥融侨悦城南区商业公共空间</h5>
-					         <span>查看案例</span>
-				          </div>
-			           </a>
-		           </li>
-	            
-	                <li>
-		               <a href="detail.aspx-cid=1&id=94.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=94">
-			              <img src="/static/ImgUpload/201610/2016102102530561076.jpg" tppabs="http://www.jhecn.com/ImgUpload/201610/2016102102530561076.jpg">
-			              <div class="txt">江苏 · 南京万谷 · 慧生活广场</div>
-			              <div class="box">
-				             <h6>江苏 · 南京万谷 · 慧生活广场</h6>
-				             <h4></h4>
-					         <h5>江苏 · 南京万谷 · 慧生活广场</h5>
-					         <span>查看案例</span>
-				          </div>
-			           </a>
-		           </li>
-	            
-	                <li>
-		               <a href="detail.aspx-cid=1&id=98.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=98">
-			              <img src="/static/ImgUpload/201610/2016102103230197630.png" tppabs="http://www.jhecn.com/ImgUpload/201610/2016102103230197630.png">
-			              <div class="txt">江苏 · 南京水平方商场</div>
-			              <div class="box">
-				             <h6>江苏 · 南京水平方商场</h6>
-				             <h4></h4>
-					         <h5>江苏 · 南京水平方商场</h5>
-					         <span>查看案例</span>
-				          </div>
-			           </a>
-		           </li>
-	            
-	                <li>
-		               <a href="detail.aspx-cid=1&id=96.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=96">
-			              <img src="/static/ImgUpload/201610/201610210302206264.jpg" tppabs="http://www.jhecn.com/ImgUpload/201610/201610210302206264.jpg">
-			              <div class="txt">江苏 · 淮安中央新亚国际购物广场</div>
-			              <div class="box">
-				             <h6>江苏 · 淮安中央新亚国际购物广场</h6>
-				             <h4></h4>
-					         <h5>江苏 · 淮安中央新亚国际购物广场</h5>
-					         <span>查看案例</span>
-				          </div>
-			           </a>
-		           </li>
-	            
-	                <li>
-		               <a href="detail.aspx-cid=1&id=95.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=95">
-			              <img src="/static/ImgUpload/201610/2016102102560528191.jpg" tppabs="http://www.jhecn.com/ImgUpload/201610/2016102102560528191.jpg">
-			              <div class="txt">福建 · 三明永安诚上广场</div>
-			              <div class="box">
-				             <h6>福建 · 三明永安诚上广场</h6>
-				             <h4></h4>
-					         <h5>福建 · 三明永安诚上广场</h5>
-					         <span>查看案例</span>
-				          </div>
-			           </a>
-		           </li>
-	            
-	   
-	       
-		   
+		   {/volist}
+
+
+
+
 	   </ul>
 	</div>
 

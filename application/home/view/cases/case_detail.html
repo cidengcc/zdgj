@@ -69,7 +69,7 @@
 <!-- 面包屑 -->
 <div id="Crumb">
  <div class="cw">
-  <a href="../index.htm" tppabs="http://www.jhecn.com/" class="home"></a><em>></em><a href="index.htm" tppabs="http://www.jhecn.com/case/">工程案例</a><em>></em><span>商业综合体</span>
+  <a href="{:url('Cases/index')}" class="home"></a><em>></em><a href="{:url('Cases/index')}" >工程案例</a><em>></em><span>{$type_name}</span>
  </div>
 </div>
 
@@ -84,42 +84,46 @@
     <span id="nextTop" class="btn next"></span>
     <div id="picBox" class="picBox">
      <ul class="cf">
-      <li><img width="680" height="508" src="/static/ImgUpload/201608/2016082910555661916.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082910555661916.jpg"/></li><li><img width="680" height="508" src="/static/ImgUpload/201608/2016082910560217552.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082910560217552.jpg"/></li><li><img width="680" height="508" src="/static/ImgUpload/201608/2016082910560656964.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082910560656964.jpg"/></li><li><img width="680" height="508" src="/static/ImgUpload/201608/2016082910575611130.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082910575611130.jpg"/></li>
+      <li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902045237692.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902045237692.jpg"/></li><li><img width="680" height="508" src="/static/ImgUpload/201608/201608290204576395.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/201608290204576395.jpg"/></li><li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902050267935.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902050267935.jpg"/></li><li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902052233526.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902052233526.jpg"/></li><li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902053552440.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902053552440.jpg"/></li><li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902054397470.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902054397470.jpg"/></li>
 
      </ul>
     </div>
     <div id="listBox" class="listBox">
      <ul class="cf">
-      <li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082910555661916.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082910555661916.jpg"/></li><li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082910560217552.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082910560217552.jpg"/></li><li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082910560656964.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082910560656964.jpg"/></li><li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082910575611130.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082910575611130.jpg"/></li>
+      <li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082902045237692.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902045237692.jpg"/></li><li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/201608290204576395.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/201608290204576395.jpg"/></li><li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082902050267935.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902050267935.jpg"/></li><li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082902052233526.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902052233526.jpg"/></li><li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082902053552440.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902053552440.jpg"/></li><li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082902054397470.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902054397470.jpg"/></li>
 
      </ul>
     </div>
    </div>
+
    <div class="txt fl">
-    <h5>安徽 · 合肥融侨悦城南区商业公共空间 </h5>
+    <h5>{$list.city} · {$list.title}</h5>
     <p>
      <br />
     </p>
     <p class="MsoNormal">
-     <span style="line-height:2;">安徽</span><span style="line-height:2;">&nbsp;·&nbsp;</span><span style="line-height:2;">合肥融侨悦城南区商业公共空间</span>
+     <span style="line-height:2;">{$list.city}</span><span style="line-height:2;">&nbsp;·&nbsp;</span><span style="line-height:2;">{$list.site}</span>
     </p>
     <p class="MsoNormal">
      <o:p></o:p>
     </p>
+    <!--<p class="MsoNormal">-->
+     <!--<span style="line-height:2;">项目地址：合肥</span><o:p></o:p>-->
+    <!--</p>-->
     <p class="MsoNormal">
-     <span style="line-height:2;">项目地址：合肥</span><o:p></o:p>
+     <span style="line-height:2;">项目面积：</span><span style="line-height:2;">{$list.area}</span><span style="line-height:2;">万方</span><o:p></o:p>
     </p>
     <p class="MsoNormal">
-     <span style="line-height:2;">项目面积：</span><span style="line-height:2;">6</span><span style="line-height:2;">万方</span><o:p></o:p>
+     <span style="line-height:2;">设计师：{$list.name}</span><o:p></o:p>
     </p>
     <p class="MsoNormal">
-     <span style="line-height:2;">设计师：黄冬魁</span><o:p></o:p>
+     <span style="line-height:2;">设计团队：{$list.team}</span><o:p></o:p>
     </p>
     <p class="MsoNormal">
      <span style="line-height:2;">项目简介：</span><o:p></o:p>
     </p>
     <p class="MsoNormal">
-     <span style="line-height:2;">合肥融侨悦城占地</span><span style="line-height:2;">293</span><span style="line-height:2;">亩，总建筑面积约</span><span style="line-height:2;">47</span><span style="line-height:2;">万方。拥有</span><span style="line-height:2;">2.6</span><span style="line-height:2;">的低容积率和</span><span style="line-height:2;">41%</span><span style="line-height:2;">的高绿化率，园林整体布局强调有序严谨，尺度阔达，轴线深远，从而形成了一种对称式的景观空间组合。</span><span style="line-height:2;">24</span><span style="line-height:2;">栋</span><span style="line-height:2;">ART DECO</span><span style="line-height:2;">风格高层，铺排其间，沿袭了典雅、简约的法式现代建筑特色。</span><o:p></o:p>
+     <span style="line-height:2;">{$list.content}</span><o:p></o:p>
     </p>
     <span style="line-height:2;"></span><span style="line-height:2;"></span>
     <p>
@@ -143,122 +147,122 @@
  </div>
 </div>
 <script type="text/javascript" src="/static/home/js/change.js" tppabs="http://www.jhecn.com/js/change.js"></script>
-<div class="caseDet02">
- <div class="cw">
-  <h3>相关案列推荐</h3>
-  <div class="cont">
-   <ul>
+<!--<div class="caseDet02">-->
+ <!--<div class="cw">-->
+  <!--<h3>相关案列推荐</h3>-->
+  <!--<div class="cont">-->
+   <!--<ul>-->
 
-    <li>
-     <a href="detail.aspx-cid=1&id=27.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=27">
-      <img src="/static/ImgUpload/201608/2016082901460349913.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082901460349913.jpg">
-      <div class="test">
-       <div class="txt">
-        <div class="word">
-         浙江 · 正大集团城市中心F-b7-2地块
-        </div>
-       </div>
-      </div>
-     </a>
-    </li>
+    <!--<li>-->
+     <!--<a href="detail.aspx-cid=1&id=27.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=27">-->
+      <!--<img src="/static/ImgUpload/201608/2016082901460349913.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082901460349913.jpg">-->
+      <!--<div class="test">-->
+       <!--<div class="txt">-->
+        <!--<div class="word">-->
+         <!--浙江 · 正大集团城市中心F-b7-2地块-->
+        <!--</div>-->
+       <!--</div>-->
+      <!--</div>-->
+     <!--</a>-->
+    <!--</li>-->
 
-    <li>
-     <a href="detail.aspx-cid=1&id=11.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=11">
-      <img src="/static/ImgUpload/201608/201608291105539105.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/201608291105539105.jpg">
-      <div class="test">
-       <div class="txt">
-        <div class="word">
-         天津 · 泰达一中
-        </div>
-       </div>
-      </div>
-     </a>
-    </li>
+    <!--<li>-->
+     <!--<a href="detail.aspx-cid=1&id=11.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=11">-->
+      <!--<img src="/static/ImgUpload/201608/201608291105539105.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/201608291105539105.jpg">-->
+      <!--<div class="test">-->
+       <!--<div class="txt">-->
+        <!--<div class="word">-->
+         <!--天津 · 泰达一中-->
+        <!--</div>-->
+       <!--</div>-->
+      <!--</div>-->
+     <!--</a>-->
+    <!--</li>-->
 
-    <li>
-     <a href="detail.aspx-cid=1&id=14.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=14">
-      <img src="/static/ImgUpload/201608/2016082911205013723.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082911205013723.jpg">
-      <div class="test">
-       <div class="txt">
-        <div class="word">
-         重庆 · 东原 · D7整形医院
-        </div>
-       </div>
-      </div>
-     </a>
-    </li>
+    <!--<li>-->
+     <!--<a href="detail.aspx-cid=1&id=14.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=14">-->
+      <!--<img src="/static/ImgUpload/201608/2016082911205013723.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082911205013723.jpg">-->
+      <!--<div class="test">-->
+       <!--<div class="txt">-->
+        <!--<div class="word">-->
+         <!--重庆 · 东原 · D7整形医院-->
+        <!--</div>-->
+       <!--</div>-->
+      <!--</div>-->
+     <!--</a>-->
+    <!--</li>-->
 
-    <li>
-     <a href="detail.aspx-cid=1&id=12.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=12">
-      <img src="/static/ImgUpload/201608/2016082911115067153.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082911115067153.jpg">
-      <div class="test">
-       <div class="txt">
-        <div class="word">
-         湖南 · 长沙奥克斯广场
-        </div>
-       </div>
-      </div>
-     </a>
-    </li>
+    <!--<li>-->
+     <!--<a href="detail.aspx-cid=1&id=12.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=12">-->
+      <!--<img src="/static/ImgUpload/201608/2016082911115067153.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082911115067153.jpg">-->
+      <!--<div class="test">-->
+       <!--<div class="txt">-->
+        <!--<div class="word">-->
+         <!--湖南 · 长沙奥克斯广场-->
+        <!--</div>-->
+       <!--</div>-->
+      <!--</div>-->
+     <!--</a>-->
+    <!--</li>-->
 
-    <li>
-     <a href="detail.aspx-cid=1&id=94.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=94">
-      <img src="/static/ImgUpload/201610/2016102102530561076.jpg" tppabs="http://www.jhecn.com/ImgUpload/201610/2016102102530561076.jpg">
-      <div class="test">
-       <div class="txt">
-        <div class="word">
-         江苏 · 南京万谷 · 慧生活广场
-        </div>
-       </div>
-      </div>
-     </a>
-    </li>
+    <!--<li>-->
+     <!--<a href="detail.aspx-cid=1&id=94.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=94">-->
+      <!--<img src="/static/ImgUpload/201610/2016102102530561076.jpg" tppabs="http://www.jhecn.com/ImgUpload/201610/2016102102530561076.jpg">-->
+      <!--<div class="test">-->
+       <!--<div class="txt">-->
+        <!--<div class="word">-->
+         <!--江苏 · 南京万谷 · 慧生活广场-->
+        <!--</div>-->
+       <!--</div>-->
+      <!--</div>-->
+     <!--</a>-->
+    <!--</li>-->
 
-    <li>
-     <a href="detail.aspx-cid=1&id=98.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=98">
-      <img src="/static/ImgUpload/201610/2016102103230197630.png" tppabs="http://www.jhecn.com/ImgUpload/201610/2016102103230197630.png">
-      <div class="test">
-       <div class="txt">
-        <div class="word">
-         江苏 · 南京水平方商场
-        </div>
-       </div>
-      </div>
-     </a>
-    </li>
+    <!--<li>-->
+     <!--<a href="detail.aspx-cid=1&id=98.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=98">-->
+      <!--<img src="/static/ImgUpload/201610/2016102103230197630.png" tppabs="http://www.jhecn.com/ImgUpload/201610/2016102103230197630.png">-->
+      <!--<div class="test">-->
+       <!--<div class="txt">-->
+        <!--<div class="word">-->
+         <!--江苏 · 南京水平方商场-->
+        <!--</div>-->
+       <!--</div>-->
+      <!--</div>-->
+     <!--</a>-->
+    <!--</li>-->
 
-    <li>
-     <a href="detail.aspx-cid=1&id=96.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=96">
-      <img src="/static/ImgUpload/201610/201610210302206264.jpg" tppabs="http://www.jhecn.com/ImgUpload/201610/201610210302206264.jpg">
-      <div class="test">
-       <div class="txt">
-        <div class="word">
-         江苏 · 淮安中央新亚国际购物广场
-        </div>
-       </div>
-      </div>
-     </a>
-    </li>
+    <!--<li>-->
+     <!--<a href="detail.aspx-cid=1&id=96.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=96">-->
+      <!--<img src="/static/ImgUpload/201610/201610210302206264.jpg" tppabs="http://www.jhecn.com/ImgUpload/201610/201610210302206264.jpg">-->
+      <!--<div class="test">-->
+       <!--<div class="txt">-->
+        <!--<div class="word">-->
+         <!--江苏 · 淮安中央新亚国际购物广场-->
+        <!--</div>-->
+       <!--</div>-->
+      <!--</div>-->
+     <!--</a>-->
+    <!--</li>-->
 
-    <li>
-     <a href="detail.aspx-cid=1&id=95.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=95">
-      <img src="/static/ImgUpload/201610/2016102102560528191.jpg" tppabs="http://www.jhecn.com/ImgUpload/201610/2016102102560528191.jpg">
-      <div class="test">
-       <div class="txt">
-        <div class="word">
-         福建 · 三明永安诚上广场
-        </div>
-       </div>
-      </div>
-     </a>
-    </li>
+    <!--<li>-->
+     <!--<a href="detail.aspx-cid=1&id=95.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=1&id=95">-->
+      <!--<img src="/static/ImgUpload/201610/2016102102560528191.jpg" tppabs="http://www.jhecn.com/ImgUpload/201610/2016102102560528191.jpg">-->
+      <!--<div class="test">-->
+       <!--<div class="txt">-->
+        <!--<div class="word">-->
+         <!--福建 · 三明永安诚上广场-->
+        <!--</div>-->
+       <!--</div>-->
+      <!--</div>-->
+     <!--</a>-->
+    <!--</li>-->
 
 
 
-   </ul>
-  </div>
- </div>
-</div>
+   <!--</ul>-->
+  <!--</div>-->
+ <!--</div>-->
+<!--</div>-->
 
 
 <script type='text/javascript'>

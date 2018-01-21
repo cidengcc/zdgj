@@ -1,46 +1,49 @@
 <header>
     <div class="cw">
         <div class="header">
-            <a href="{:url('Index/index')}" tppabs="http://www.jhecn.com/" class="logo fl" title="稼禾建设"><img src="/static/home/images/commom/logo.png" tppabs="http://www.jhecn.com/images/commom/logo.png" /></a>
+            <a href="{:url('Index/index')}" class="logo fl" title="稼禾建设"><img src="/static/home/images/commom/logo.png"  /></a>
             <div class="fr">
                 <ul class="nav fl">
-                    <li><a href="{:url('Index/index')}" tppabs="http://www.jhecn.com/" class="tit cur">首页</a></li>
+                    <li><a href="{:url('Index/index')}"  class="tit cur">首页</a></li>
                     <li>
-                        <a href="{:url('About/index')}" tppabs="http://www.jhecn.com/about/" class="tit">集团简介</a>
+                        <a href="{:url('About/index')}"  class="tit">集团简介</a>
                         <div class="dropdown" style="width:240px;left:-120px;">
-                            <a href="{:url('About/index')}" tppabs="http://www.jhecn.com/about/default.aspx">公司简介</a><em>/</em><a href="{:url('About/honnor')}" tppabs="http://www.jhecn.com/about/honnor.aspx">荣誉资质</a><em>/</em><a href="{:url('About/culture')}" tppabs="http://www.jhecn.com/about/culture.aspx">企业文化</a>
+                            <a href="{:url('About/index')}"  >公司简介</a><em>/</em><a href="{:url('About/honnor')}"  >荣誉资质</a><em>/</em><a href="{:url('About/culture')}" >企业文化</a>
                         </div>
                     </li>
                     <li>
-                        <a href="{:url('News/index')}" tppabs="http://www.jhecn.com/news/" class="tit">新闻&媒体</a>
+                        <a href="{:url('News/index')}"   class="tit">新闻&媒体</a>
                         <div class="dropdown" style="width:160px;left:-80px;">
-                            <a href="{:url('News/index')}" tppabs="http://www.jhecn.com/news/default.aspx">新闻动态</a><em>/</em><a href="{:url('News/media')}" tppabs="http://www.jhecn.com/news/default.aspx?cid=101">媒体报道</a>
+                            <a href="{:url('News/index')}"  >新闻动态</a><em>/</em><a href="{:url('News/media')}"  >媒体报道</a>
                         </div>
                     </li>
                     <li>
-                        <a href="{:url('Team/index')}" tppabs="http://www.jhecn.com/team/" class="tit">联合设计</a>
+                        <a href="{:url('Team/index')}" class="tit">联合设计</a>
                         <div class="dropdown" style="width:260px;left:-140px;">
-                            <a href="{:url('Team/index')}" tppabs="http://www.jhecn.com/team/default.aspx">设计院简介</a><em>/</em><a href="{:url('Team/team')}" tppabs="http://www.jhecn.com/team/team.aspx">设计团队</a><em>/</em><a href="{:url('Team/works')}" tppabs="http://www.jhecn.com/team/design.aspx">设计作品</a>
+                            <a href="{:url('Team/index')}" >设计院简介</a><em>/</em><a href="{:url('Team/team')}">设计团队</a><em>/</em><a href="{:url('Team/works')}" >设计作品</a>
                         </div>
                     </li>
                     <li>
                         <a href="{:url('Cases/index')}" class="tit">工程案例</a>
                         <div class="dropdown" style="width:595px;left:-297px;">
                             {volist name="type" id="vo"}
-                            <a href="{:url('Cases/case_class')}">{$vo.name}</a>
+                            <a href="{:url('Cases/case_class',array('typeID'=>$vo['typeID']))}">{$vo.name}</a>
+                            {if condition="$vo.typeID < 7"}
                             <em>/</em>
+                            {else /}
+                            {/if}
                             {/volist}
                         </div>
                     </li>
                     <li>
-                        <a href="{:url('Contact/index')}" tppabs="http://www.jhecn.com/contact/" class="tit">关于我们</a>
+                        <a href="{:url('Contact/index')}" class="tit">关于我们</a>
                         <div class="dropdown" style="width:160px;left:-80px;">
-                            <a href="{:url('Contact/joinus')}" tppabs="http://www.jhecn.com/contact/job.aspx">人才招聘</a><em>/</em><a href="{:url('Contact/index')}" tppabs="http://www.jhecn.com/contact/Default.aspx">联系方式</a>
+                            <a href="{:url('Contact/joinus')}" >人才招聘</a><em>/</em><a href="{:url('Contact/index')}"  >联系方式</a>
                         </div>
                     </li>
                 </ul>
                 <div class="share fl">
-                    <a href="javascript:;" class="weixin fl"><img src="/static/home/images/commom/h_wx.jpg" tppabs="http://www.jhecn.com/images/commom/h_wx.jpg" /></a><a href="" class="tmall fl"></a></div>
+                    <a href="javascript:;" class="weixin fl"><img src="/static/home/images/commom/h_wx.jpg"   /></a><a href="" class="tmall fl"></a></div>
             </div>
         </div>
     </div>
@@ -50,10 +53,10 @@
 <div class="rightTool">
     <ul>
         <li>
-            <a href="javascript:void(0)" onclick="_MEIQIA('showPanel')"><img src="/static/home/images/commom/ico_1.png" tppabs="http://www.jhecn.com/images/commom/ico_1.png" /></a>
+            <a href="javascript:void(0)" onclick="_MEIQIA('showPanel')"><img src="/static/home/images/commom/ico_1.png" /></a>
         </li>
         <li>
-            <a href="javascript:;"><img src="/static/home/images/commom/ico_2.png" tppabs="http://www.jhecn.com/images/commom/ico_2.png" /></a>
+            <a href="javascript:;"><img src="/static/home/images/commom/ico_2.png"  /></a>
             <div class="box">
                 <a href="javascript:;" class="tl">联系<br />方式</a>
                 <div class="lx">
@@ -63,16 +66,16 @@
             </div>
         </li>
         <li>
-            <a href="javascript:;"><img src="/static/home/images/commom/ico_3.png" tppabs="http://www.jhecn.com/images/commom/ico_3.png" /></a>
+            <a href="javascript:;"><img src="/static/home/images/commom/ico_3.png" /></a>
             <div class="box">
                 <a href="javascript:;" class="scan">扫一扫</a>
                 <div class="wx">
-                    <img src="/static/home/images/commom/code.jpg" tppabs="http://www.jhecn.com/images/commom/code.jpg" />
+                    <img src="/static/home/images/commom/code.jpg" />
                 </div>
             </div>
         </li>
         <li>
-            <a href="javascript:;" class="backTop"><img src="/static/home/images/commom/ico_4.png" tppabs="http://www.jhecn.com/images/commom/ico_4.png" /></a>
+            <a href="javascript:;" class="backTop"><img src="/static/home/images/commom/ico_4.png"  /></a>
         </li>
     </ul>
 </div>

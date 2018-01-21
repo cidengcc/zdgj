@@ -91,72 +91,19 @@
  <div class="pageBody case clearfix">
   <ul class="caseBy">
 
-   <li>
-    <a href="caselist.aspx-cid=1.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=1">
-     <img src="/static/ImgUpload/201608/2016082502171512241.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082502171512241.jpg">
-     <div class="txt">商业综合体</div>
+   {volist name="list" id="vo"}
+    <li>
+    <a href="{:url('Cases/case_class',array('typeID'=>$vo['typeID']))}" >
+     <img src="{$vo.url}" >
+     <div class="txt">{$vo.name}</div>
      <div class="box">
       <h5></h5>
-      <h4>商业综合体</h4>
+      <h4>{$vo.name}</h4>
      </div>
     </a>
    </li>
 
-   <li>
-    <a href="caselist.aspx-cid=2.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=2">
-     <img src="/static/ImgUpload/201608/201608250220222019.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/201608250220222019.jpg">
-     <div class="txt">星级酒店</div>
-     <div class="box">
-      <h5></h5>
-      <h4>星级酒店</h4>
-     </div>
-    </a>
-   </li>
-
-   <li>
-    <a href="caselist.aspx-cid=3.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=3">
-     <img src="/static/ImgUpload/201608/2016082502203923013.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082502203923013.jpg">
-     <div class="txt">办公楼</div>
-     <div class="box">
-      <h5></h5>
-      <h4>办公楼</h4>
-     </div>
-    </a>
-   </li>
-
-   <li>
-    <a href="caselist.aspx-cid=4.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=4">
-     <img src="/static/ImgUpload/201608/2016082601490466341.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082601490466341.jpg">
-     <div class="txt">别墅豪宅</div>
-     <div class="box">
-      <h5></h5>
-      <h4>别墅豪宅</h4>
-     </div>
-    </a>
-   </li>
-
-   <li>
-    <a href="caselist.aspx-cid=5.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=5">
-     <img src="/static/ImgUpload/201608/2016082902075170662.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902075170662.jpg">
-     <div class="txt">精装公寓</div>
-     <div class="box">
-      <h5></h5>
-      <h4>精装公寓</h4>
-     </div>
-    </a>
-   </li>
-
-   <li>
-    <a href="caselist.aspx-cid=6.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=6">
-     <img src="/static/ImgUpload/201608/2016082902082795647.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902082795647.jpg">
-     <div class="txt">软装设计</div>
-     <div class="box">
-      <h5></h5>
-      <h4>软装设计</h4>
-     </div>
-    </a>
-   </li>
-
+   {/volist}
 
 
 

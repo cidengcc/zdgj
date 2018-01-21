@@ -83,222 +83,27 @@ $(function(){
 <!-- 面包屑 -->
 <div id="Crumb">
 	<div class="cw">
-		<a href="{:url('Team/index')}" tppabs="http://www.jhecn.com/" class="home"></a><em>></em><a href="{:url('Team/index')}" tppabs="http://www.jhecn.com/team/">联合设计</a><em>></em><span>设计作品</span>
+		<a href="{:url('Team/index')}" class="home"></a><em>></em><a href="{:url('Team/index')}">联合设计</a><em>></em><span>设计作品</span>
 	</div>
 </div>
 
 <div class="cw">
 	<div class="pageBody design clearfix">
 	   <ul class="designList">
-	   
-	        <li>
-		       <a href="designdetail.aspx-cid=3.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=3">
-			      <img src="/static/ImgUpload/201608/2016083010540143383.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016083010540143383.jpg">
-			      <div class="txt">苏冰</div>
+		   {volist name="list" id="vo"}
+
+		   <li>
+		       <a href="{:url('Cases/case_detail',array('articlesID'=>$vo['articlesID']))}">
+			      <img src="{$vo.url}">
+			      <div class="txt">{$vo.name}</div>
 			      <div class="box">
 				     <h5></h5>
-				     <h4>苏冰</h4>
+				     <h4>{$vo.name}</h4>
 				  </div>
 			   </a>
 		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=2.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=2">
-			      <img src="/static/ImgUpload/201609/2016090506080588156.jpg" tppabs="http://www.jhecn.com/ImgUpload/201609/2016090506080588156.jpg">
-			      <div class="txt">刘艺</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>刘艺</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=7.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=7">
-			      <img src="/static/ImgUpload/201608/2016083005564794835.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016083005564794835.jpg">
-			      <div class="txt">崔志昊</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>崔志昊</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=9.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=9">
-			      <img src="/static/ImgUpload/201608/2016083106013649498.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016083106013649498.jpg">
-			      <div class="txt">黄冬魁</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>黄冬魁</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=13.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=13">
-			      <img src="/static/ImgUpload/201609/2016090501515895233.jpg" tppabs="http://www.jhecn.com/ImgUpload/201609/2016090501515895233.jpg">
-			      <div class="txt">罗剑</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>罗剑</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=1.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=1">
-			      <img src="/static/ImgUpload/201608/2016083010412838539.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016083010412838539.jpg">
-			      <div class="txt">任建军</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>任建军</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=4.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=4">
-			      <img src="/static/ImgUpload/201608/2016083010584280056.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016083010584280056.jpg">
-			      <div class="txt">徐枫</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>徐枫</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=5.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=5">
-			      <img src="/static/ImgUpload/201609/2016090506074178300.jpg" tppabs="http://www.jhecn.com/ImgUpload/201609/2016090506074178300.jpg">
-			      <div class="txt">孙贵宝</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>孙贵宝</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=15.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=15">
-			      <img src="/static/ImgUpload/201609/2016091805340766649.jpg" tppabs="http://www.jhecn.com/ImgUpload/201609/2016091805340766649.jpg">
-			      <div class="txt">邓雷</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>邓雷</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=16.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=16">
-			      <img src="/static/ImgUpload/201609/201609180601499989.jpg" tppabs="http://www.jhecn.com/ImgUpload/201609/201609180601499989.jpg">
-			      <div class="txt">刘贤儒</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>刘贤儒</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=17.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=17">
-			      <img src="/static/ImgUpload/201609/2016091806234328749.jpg" tppabs="http://www.jhecn.com/ImgUpload/201609/2016091806234328749.jpg">
-			      <div class="txt">佘一超</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>佘一超</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=19.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=19">
-			      <img src="/static/ImgUpload/201610/2016101005122144902.JPG" tppabs="http://www.jhecn.com/ImgUpload/201610/2016101005122144902.JPG">
-			      <div class="txt">钟夏琪</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>钟夏琪</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=20.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=20">
-			      <img src="/static/ImgUpload/201610/2016102506114623774.jpg" tppabs="http://www.jhecn.com/ImgUpload/201610/2016102506114623774.jpg">
-			      <div class="txt">雷小雨</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>雷小雨</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=18.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=18">
-			      <img src="/static/ImgUpload/201609/201609191020233966.jpg" tppabs="http://www.jhecn.com/ImgUpload/201609/201609191020233966.jpg">
-			      <div class="txt">汤宏伟</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>汤宏伟</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=21.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=21">
-			      <img src="/static/ImgUpload/201612/201612081139382457.jpg" tppabs="http://www.jhecn.com/ImgUpload/201612/201612081139382457.jpg">
-			      <div class="txt">孙程</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>孙程</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=14.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=14">
-			      <img src="/static/ImgUpload/201609/2016090603071176550.jpg" tppabs="http://www.jhecn.com/ImgUpload/201609/2016090603071176550.jpg">
-			      <div class="txt">李颖</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>李颖</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=11.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=11">
-			      <img src="/static/ImgUpload/201609/2016090105253415645.jpg" tppabs="http://www.jhecn.com/ImgUpload/201609/2016090105253415645.jpg">
-			      <div class="txt">苏畅</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>苏畅</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=12.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=12">
-			      <img src="/static/ImgUpload/201609/2016090105444182476.jpg" tppabs="http://www.jhecn.com/ImgUpload/201609/2016090105444182476.jpg">
-			      <div class="txt">方菊花</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>方菊花</h4>
-				  </div>
-			   </a>
-		   </li>
-	    
-	        <li>
-		       <a href="designdetail.aspx-cid=8.htm" tppabs="http://www.jhecn.com/team/designdetail.aspx?cid=8">
-			      <img src="/static/ImgUpload/201608/2016083105492656886.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016083105492656886.jpg">
-			      <div class="txt">阚琦</div>
-			      <div class="box">
-				     <h5></h5>
-				     <h4>阚琦</h4>
-				  </div>
-			   </a>
-		   </li>
+		   {/volist}
+
 	    
 	   
 	       

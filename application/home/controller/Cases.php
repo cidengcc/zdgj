@@ -19,10 +19,33 @@ class Cases extends Base
     );
     public function index()
     {
+        $list = Db::name('type')->select();
+        foreach ($list as $k=>$v){
+            $url = Db::name('articles')->where('typeID',$v['typeID'])->order('orderby asc')->value('url');
+            if ($url){
+                $list[$k]['url'] = $url;
+            }else{
+                unset($list[$k]);
+            }
+        }
+        $this->assign('list',$list);
         return $this->fetch();
     }
     public function case_class()
     {
+        $info = info();
+        $typeID = 1;
+        if (!empty($info['typeID'])){
+           $typeID = $info['typeID'];
+        }
+        $where['typeID'] = $typeID;
+        $list = Db::name('articles')->where($where)->select();
+        $type_name = Db::name('type')
+            ->where('typeID',$typeID)
+            ->value('name');
+        //        dump($list);die;
+        $this->assign('type_name',$type_name);
+        $this->assign('list',$list);
         return $this->fetch();
     }
     /**
@@ -30,6 +53,20 @@ class Cases extends Base
      */
     public function case_detail()
     {
+        $info = info();
+        $where['articlesID'] = $info['articlesID'];
+        $list = Db::name('articles')
+            ->alias('a')
+            ->join('user u','a.userID = u.userID','left')
+            ->where($where)
+            ->find();
+        $type_name = Db::name('type')
+            ->where('typeID',$list['typeID'])
+            ->value('name');
+        //        dump($list);die;
+        $this->assign('type_name',$type_name);
+        $this->assign('list',$list);
+
         return $this->fetch();
     }
 }
