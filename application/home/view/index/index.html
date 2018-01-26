@@ -129,53 +129,29 @@
 <div class="indexBanner">
    <div class="flexslider">
       <ul class="slides">
-             <li>
-		         <a href="#" style="background:url(/static/ImgUpload/201712/2017122610003920149.jpg)/*tpa=http://www.jhecn.com/ImgUpload/201712/2017122610003920149.jpg*/ no-repeat center;">
-				    <div class="bannerBox">
-						<h5>新年快乐</h5>
-						<h4></h4>
-					</div>
-				 </a>
-		      </li>
-            
-             <li>
-		         <a href="case/detail.aspx-cid=2&id=20.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=2&id=20" style="background:url(/static/ImgUpload/201608/2016083004205616950.jpg)/*tpa=http://www.jhecn.com/ImgUpload/201608/2016083004205616950.jpg*/ no-repeat center;">
-				    <div class="bannerBox">
-						<h5>合肥 · 融侨皇冠假日酒店</h5>
-						<h4>Hefei finance overseas Chinese Crowne Plaza Hotel</h4>
-					</div>
-				 </a>
-		      </li>
-            
-             <li>
-		         <a href="case/detail.aspx-cid=3&id=28.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=3&id=28" style="background:url(/static/ImgUpload/201608/2016083003292986210.jpg)/*tpa=http://www.jhecn.com/ImgUpload/201608/2016083003292986210.jpg*/ no-repeat center;">
-				    <div class="bannerBox">
-						<h5>广州 · 腾讯华南电子商务运营总部</h5>
-						<h4>Guangzhou Tencent Southern China e-commerce operations headquarters</h4>
-					</div>
-				 </a>
-		      </li>
-            
-             <li>
-		         <a href="case/detail.aspx-cid=3&id=3.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=3&id=3" style="background:url(/static/ImgUpload/201608/2016083006021711526.jpg)/*tpa=http://www.jhecn.com/ImgUpload/201608/2016083006021711526.jpg*/ no-repeat center;">
-				    <div class="bannerBox">
-						<h5>沈阳 · 京东亚洲一号仓储运营中心</h5>
-						<h4>Shenyang Jingdong Asia one warehouse operations center</h4>
-					</div>
-				 </a>
-		      </li>
-            
-             <li>
-		         <a href="case/detail.aspx-cid=4&id=34.htm" tppabs="http://www.jhecn.com/case/detail.aspx?cid=4&id=34" style="background:url(/static/ImgUpload/201608/2016083004192088609.jpg)/*tpa=http://www.jhecn.com/ImgUpload/201608/2016083004192088609.jpg*/ no-repeat center;">
-				    <div class="bannerBox">
-						<h5>福州 · 中辉集团平潭海坛古城</h5>
-						<h4>Fuzhou, China Hui group Pingtan sea ancient city</h4>
-					</div>
-				 </a>
-		      </li>
-            
-                
-	      
+		  {volist name="img" id="vo"}
+			  <li>
+				  {if condition="$vo.articlesID"}
+				  		<a href="{:url('Cases/case_detail',array('articlesID'=>$vo.articlesID))}" style="background:url({$vo.url}) no-repeat center;">
+				  {else /}
+					  <a href="#" style="background:url({$vo.url}) no-repeat center;">
+				  {/if}
+					  <div class="bannerBox">
+						  {if condition="$vo.articlesID"}
+						  <h5>{$vo.city} · {$vo.site}</h5>
+
+						  {else /}
+						  <h5>{$vo.title}</h5>
+						  {/if}
+
+						  <!--<h4></h4>-->
+					  </div>
+				  </a>
+			  </li>
+
+		  {/volist}
+
+
 	  </ul>
    </div>
    <!--
@@ -189,14 +165,14 @@
 <div class="cw">
    <div class="indexNews">
        
-            <a href="news/detail.aspx-cid=100&id=26.htm" tppabs="http://www.jhecn.com/news/detail.aspx?cid=100&id=26" class="link">建筑界的神雕侠侣！</a> <span>2017-12-12</span>
+            <a href="{:url('News/index')}" class="link">{$new.title}</a> <span>{$new.time|date="Y-m-d",###}</span>
         
       <!--<a href="/news/" class="more">更多新闻</a>-->
    </div>
    <div class="indexBody clearfix">
        <div class="Design fl" style="background: url(/static/home/images/index/design.jpg)">
-	       <a href="team/team.aspx.htm" tppabs="http://www.jhecn.com/team/team.aspx">
-		      <p>稼禾设计</p>
+	       <a href="{:url('Team/index')}" tppabs="http://www.jhecn.com/team/team.aspx">
+		      <p>臻邸设计</p>
 			  <h4>JHE Design</h4>
 			  <h5>国际团队  创意中国</h5>
 			  <h6><span>了解更多</span></h6>
@@ -207,7 +183,7 @@
 			   {volist name="list" id="vo"}
 
 			   <div class="con c_{$vo.typeID}" style="background: url({$vo.type_url})">
-				  <a href="case/caselist.aspx-cid=2.htm" >
+				  <a href="{:url('Cases/case_class',array('typeID'=>$vo.typeID))}" >
 				   <div class="txt">
 				      <h6>{$vo.name}</h6>
 					  <h4>Sart Hotel</h4>
@@ -255,7 +231,7 @@
 				<!--</div>-->
 		   </div>
 	   </div>
-	   <a href="case/index.htm" tppabs="http://www.jhecn.com/case/" class="more fl">
+	   <a href="{:url('Cases/index')}" class="more fl">
 	   <h4>+</h4>
 	   <h5>更<br>多<br>精<br>品<br>案<br>例</h5>
 	   </a>
