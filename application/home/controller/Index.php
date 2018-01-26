@@ -18,6 +18,9 @@ class Index extends Base
     );
     public function index()
     {
+        //{:url('Cases/case_class',array('typeID'=>$vo['typeID']))}
+        $list = Db::name('type')->order('typeID asc')->limit(5)->select();
+        $this->assign('list',$list);
         return $this->fetch();
 
     }

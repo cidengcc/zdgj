@@ -194,7 +194,7 @@
       <!--<a href="/news/" class="more">更多新闻</a>-->
    </div>
    <div class="indexBody clearfix">
-       <div class="Design fl">
+       <div class="Design fl" style="background: url(/static/home/images/index/design.jpg)">
 	       <a href="team/team.aspx.htm" tppabs="http://www.jhecn.com/team/team.aspx">
 		      <p>稼禾设计</p>
 			  <h4>JHE Design</h4>
@@ -204,51 +204,55 @@
 	   </div>
 	   <div class="change fl">
 		   <div class="change_body">
-				<div class="con c_1">
-				  <a href="case/caselist.aspx-cid=2.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=2">
+			   {volist name="list" id="vo"}
+
+			   <div class="con c_{$vo.typeID}" style="background: url({$vo.type_url})">
+				  <a href="case/caselist.aspx-cid=2.htm" >
 				   <div class="txt">
-				      <h6>星级酒店</h6>
+				      <h6>{$vo.name}</h6>
 					  <h4>Sart Hotel</h4>
 				   </div>
 				   <h5></h5>
 				  </a> 
 				</div>
-				<div class="con c_2">
-				  <a href="case/caselist.aspx-cid=3.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=3">
-				   <div class="txt">
-				      <h6>办公楼</h6>
-					  <h4>Office Building</h4>
-				   </div>
-				   <h5></h5>
-				  </a> 
-				</div>
-				<div class="con c_3">
-				  <a href="case/caselist.aspx-cid=4.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=4">
-				   <div class="txt">
-				      <h6>别墅豪宅</h6>
-					  <h4>Villa Mansion</h4>
-				   </div>
-				   <h5></h5>
-				  </a> 
-				</div>
-				<div class="con c_4">
-				  <a href="case/caselist.aspx-cid=5.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=5">
-				   <div class="txt">
-				      <h6>精装公寓</h6>
-					  <h4>Apartment</h4>
-				   </div>	
-				   <h5></h5>
-				  </a> 
-				</div>
-				<div class="con c_5">
-				  <a href="case/caselist.aspx-cid=6.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=6">
-				   <div class="txt">
-				      <h6>软装设计</h6>
-					  <h4>Soft Design</h4>
-				   </div>	 
-				   <h5></h5>
-				   </a>
-				</div>
+			   {/volist}
+
+			   <!--<div class="con c_2">-->
+				  <!--<a href="case/caselist.aspx-cid=3.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=3">-->
+				   <!--<div class="txt">-->
+				      <!--<h6>办公楼</h6>-->
+					  <!--<h4>Office Building</h4>-->
+				   <!--</div>-->
+				   <!--<h5></h5>-->
+				  <!--</a>-->
+				<!--</div>-->
+				<!--<div class="con c_3">-->
+				  <!--<a href="case/caselist.aspx-cid=4.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=4">-->
+				   <!--<div class="txt">-->
+				      <!--<h6>别墅豪宅</h6>-->
+					  <!--<h4>Villa Mansion</h4>-->
+				   <!--</div>-->
+				   <!--<h5></h5>-->
+				  <!--</a>-->
+				<!--</div>-->
+				<!--<div class="con c_4">-->
+				  <!--<a href="case/caselist.aspx-cid=5.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=5">-->
+				   <!--<div class="txt">-->
+				      <!--<h6>精装公寓</h6>-->
+					  <!--<h4>Apartment</h4>-->
+				   <!--</div>-->
+				   <!--<h5></h5>-->
+				  <!--</a>-->
+				<!--</div>-->
+				<!--<div class="con c_5">-->
+				  <!--<a href="case/caselist.aspx-cid=6.htm" tppabs="http://www.jhecn.com/case/caselist.aspx?cid=6">-->
+				   <!--<div class="txt">-->
+				      <!--<h6>软装设计</h6>-->
+					  <!--<h4>Soft Design</h4>-->
+				   <!--</div>-->
+				   <!--<h5></h5>-->
+				   <!--</a>-->
+				<!--</div>-->
 		   </div>
 	   </div>
 	   <a href="case/index.htm" tppabs="http://www.jhecn.com/case/" class="more fl">
