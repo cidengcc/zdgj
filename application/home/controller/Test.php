@@ -90,4 +90,11 @@ class Test extends Base
             return $this->fetch();
         }
     }
+    public function baidu(){
+        $list = Db::name('news')->find();
+        dump($list);
+        die;
+        $this->assign('list',$list);
+        return $this->fetch();
+    }
 }
