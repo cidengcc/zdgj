@@ -98,12 +98,12 @@ $(function(){
 	       <div class="newsBody">
                
 			            <div class="newsHot clearfix">
-			              <a href="detail.aspx-cid=100&id=26.htm" class="fl"><img src="{$new.new_url}"></a>
+			              <a href="{:url('News/detail',array('newID'=>$new.newID))}" class="fl"><img src="{$new.new_url}"></a>
 				          <div class="fl">
 				              <h5>{$new.title}</h5>
 					          <h4>{$new.time|date="Y-m-d",###}</h4>
 					          <p>{$new.sketch}</p>
-					          <a href="detail.aspx-cid=100&id=26.htm" class="link">查看详细</a>
+					          <a href="{:url('News/detail',array('newID'=>$new.newID))}" class="link">查看详细</a>
 				          </div>
 			          </div>
 			        
@@ -113,7 +113,7 @@ $(function(){
 				  {volist name="list" id="vo"}
 
 				  <li>
-				              <a href="{:url('News/index')}" >
+				              <a href="{:url('News/detail',array('newID'=>$vo.newID))}" >
 					             <div class="data fl">
 						            <h6>{$vo.d}</h6>
 						            <h4>{$vo.m}</h4>

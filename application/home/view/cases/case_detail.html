@@ -84,17 +84,33 @@
     <span id="nextTop" class="btn next"></span>
     <div id="picBox" class="picBox">
      <ul class="cf">
-      <li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902045237692.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902045237692.jpg"/></li><li><img width="680" height="508" src="/static/ImgUpload/201608/201608290204576395.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/201608290204576395.jpg"/></li><li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902050267935.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902050267935.jpg"/></li><li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902052233526.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902052233526.jpg"/></li><li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902053552440.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902053552440.jpg"/></li><li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902054397470.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902054397470.jpg"/></li>
+      <li><img width="680" height="508" src="1.jpg" /></li>
+      <!--<li><img width="680" height="508" src="/static/ImgUpload/201608/201608290204576395.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/201608290204576395.jpg"/></li>-->
+      <!--<li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902050267935.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902050267935.jpg"/></li>-->
+      <!--<li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902052233526.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902052233526.jpg"/></li>-->
+      <!--<li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902053552440.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902053552440.jpg"/></li>-->
+      <!--<li><img width="680" height="508" src="/static/ImgUpload/201608/2016082902054397470.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902054397470.jpg"/></li>-->
 
      </ul>
     </div>
     <div id="listBox" class="listBox">
      <ul class="cf">
-      <li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082902045237692.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902045237692.jpg"/></li><li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/201608290204576395.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/201608290204576395.jpg"/></li><li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082902050267935.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902050267935.jpg"/></li><li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082902052233526.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902052233526.jpg"/></li><li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082902053552440.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902053552440.jpg"/></li><li><i class="arr2"></i><img width="150" height="100" src="/static/ImgUpload/201608/2016082902054397470.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082902054397470.jpg"/></li>
+      {volist name="img" id="vo"}
+
+      <li><i class="arr2"></i><img width="150" height="100" src="{$vo.url}"/></li>
+      {/volist}
 
      </ul>
     </div>
    </div>
+   <script>
+       var html = '';
+       for( var i=0; i<$('#listBox').find('li').length; i++ ){
+           console.log($('#listBox').find('li').eq(i).find('img').attr('src'))
+           html += '<li><img width="680" height="508" src="'+ $('#listBox').find('li').eq(i).find('img').attr('src') +'"/></li>'
+       }
+       $('#picBox').find('.cf').html(html)
+   </script>
 
    <div class="txt fl">
     <h5>{$list.city} · {$list.title}</h5>

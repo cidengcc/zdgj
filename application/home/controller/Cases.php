@@ -66,6 +66,9 @@ class Cases extends Base
         //        dump($list);die;
         $this->assign('type_name',$type_name);
         $this->assign('list',$list);
+        //图片
+        $img = Db::name('article_img')->where($where)->order('orderby asc')->select();
+        $this->assign('img',$img);
 
         return $this->fetch();
     }

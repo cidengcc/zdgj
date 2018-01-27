@@ -35,8 +35,18 @@ class News extends Base
 
         return $this->fetch();
     }
-    public function media()
+    public function detail()
     {
+        $info = info();
+        if (empty($info['newID'])){
+            echo '参数错误';
+        }
+        $where['newID'] = $info['newID'];
+        //新闻
+        $new = Db::name('news')
+            ->where($where)
+            ->find();
+        $this->assign('new',$new);
         return $this->fetch();
     }
 }
