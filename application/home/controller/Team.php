@@ -43,9 +43,9 @@ class Team extends Base
 
         $list_all = Db::name('articles')->order('orderby asc')->where($where)->select();
 
-        $articlesID = $list_all[0]['articlesID'];
+        //$articlesID = $list_all[0]['articlesID'];
 //        dump($list);die;
-        $this->assign('articlesID',$articlesID);
+        //$this->assign('articlesID',$articlesID);
         $this->assign('list',$list);
         $this->assign('list_all',$list_all);
         return $this->fetch();

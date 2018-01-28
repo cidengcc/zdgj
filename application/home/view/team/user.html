@@ -88,8 +88,7 @@ $(function(){
                <h4>{$list.job}</h4>
                <div class="exp clearfix">
 			       <div class="fl">
-				      <img src="/static/ImgUpload/201608/2016082904115838019.jpg" tppabs="http://www.jhecn.com/ImgUpload/201608/2016082904115838019.jpg">
-					  <a href="{:url('Cases/case_detail',array('articlesID'=>$articlesID))}">Ta的作品集</a>
+				      <img src="{$list.user_img}" >
 				   </div>
 				   <div class="fr">
 				     <p class="MsoNormal">
@@ -121,12 +120,10 @@ $(function(){
 						<p class="MsoNormal">
 							<strong><span style="line-height:2;color:#333333;">代表作品</span></strong><span style="color:#333333;"><span style="line-height:2;color:#333333;">：</span> </span>
 						</p>
-					   {volist name="list_all" id="vo"}
 
 							<p style="margin-top:0pt;margin-bottom:0pt;margin-left:0in;direction:ltr;unicode-bidi:embed;word-break:normal;">
-								<span style="line-height:2;color:#333333;">{$vo.city} · {$vo.title}</span>
+								<span style="line-height:2;color:#333333;">{$list.xiangmu}</span>
 							</p>
-					   {/volist}
 						<p>
 							<br />
 						</p>
