@@ -18,8 +18,8 @@ class Team extends Base
         $list_top = Db::name('user')->where($where)->find();
         $this->assign('list_top',$list_top);
         //列表
-        $where1['orderby'] = ['neq',1];
-        $list = Db::name('user')->where($where1)->select();
+        //$where1['orderby'] = ['neq',1];
+        $list = Db::name('user')->select();
         $this->assign('list',$list);
         return $this->fetch();
     }

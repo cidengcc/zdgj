@@ -27,7 +27,15 @@
 <script type="text/javascript" src="/static/home/js/jquery.easing.1.3.js" tppabs="http://www.jhecn.com/js/jquery.easing.1.3.js"></script>
 <script type="text/javascript">
 $(function(){
-  $(".teamBody ul li:even").css("background","#f8f8f8");
+	$("ul.designList li").hover(function(){
+		$(this).find(".box").fadeIn();	
+		$(this).find(".txt").hide();
+	},function(){
+		$(this).find(".box").fadeOut();
+		$(this).find(".txt").show();
+	});	
+
+	
 });
 </script>
 <title>
@@ -66,65 +74,34 @@ $(function(){
 
 
 
+
+
 <!-- Banner -->
-<div class="pageBanner" style="background:url(/static/home/images/team/banner.jpg)/*tpa=http://www.jhecn.com/images/team/banner.jpg*/ no-repeat center;"></div>
+<div class="pageBanner" style="background:url(/static/home/images/partner/partner.png)/*tpa=http://www.jhecn.com/images/team/banner.jpg*/ no-repeat center;"></div>
 
 
 <!-- 面包屑 -->
-<div id="Crumb">
-	<div class="cw">
-		<a href="{:url('Team/team')}"  class="home"></a><em>>
-	<!--</em><a href="{:url('Team/index')}"  >设计团队</a><em>>-->
-		</em><span>设计团队</span>
-	</div>
-</div>
+<!--<div id="Crumb">-->
+	<!--<div class="cw">-->
+		<!--<a href="{:url('Team/index')}" class="home"></a><em>></em><a href="{:url('Team/index')}">设计团队</a><em>></em><span>设计作品</span>-->
+	<!--</div>-->
+<!--</div>-->
+
 <div class="cw">
-	<div class="pageBody clearfix">
+	<div class="pageBody design clearfix">
+	   <ul class="designList">
+		   {volist name="list" id="vo"}
+
+		   <li>
+			      <img src="{$vo.partner_img}">
+
+		   </li>
+		   {/volist}
+
+	    
 	   
-<script type="text/javascript">
-$(function(){
-  $(".navList ul li:last-child").css("border-bottom","none");
-});
-</script>
-	   <div class="pageNav fr">
-			{include file="pub/right_team"}
-		   {include file="pub/right_a" /}
-	   </div>
-	   <div class="mainBody fl">
-		   <h2 class="label">设计团队 <em>/</em> <span>Design Team</span></h2>
-	       <div class="teamBody">
-              
-                    <!--<div class="Top">-->
-			             <!--<a href="{:url('Team/user',array('userID'=>$list_top['userID']))}">-->
-				             <!--<img src="{$list_top.user_img}" class="fl" width="200" height="240">-->
-					         <!--<div class="txt fr">-->
-					            <!--<h5>{$list_top.name}</h5>-->
-					            <!--<h4>{$list_top.job}</h4>-->
-						        <!--<p>{$list_top.idea}</p>-->
-					         <!--</div>-->
-				         <!--</a>-->
-			        <!--</div>-->
-			  <ul>
-
-				  {volist name="list" id="vo"}
-
-				  <li>
-		                 <a href="{:url('Team/user',array('userID'=>$vo['userID']))}" >
-			                <img src="{$vo.user_img}"  class="fl" width="100" height="120">
-				            <div class="fl">
-								<h5>{$vo.name}</h5>
-								<h4>{$vo.job}</h4>
-								<p>{$vo.idea}</p>
-				            </div>
-			             </a>
-		            </li>
-				  {/volist}
-
-
-
-			  </ul>
-		   </div>
-	   </div>
+	       
+	   </ul>
 	</div>
 
 </div>
