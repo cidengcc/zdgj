@@ -6,10 +6,10 @@
                 <ul class="nav fl">
                     <li><a href="{:url('Index/index')}"  class="tit cur">首页</a></li>
                     <li>
-                        <a href="{:url('About/index')}"  class="tit">集团简介</a>
-                        <div class="dropdown" style="width:240px;left:-120px;">
-                            <a href="{:url('About/index')}"  >公司简介</a><em>/</em><a href="{:url('About/honnor')}"  >荣誉资质</a><em>/</em><a href="{:url('About/culture')}" >企业文化</a>
-                        </div>
+                        <a href="{:url('About/index')}"  class="tit">关于臻邸</a>
+                        <!--<div class="dropdown" style="width:240px;left:-120px;">-->
+                            <!--<a href="{:url('About/index')}"  >公司简介</a>&lt;!&ndash;<em>/</em><a href="{:url('About/honnor')}"  >荣誉资质</a><em>/</em><a href="{:url('About/culture')}" >企业文化</a>&ndash;&gt;-->
+                        <!--</div>-->
                     </li>
                     <li>
                         <a href="{:url('News/index',array('type'=>1))}"   class="tit">新闻&媒体</a>
@@ -18,29 +18,33 @@
                         </div>
                     </li>
                     <li>
-                        <a href="{:url('Team/index')}" class="tit">联合设计</a>
-                        <div class="dropdown" style="width:260px;left:-140px;">
-                            <a href="{:url('Team/index')}" >设计院简介</a><em>/</em><a href="{:url('Team/team')}">设计团队</a><em>/</em><a href="{:url('Team/works')}" >设计作品</a>
-                        </div>
+                        <a href="{:url('Team/team')}" class="tit">设计团队</a>
+                        <!--<div class="dropdown" style="width:260px;left:-140px;">-->
+                            <!--<a href="{:url('Team/index')}" >设计院简介</a><em>/</em><a href="{:url('Team/team')}">设计团队</a><em>/</em><a href="{:url('Team/works')}" >设计作品</a>-->
+                        <!--</div>-->
+                    </li>
+                    <li>
+                    <a href="{:url('Cases/index')}" class="tit">设计案例</a>
+                    <div class="dropdown" style="width:595px;left:-297px;">
+                        {volist name="type" id="vo"}
+                        <a href="{:url('Cases/case_class',array('typeID'=>$vo['typeID']))}">{$vo.name}</a>
+                        {if condition="$vo.typeID < 7"}
+                        <em>/</em>
+                        {else /}
+                        {/if}
+                        {/volist}
+                    </div>
                     </li>
                     <li>
                         <a href="{:url('Cases/index')}" class="tit">工程案例</a>
-                        <div class="dropdown" style="width:595px;left:-297px;">
-                            {volist name="type" id="vo"}
-                            <a href="{:url('Cases/case_class',array('typeID'=>$vo['typeID']))}">{$vo.name}</a>
-                            {if condition="$vo.typeID < 7"}
-                            <em>/</em>
-                            {else /}
-                            {/if}
-                            {/volist}
-                        </div>
+
                     </li>
-                    <li>
-                        <a href="{:url('Contact/index')}" class="tit">关于我们</a>
-                        <div class="dropdown" style="width:160px;left:-80px;">
-                            <a href="{:url('Contact/joinus')}" >人才招聘</a><em>/</em><a href="{:url('Contact/index')}"  >联系方式</a>
-                        </div>
-                    </li>
+                    <!--<li>-->
+                        <!--<a href="{:url('Contact/index')}" class="tit">关于我们</a>-->
+                        <!--<div class="dropdown" style="width:160px;left:-80px;">-->
+                            <!--<a href="{:url('Contact/joinus')}" >人才招聘</a><em>/</em><a href="{:url('Contact/index')}"  >联系方式</a>-->
+                        <!--</div>-->
+                    <!--</li>-->
                 </ul>
                 <div class="share fl">
                     <a href="javascript:;" class="weixin fl"><img src="/static/home/images/commom/h_wx.jpg"   /></a><a href="" class="tmall fl"></a></div>
