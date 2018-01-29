@@ -1,10 +1,13 @@
 <?php
 namespace app\admin\controller;
 
-class Index
+class Index extends Base
 {
     public function index()
     {
-        echo 111;
+
+        return $this->fetch();
+
+
     }
 }
