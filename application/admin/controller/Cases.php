@@ -26,18 +26,7 @@ class Cases extends Base
     }
     public function case_class()
     {
-        $info = info();
-        $typeID = 1;
-        if (!empty($info['typeID'])){
-           $typeID = $info['typeID'];
-        }
-        $where['typeID'] = $typeID;
-        $list = Db::name('articles')->where($where)->select();
-        $type_name = Db::name('type')
-            ->where('typeID',$typeID)
-            ->value('name');
-        //        dump($list);die;
-        $this->assign('type_name',$type_name);
+        $list = Db::name('articles')->select();
         $this->assign('list',$list);
         return $this->fetch();
     }
