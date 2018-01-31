@@ -23,10 +23,12 @@ class Base extends Controller
         if(in_array(request()->action(),array('login','logout','vertify')) || in_array(request()->controller(),array('Ueditor','Uploadify'))){
             //return;
         }else{
-            if(!session('admin_id')){
+            if(!session('adminID')){
                 $this->redirect('Login/login');
                 //$this->error("登录页面跳转中",url('Login/login'));
             }
+            $this->assign('adminID',session('adminID'));
+            $this->assign('user_name',session('user_name'));
         }
     }
 }
