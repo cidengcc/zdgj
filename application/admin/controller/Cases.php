@@ -26,7 +26,13 @@ class Cases extends Base
     }
     public function case_class()
     {
-        $list = Db::name('articles')->select();
+
+        $list = Db::name('articles')
+            ->alias('a')
+            ->join('type t','a.typeID = t.typeID','left')
+            ->where('a.deleting',1)
+            ->order('a.orderby asc')
+            ->select();
         $this->assign('list',$list);
         return $this->fetch();
     }
@@ -52,6 +58,32 @@ class Cases extends Base
         $img = Db::name('article_img')->where($where)->order('orderby asc')->select();
         $this->assign('img',$img);
 
+        return $this->fetch();
+    }
+
+
+    public function case_del()
+    {
+        $info = info();
+//        dump($info);
+        $where['articlesID'] = $info['id'];
+        $data['deleting'] = 2;
+        $re = Db::name('articles')->where($where)->update($data);
+        if ($re){
+            $list['status'] = 1;
+        }else{
+            $list['status'] = 2;
+        }
+        return json($list);
+    }
+
+
+    public  function  case_add(){
+        if(request()->isPost()){
+
+        }
+        $type = Db::name('type')->order('typeID asc')->select();
+        $this->assign('type',$type);
         return $this->fetch();
     }
 }
