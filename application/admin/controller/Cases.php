@@ -83,9 +83,33 @@ class Cases extends Base
             $info = info();
             dump($info);
             die;
+            $this->request->filter(['strip_tags', 'htmlspecialchars', 'trim']);
+            $info = $this->request->only(['problem_classID','title','img','sort','status']);
+            $info['time'] = time();
+            $info['img_oss'] = substrOssImg($info['img']);
+            $info['img'] = substrOssImg($info['img']);
+            if($info['problem_classID'] == 0){  //新增
+                unset($info['problem_classID']);
+                $result = Db::name('problem_class')->insert($info);
+            }else{  //修改
+                $result = Db::name('problem_class')->where(['problem_classID'=>$info['problem_classID']])->update($info);
+
+            }
+            Db::name('tmp_file')->where('file_path','=',joinOssImg($info['img']))->delete();
+            if($result == false){
+                $this->ajaxReturn(['status'=>0,'msg'=>'操作失败']);
+            }
+            $this->ajaxReturn(['status'=>1,'msg'=>'操作成功']);
         }
         $type = Db::name('type')->order('typeID asc')->select();
         $this->assign('type',$type);
+        $info = $this->request->only(['articlesID']);
+        if(!empty($info['articlesID'])){
+            $infos = Db::name('articles')->where(['articlesID'=>$info['articlesID']])->find();
+        }else{
+            $infos = '';
+        }
+        $this->assign('infos',$infos);
         return $this->fetch();
     }
 }
