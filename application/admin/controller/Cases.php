@@ -80,7 +80,9 @@ class Cases extends Base
 
     public  function  case_add(){
         if(request()->isPost()){
-
+            $info = info();
+            dump($info);
+            die;
         }
         $type = Db::name('type')->order('typeID asc')->select();
         $this->assign('type',$type);
