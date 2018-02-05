@@ -93,7 +93,7 @@
 
    {volist name="list" id="vo"}
     <li>
-    <a href="{:url('Cases/case_class',array('typeID'=>$vo['typeID']))}" >
+    <a href="{:url('Cases/case_class',array('typeID'=>$vo['typeID'],'genre'=>$vo['genre']))}" >
      <img src="{$vo.url}" >
      <div class="txt">{$vo.name}</div>
      <div class="box">

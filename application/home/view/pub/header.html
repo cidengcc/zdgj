@@ -30,7 +30,7 @@
                         <!--</div>-->
                     </li>
                     <li>
-                    <a href="{:url('Cases/index')}" class="tit">设计案例</a>
+                    <a href="{:url('Cases/index',array('genre'=>1))}" class="tit">设计案例</a>
                     <div class="dropdown" style="width:595px;left:-297px;">
                         {volist name="type" id="vo"}
                         <a href="{:url('Cases/case_class',array('typeID'=>$vo['typeID']))}">{$vo.name}</a>
@@ -42,7 +42,7 @@
                     </div>
                     </li>
                     <li>
-                        <a href="{:url('Cases/index')}" class="tit">工程案例</a>
+                        <a href="{:url('Cases/index',array('genre'=>2))}" class="tit">工程案例</a>
 
                     </li>
                     <!--<li>-->

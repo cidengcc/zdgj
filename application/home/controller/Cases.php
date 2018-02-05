@@ -19,11 +19,13 @@ class Cases extends Base
     );
     public function index()
     {
+        $info = info();
         $list = Db::name('type')->select();
         foreach ($list as $k=>$v){
-            $url = Db::name('articles')->where('typeID',$v['typeID'])->order('orderby asc')->value('url');
-            if ($url){
-                $list[$k]['url'] = $url;
+            $re = Db::name('articles')->where(['typeID'=>$v['typeID'],'genre'=>$info['genre']])->order('orderby asc')->field('url,genre')->find();
+            if ($re){
+                $list[$k]['url'] = $re['url'];
+                $list[$k]['genre'] = $re['genre'];
             }else{
                 unset($list[$k]);
             }
@@ -39,6 +41,7 @@ class Cases extends Base
            $typeID = $info['typeID'];
         }
         $where['typeID'] = $typeID;
+        $where['genre'] = $info['genre'];
         $list = Db::name('articles')->where($where)->select();
         $type_name = Db::name('type')
             ->where('typeID',$typeID)
@@ -70,6 +73,21 @@ class Cases extends Base
         $img = Db::name('article_img')->where($where)->order('orderby asc')->select();
         $this->assign('img',$img);
 
+        return $this->fetch();
+    }
+
+    public function project()
+    {
+        $list = Db::name('type')->select();
+        foreach ($list as $k=>$v){
+            $url = Db::name('articles')->where(['typeID'=>$v['typeID'],'genre'=>2])->order('orderby asc')->value('url');
+            if ($url){
+                $list[$k]['url'] = $url;
+            }else{
+                unset($list[$k]);
+            }
+        }
+        $this->assign('list',$list);
         return $this->fetch();
     }
 }
