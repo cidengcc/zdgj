@@ -13,21 +13,96 @@
 		<div class="ncap-form-default">
 			<dl class="row">
 				<dt class="tit">
-					<label for="title"><em>*</em>文章分类标题:</label>
+					<label for="title"><em>*</em>案例标题:</label>
 				</dt>
 				<dd class="opt">
 					<input type="text" name="title" value="{$infos['title']}" id="title" class="input-txt">
-					<input type="hidden" name ='problem_classID' value="{$infos['problem_classID'] | default =0}">
+					<input type="hidden" name ='articlesID' value="{$infos['articlesID'] | default =0}">
 				</dd>
 			</dl>
-			<!--<dl class="row">
-                <dt class="tit">
-                    <label for="ad_describe"><em>*</em>广告位描述</label>
-                </dt>
-                <dd class="opt">
-                    <textarea name="descrip" id="descrip" value="{$ad_site_info['descrip']}" class="input-txt"></textarea>
-                </dd>
-            </dl>-->
+			<dl class="row">
+				<dt class="tit">
+					<label for="team"><em>*</em>团队:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="team" value="{$infos['team']}" id="team" class="input-txt">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="city"><em>*</em>城市:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="city" value="{$infos['city']}" id="city" class="input-txt">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="site"><em>*</em>地址:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="site" value="{$infos['site']}" id="site" class="input-txt">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="title"><em>*</em>内容:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="content" value="{$infos['content']}" id="content" class="input-txt">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="area"><em>*</em>面积:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="area" value="{$infos['orderby']}" id="area" class="input-txt">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="orderby"><em>*</em>排序:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="orderby" value="{$infos['orderby']}" id="orderby" class="input-txt">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label><em>*</em>类别:</label>
+				</dt>
+				<dd class="opt">
+					<input type="radio" name="genre" value="1" {if condition="$infos['genre'] == 1"}checked{/if}>设计案例
+					<input type="radio" name="genre" value="2" {if condition="$infos['genre'] === 2"}checked{/if}>工程案例
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="typeID"><em>*</em>案例分类</label>
+				</dt>
+				<dd class="opt">
+					<select id="typeID" name="typeID" class="select" style="width: 120px; height: 28px; border: 1px solid #ccc; border-radius: 4px">
+						<option value="">请选择...</option>
+						{volist name="type" id="vo"}
+						<option value="{$vo.typeID}" {if condition="$infos.typeID eq $vo.typeID"}selected{/if} >{$vo.name}</option>
+						{/volist}
+					</select>
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="userID"><em>*</em>作者</label>
+				</dt>
+				<dd class="opt">
+					<select id="userID" name="userID" class="select" style="width: 120px; height: 28px; border: 1px solid #ccc; border-radius: 4px">
+						<option value="">请选择...</option>
+						{volist name="user" id="vo"}
+						<option value="{$vo.userID}" {if condition="$infos.userID eq $vo.userID"}selected{/if} >{$vo.name}</option>
+						{/volist}
+					</select>
+				</dd>
+			</dl>
 			<dl class="row">
 				<dt class="tit">
 					<label for="img"><em>*</em>分类icon上传:</label>
@@ -82,23 +157,7 @@
 					</script>
 				</dd>
 			</dl>
-			<dl class="row">
-				<dt class="tit">
-					<label for="sort"><em>*</em>排序:</label>
-				</dt>
-				<dd class="opt">
-					<input type="text" name="sort" value="{$infos['sort']}" id="sort" class="input-txt">
-				</dd>
-			</dl>
-			<dl class="row">
-				<dt class="tit">
-					<label><em>*</em>类别:</label>
-				</dt>
-				<dd class="opt">
-					<input type="radio" name="genre" value="1" {if condition="$infos['status'] !== 0"}checked{/if}>显示
-					<input type="radio" name="genre" value="2" {if condition="$infos['status'] === 0"}checked{/if}>不显示
-				</dd>
-			</dl>
+
 			<!--<dl class="row">
                 <dt class="tit">
                     <label for="second"><em>*</em>关键字:</label>
@@ -133,9 +192,15 @@
     function adsubmit(){
         var params = $('#adminHandle').serialize();
         if($('#title').val() == ''){
-            layer.msg('名称不能为空');
+            layer.msg('标题不能为空');
             return false;
-        }else if($('#sort').val() == ''){
+        }else if($('#orderby').val() == ''){
+            layer.msg('排序不能为空');
+            return false;
+        }else if($('#typeID').val() == ''){
+            layer.msg('排序不能为空');
+            return false;
+        }else if($('#content').val() == ''){
             layer.msg('排序不能为空');
             return false;
         }

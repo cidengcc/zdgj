@@ -31,4 +31,14 @@ class Base extends Controller
             $this->assign('user_name',session('user_name'));
         }
     }
+    /**
+     * @describe 转换array为JSON
+     * @author wuliucahng
+     * @param array $data 数据
+     * @param string $type json
+     * @return string
+     */
+    public function ajaxReturn($data,$type = 'json'){
+        exit(json_encode($data));
+    }
 }
