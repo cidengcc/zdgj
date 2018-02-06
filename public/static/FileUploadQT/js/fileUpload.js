@@ -45,7 +45,7 @@ var uploadTools = {
             "size":"-1",//文件大小限制,单位kB
             "ismultiple":true,//是否选择多文件
             "showSummerProgress":true,//显示总进度条
-            "filelSavePath":"",//文件上传地址，后台设置的根目录
+            "filelSavePath":"upload",//文件上传地址，后台设置的根目录
             "beforeUpload":function(){//在上传前面执行的回调函数
             },
             "onUpload":function(){//在上传之后
