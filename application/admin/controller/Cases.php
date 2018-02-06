@@ -101,10 +101,13 @@ class Cases extends Base
         $info = $this->request->only(['articlesID']);
         if(!empty($info['articlesID'])){
             $infos = Db::name('articles')->where(['articlesID'=>$info['articlesID']])->find();
+            $imgs = Db::name('img')->where(['articlesID'=>$info['articlesID']])->select();
         }else{
             $infos = '';
+            $imgs = '';
         }
         $this->assign('infos',$infos);
+        $this->assign('imgs',$imgs);
         return $this->fetch();
     }
 }
