@@ -1,0 +1,158 @@
+{include file="public/layout" /}
+
+<!--<script type="text/javascript" src="/static/js/layer/laydate/laydate.js"></script>-->
+<body style="background-color: rgb(255, 255, 255); overflow: auto; cursor: default; -moz-user-select: inherit;">
+<script type="text/javascript" src="/static/uploadify/jquery.uploadify.min.js"></script>
+<link rel="stylesheet" href="/static/uploadify/uploadify.css">
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+	<form class="form-horizontal" id="adminHandle" action="" method="post">
+		<!--<input type="hidden" name="act" value="edit">-->
+		<!--<input type="hidden" name="admin_id" value="2">-->
+		<div class="ncap-form-default">
+			<dl class="row">
+				<dt class="tit">
+					<label for="title"><em>*</em>新闻标题:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="title" value="{$infos['title']}" id="title" class="input-txt">
+					<input type="hidden" name ='newID' value="{$infos['newID'] | default =0}">
+					<input type="hidden" name ='type' value="{$type}">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="sketch"><em>*</em>简述:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="sketch" value="{$infos['sketch']}" id="sketch" class="input-txt">
+				</dd>
+			</dl>
+
+
+
+			<dl class="row">
+				<dt class="tit">
+					<label for="orderby"><em>*</em>排序:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="orderby" value="{$infos['orderby']}" id="orderby" class="input-txt">
+				</dd>
+			</dl>
+
+
+			<dl class="row">
+				<dt class="tit">
+					<label for="img"><em>*</em>分类icon上传:</label>
+				</dt>
+				<dd class="opt">
+					<div>
+						<input id="thumb_file2" name="license_image" type="file" value="" />
+					</div>
+					<div class="jq_uploads_img2">
+						{if condition="$infos.img"}
+						<span style="width: 200px; height: 120px; float: left; margin-left: 5px; margin-top: 10px;">
+                            <img width="200" height="100" src="{$infos.img}"><input id="img" type="hidden" name="img" value="{$infos.img}" />
+                            <a href="javascript:void(0);">删除</a>
+                        </span>
+						{else/}
+						<input id="img" type="hidden" name="img" value="" />
+						{/if}
+					</div>
+					<script>
+                        //图片上传
+                        $("#thumb_file2").uploadify({
+                            'swf': '/static/uploadify/uploadify.swf?t={$nowtime}',
+                            'uploader': '{:url("Uploadify/uploadify_oss",array("add_type"=>7))}',
+//                            'uploader': '{:url("Uploadify/uploadify",array("model"=>"article"))}',
+                            'cancelImg': '/static/uploadify/uploadify-cancel.png',
+                            'buttonText': '上传图片',
+                            'fileTypeExts': '*.gif;*.jpg;*.png;*.jpeg',
+                            'queueSizeLimit': 1 ,
+                            'onUploadSuccess': function (file, data, response) {
+                                data =  data.replace(/\ufeff/g,'');
+                                var str = '<span style="width: 200px; height: 120px; float: left; margin-left: 5px; margin-top: 10px;"><img width="200" height="100" src="' + data + '"><input type="hidden" id="img" name="img" value="' + data + '" /><a href="javascript:void(0);">删除</a></span>';
+                                $(".jq_uploads_img2").html(str);
+                            }
+                        });
+                        //图片删除
+                        $(document).on("click", ".jq_uploads_img2 a", function () {
+                            var image=$(this).prevAll('input').val();
+                            $.ajax({
+                                url : "{:url('uploadify/delete')}",
+                                type : 'post',
+                                data : 'image='+image,
+                                dataType : 'json',
+                                success : function(res){
+                                    if(res.status == 0){
+                                        layer.msg(res.msg,{time:1000});
+                                        return false;
+                                    }
+                                }
+                            });
+                            $(this).parent().remove();
+                        });
+					</script>
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="container"><em>*</em>内容:</label>
+				</dt>
+				<dd class="opt">
+					<script id="container" name="container"  value = "{$infos['conten']}">
+
+					</script>
+					<!--<input type="text" name="conten" value="{$infos['conten']}" id="conten" class="input-txt">-->
+				</dd>
+			</dl>
+			<div class="bot"><a href="JavaScript:void(0);" onclick="adsubmit();" class="ncap-btn-big ncap-btn-green" id="submitBtn">确认提交</a></div>
+		</div>
+	</form>
+</div>
+</div>
+<!-- 配置文件 -->
+<script type="text/javascript" src="/static/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="/static/ueditor/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var editor = UE.getEditor('container');
+</script>
+<script>
+    $("#sort").keyup(function (){
+        var reg = $(this).val().match(/^[1-9]\d*$/);
+        var txt = '';
+        if (reg != null) {
+            txt = reg[0];
+        }
+        $(this).val(txt);
+    })
+
+    function adsubmit(){
+        var params = $('#adminHandle').serialize();
+        if($('#title').val() == ''){
+            layer.msg('标题不能为空');
+            return false;
+        }else if($('#orderby').val() == ''){
+            layer.msg('排序不能为空');
+            return false;
+        }
+        $.ajax({
+            url:"{:url('news/new_add')}",
+            type:'post',
+            data:params,
+            dataType:'json',
+            success:function(res){
+                layer.msg(res.msg,{time:1000},function(){
+                    if(res.status == 1){
+                        location.href= "{:url('news/index',array('type'=>$type))}";
+                    }
+                });
+            }
+        });
+    }
+</script>
+</body>
+</html>
