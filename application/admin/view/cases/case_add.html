@@ -103,56 +103,108 @@
 					</select>
 				</dd>
 			</dl>
+			<!--<dl class="row">-->
+				<!--<dt class="tit">-->
+					<!--<label for="img"><em>*</em>分类icon上传:</label>-->
+				<!--</dt>-->
+				<!--<dd class="opt">-->
+					<!--<div>-->
+						<!--<input id="thumb_file2" name="license_image" type="file" value="" />-->
+					<!--</div>-->
+					<!--<div class="jq_uploads_img2">-->
+						<!--{if condition="$infos.img"}-->
+						<!--<span style="width: 200px; height: 120px; float: left; margin-left: 5px; margin-top: 10px;">-->
+                            <!--<img width="200" height="100" src="{$infos.img}"><input id="img" type="hidden" name="img" value="{$infos.img}" />-->
+                            <!--<a href="javascript:void(0);">删除</a>-->
+                        <!--</span>-->
+						<!--{else/}-->
+						<!--<input id="img" type="hidden" name="img" value="" />-->
+						<!--{/if}-->
+					<!--</div>-->
+					<!--<script>-->
+                        <!--//图片上传-->
+                        <!--$("#thumb_file2").uploadify({-->
+                            <!--'swf': '/static/uploadify/uploadify.swf?t={$nowtime}',-->
+                            <!--'uploader': '{:url("Uploadify/uploadify_oss",array("add_type"=>7))}',-->
+<!--//                            'uploader': '{:url("Uploadify/uploadify",array("model"=>"article"))}',-->
+                            <!--'cancelImg': '/static/uploadify/uploadify-cancel.png',-->
+                            <!--'buttonText': '上传图片',-->
+                            <!--'fileTypeExts': '*.gif;*.jpg;*.png;*.jpeg',-->
+                            <!--'queueSizeLimit': 1 ,-->
+                            <!--'onUploadSuccess': function (file, data, response) {-->
+                                <!--data =  data.replace(/\ufeff/g,'');-->
+                                <!--var str = '<span style="width: 200px; height: 120px; float: left; margin-left: 5px; margin-top: 10px;"><img width="200" height="100" src="' + data + '"><input type="hidden" id="img" name="img" value="' + data + '" /><a href="javascript:void(0);">删除</a></span>';-->
+                                <!--$(".jq_uploads_img2").html(str);-->
+                            <!--}-->
+                        <!--});-->
+                        <!--//图片删除-->
+                        <!--$(document).on("click", ".jq_uploads_img2 a", function () {-->
+                            <!--var image=$(this).prevAll('input').val();-->
+                            <!--$.ajax({-->
+                                <!--url : "{:url('uploadify/delete')}",-->
+                                <!--type : 'post',-->
+                                <!--data : 'image='+image,-->
+                                <!--dataType : 'json',-->
+                                <!--success : function(res){-->
+                                    <!--if(res.status == 0){-->
+                                        <!--layer.msg(res.msg,{time:1000});-->
+                                        <!--return false;-->
+                                    <!--}-->
+                                <!--}-->
+                            <!--});-->
+                            <!--$(this).parent().remove();-->
+                        <!--});-->
+					<!--</script>-->
+				<!--</dd>-->
+			<!--</dl>-->
 			<dl class="row">
 				<dt class="tit">
-					<label for="img"><em>*</em>分类icon上传:</label>
+					<label><em>*</em>图片上传:</label>
 				</dt>
 				<dd class="opt">
-					<div>
-						<input id="thumb_file2" name="license_image" type="file" value="" />
-					</div>
-					<div class="jq_uploads_img2">
-						{if condition="$infos.img"}
-						<span style="width: 200px; height: 120px; float: left; margin-left: 5px; margin-top: 10px;">
-                            <img width="200" height="100" src="{$infos.img}"><input id="img" type="hidden" name="img" value="{$infos.img}" />
-                            <a href="javascript:void(0);">删除</a>
-                        </span>
-						{else/}
-						<input id="img" type="hidden" name="img" value="" />
-						{/if}
-					</div>
+					<dev id="uploadimg"></dev>
+					<div id="imgBox"></div>
+					<script src="/static/upload.js"></script>
 					<script>
-                        //图片上传
-                        $("#thumb_file2").uploadify({
-                            'swf': '/static/uploadify/uploadify.swf?t={$nowtime}',
-                            'uploader': '{:url("Uploadify/uploadify_oss",array("add_type"=>7))}',
-//                            'uploader': '{:url("Uploadify/uploadify",array("model"=>"article"))}',
-                            'cancelImg': '/static/uploadify/uploadify-cancel.png',
-                            'buttonText': '上传图片',
-                            'fileTypeExts': '*.gif;*.jpg;*.png;*.jpeg',
-                            'queueSizeLimit': 1 ,
-                            'onUploadSuccess': function (file, data, response) {
-                                data =  data.replace(/\ufeff/g,'');
-                                var str = '<span style="width: 200px; height: 120px; float: left; margin-left: 5px; margin-top: 10px;"><img width="200" height="100" src="' + data + '"><input type="hidden" id="img" name="img" value="' + data + '" /><a href="javascript:void(0);">删除</a></span>';
-                                $(".jq_uploads_img2").html(str);
-                            }
-                        });
-                        //图片删除
-                        $(document).on("click", ".jq_uploads_img2 a", function () {
-                            var image=$(this).prevAll('input').val();
-                            $.ajax({
-                                url : "{:url('uploadify/delete')}",
-                                type : 'post',
-                                data : 'image='+image,
-                                dataType : 'json',
-                                success : function(res){
-                                    if(res.status == 0){
-                                        layer.msg(res.msg,{time:1000});
-                                        return false;
-                                    }
+                        Upload("imgBox",{
+                            path:"/static/upload.php",//请求的地址
+                            data:{//往后台传递的参数
+                                savePath:"public"
+                            },
+                            type:"post",//请求方式
+                            addBtnName:"添加图片",//添加文件按钮名字
+                            //uploadBtnName:"上传图片",//上传文件按钮名字
+                            delIcon:"删除",//删除已选择文件的图标或按钮名字
+                            //autoUpload: true,//是否自动上传
+                            fileNum:5,//上传文件数量
+                            fileSize:1,//上传文件的大小，以MB为单位
+                            isRepeat:false,//是否可以重复选择文件
+                            fileType:['jpg','png','gif','jpeg'],//上传文件的类型
+                            showImgList:true,//是否显示缩略图
+                            uploadSuccess:function(results){//上传成功的回调
+                                if(results.code==100){
+                                    results.results.forEach(function(item){
+                                        var img = document.createElement("img");
+                                        img.src = item;
+                                        document.getElementById("uploadimg").appendChild(img);
+                                    });
+                                    //alert(results.msg)
+                                }else{
+                                    alert(results.msg)
                                 }
-                            });
-                            $(this).parent().remove();
+                            },
+                            uploadError:function(xhr,status){
+                                console.log(status)
+                                //上传出错的回调
+                            },
+                            delImgFn:function(parentNode,fileList,fileSrc,filterFile,index){//删除文件前的回调
+                                //下方是删除图片的操作，如需弹窗确定，可在本处执行并复制下列代码至确定事件内
+                                fileList.splice(index,1);
+                                fileSrc.splice(index,1);
+                                filterFile.splice(index,1);
+                                parentNode.parentNode.removeChild(parentNode);
+                                console.log(fileList,fileSrc);
+                            }
                         });
 					</script>
 				</dd>
