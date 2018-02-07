@@ -19,6 +19,7 @@ class News extends Base
             ->order('time desc')
             ->select();
         $this->assign('list',$list);
+        $this->assign('type',$info['type']);
 
         return $this->fetch();
     }
@@ -34,6 +35,53 @@ class News extends Base
             ->where($where)
             ->find();
         $this->assign('new',$new);
+        return $this->fetch();
+    }
+
+    public function new_del()
+    {
+        $info = info();
+//        dump($info);
+        $where['newID'] = $info['id'];
+        $re = Db::name('news')->where($where)->delete();
+        if ($re){
+            $list['status'] = 1;
+        }else{
+            $list['status'] = 2;
+        }
+        return json($list);
+    }
+
+
+    public  function  new_add(){
+        if(request()->isPost()){
+            //$this->request->filter(['strip_tags', 'htmlspecialchars', 'trim']);
+            $info = $this->request->only(['newID','container','title','url','type','sketch','orderby']);
+            $info['time'] = time();
+            $info['conten'] = $info['container'];
+            unset($info['container']);
+            if($info['newID'] == 0){  //新增
+                unset($info['newID']);
+                $result = Db::name('news')->insert($info);
+            }else{  //修改
+                $result = Db::name('news')->where(['newID'=>$info['newID']])->update($info);
+            }
+            if($result == false){
+                $this->ajaxReturn(['status'=>0,'msg'=>'操作失败']);
+            }
+            $this->ajaxReturn(['status'=>1,'msg'=>'操作成功']);
+        }
+        $info = info();
+
+        $where['type'] = $info['type'];
+        $this->assign('type',$info['type']);
+
+        if(!empty($info['newID'])){
+            $infos = Db::name('news')->where(['newID'=>$info['newID']])->find();
+        }else{
+            $infos = '';
+        }
+        $this->assign('infos',$infos);
         return $this->fetch();
     }
 }
