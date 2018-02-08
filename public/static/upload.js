@@ -70,9 +70,9 @@
 
         //参数配置项
         config:{
-            path:"",//请求的地址
+            path:"/upload.php",//请求的地址
             data:{//往后台传递的参数
-                savePath:"public",
+                savePath:"upload",
                 img:"1"
             },
             type:"post",//请求方式
@@ -80,8 +80,8 @@
             uploadBtnName:"上传图片",//上传文件按钮名字
             delIcon:"删除",//删除已选择文件的图标或按钮名字
             autoUpload:false,//是否自动上传
-            fileNum:5,//上传文件数量
-            fileSize:1,//上传文件的大小，以MB为单位
+            fileNum:10,//上传文件数量
+            fileSize:10,//上传文件的大小，以MB为单位
             isRepeat:false,//是否可以重复选择文件
             fileType:['jpg','png','gif','jpeg'],//上传文件的类型
             showImgList:true,//是否显示缩略图

@@ -4,6 +4,13 @@
 <body style="background-color: rgb(255, 255, 255); overflow: auto; cursor: default; -moz-user-select: inherit;">
 <script type="text/javascript" src="/static/uploadify/jquery.uploadify.min.js"></script>
 <link rel="stylesheet" href="/static/uploadify/uploadify.css">
+
+
+<link href="/static/zrc/css/iconfont.css" rel="stylesheet" type="text/css"/>
+<link href="/static/zrc/css/fileUpload.css" rel="stylesheet" type="text/css">
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="/static/zrc/js/fileUpload.js"></script>
+
 <div id="append_parent"></div>
 <div id="ajaxwaitid"></div>
 <div class="page">
@@ -43,59 +50,44 @@
 
 
 			<dl class="row">
-				<dt class="tit">
-					<label for="img"><em>*</em>分类icon上传:</label>
-				</dt>
 				<dd class="opt">
-					<div>
-						<input id="thumb_file2" name="license_image" type="file" value="" />
-					</div>
-					<div class="jq_uploads_img2">
-						{if condition="$infos.img"}
-						<span style="width: 200px; height: 120px; float: left; margin-left: 5px; margin-top: 10px;">
-                            <img width="200" height="100" src="{$infos.img}"><input id="img" type="hidden" name="img" value="{$infos.img}" />
-                            <a href="javascript:void(0);">删除</a>
-                        </span>
-						{else/}
-						<input id="img" type="hidden" name="img" value="" />
-						{/if}
-					</div>
-					<script>
-                        //图片上传
-                        $("#thumb_file2").uploadify({
-                            'swf': '/static/uploadify/uploadify.swf?t={$nowtime}',
-                            'uploader': '{:url("Uploadify/uploadify_oss",array("add_type"=>7))}',
-//                            'uploader': '{:url("Uploadify/uploadify",array("model"=>"article"))}',
-                            'cancelImg': '/static/uploadify/uploadify-cancel.png',
-                            'buttonText': '上传图片',
-                            'fileTypeExts': '*.gif;*.jpg;*.png;*.jpeg',
-                            'queueSizeLimit': 1 ,
-                            'onUploadSuccess': function (file, data, response) {
-                                data =  data.replace(/\ufeff/g,'');
-                                var str = '<span style="width: 200px; height: 120px; float: left; margin-left: 5px; margin-top: 10px;"><img width="200" height="100" src="' + data + '"><input type="hidden" id="img" name="img" value="' + data + '" /><a href="javascript:void(0);">删除</a></span>';
-                                $(".jq_uploads_img2").html(str);
-                            }
-                        });
-                        //图片删除
-                        $(document).on("click", ".jq_uploads_img2 a", function () {
-                            var image=$(this).prevAll('input').val();
-                            $.ajax({
-                                url : "{:url('uploadify/delete')}",
-                                type : 'post',
-                                data : 'image='+image,
-                                dataType : 'json',
-                                success : function(res){
-                                    if(res.status == 0){
-                                        layer.msg(res.msg,{time:1000});
-                                        return false;
-                                    }
-                                }
-                            });
-                            $(this).parent().remove();
-                        });
-					</script>
+					<div id="fileUploadContent" class="fileUploadContent"></div>
+
+					<!--<button onclick="testUpload()">提交</button>-->
 				</dd>
+				<script type="text/javascript">
+                    $("#fileUploadContent").initUpload({
+                        "uploadUrl":"/admin/upload/upload",//上传文件信息地址
+                        //"size":350,//文件大小限制，单位kb,默认不限制
+                        "maxFileNumber":10,//文件个数限制，为整数
+                        "filelSavePath":"/static/zrc",//文件上传地址，后台设置的根目录
+                        // "beforeUpload":beforeUploadFun,//在上传前执行的函数
+                        "onUpload":onUploadFun,//在上传后执行的函数
+                        autoCommit:false,//文件是否自动上传
+                        "fileType":['png','jpg','docx','doc']//文件类型限制，默认不限制，注意写的是文件后缀
+                    });
+                    function beforeUploadFun(opt){
+                        opt.otherData =[{"name":"name","value":"zxm"}];
+                    }
+                    function onUploadFun(opt,data){
+                        if(data.status == 1){
+                            uploadTools.uploadSuccess(opt);//显示上传成功
+                            var opt = uploadTools.getOpt("fileUploadContent");
+                            var str = '<input type="hidden" name="img[]" value = "'+data.path+'">';
+                            $('#fileUploadContent').append(str);
+                        }else{
+                            uploadTools.uploadError(opt);//显示上传错误
+                        }
+                    }
+
+
+                    function testUpload(){
+                        var opt = uploadTools.getOpt("fileUploadContent");
+                        uploadEvent.uploadFileEvent(opt);
+                    }
+				</script>
 			</dl>
+
 			<dl class="row">
 				<dt class="tit">
 					<label for="container"><em>*</em>内容:</label>
@@ -131,6 +123,7 @@
     })
 
     function adsubmit(){
+
         var params = $('#adminHandle').serialize();
         if($('#title').val() == ''){
             layer.msg('标题不能为空');

@@ -1,0 +1,38 @@
+
+#uploadimg img{
+    width: 150px;
+    margin-right: 10px;
+}
+.upload-addimg-btn{
+    position: relative;
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+    color: #fff;
+    background: #00C1B3;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    margin-bottom: 15px;
+}
+.upload-addimg-btn input[type=file]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.upload-addimg-btn input[type=button]{
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+    color: #fff;
+    background: #00C1B3;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+}
+
+
+
+
+

@@ -57,7 +57,6 @@ class Cases extends Base
         //图片
         $img = Db::name('article_img')->where($where)->order('orderby asc')->select();
         $this->assign('img',$img);
-
         return $this->fetch();
     }
 
@@ -77,17 +76,37 @@ class Cases extends Base
         return json($list);
     }
 
-
     public  function  case_add(){
         if(request()->isPost()){
             $this->request->filter(['strip_tags', 'htmlspecialchars', 'trim']);
-            $info = $this->request->only(['articlesID','title','url','team','city','site','content','area','orderby','genre','typeID','userID']);
+            $info = $this->request->only(['articlesID','title','img','team','city','site','content','area','orderby','genre','typeID','userID']);
             $info['time'] = time();
             if($info['articlesID'] == 0){  //新增
+                $img = $info['img'];
+                unset($info['img']);
                 unset($info['articlesID']);
-                $result = Db::name('articles')->insert($info);
+                $result = Db::name('articles')->insertGetId($info);
+                if ($result){
+                    foreach ($img as $k => $v){
+                        $data[]['url'] = '/static/'.$v;
+                        $data[]['articlesID'] = $result;
+                    }
+                    Db::name('img')->insertAll($data);
+                    Db::name('articles')->where(['articlesID'=>$result])->update(['url'=>$data[0]['url']]);
+                }
             }else{  //修改
+                if ($info['img']){
+                    $img = $info['img'];
+                    unset($info['img']);
+                }
                 $result = Db::name('articles')->where(['articlesID'=>$info['articlesID']])->update($info);
+                if ($result){
+                    foreach ($img as $k => $v){
+                        $data[]['url'] = '/static/'.$v;
+                        $data[]['articlesID'] = $info['articlesID'];
+                    }
+                    Db::name('img')->insertAll($data);
+                }
             }
             if($result == false){
                 $this->ajaxReturn(['status'=>0,'msg'=>'操作失败']);
