@@ -18,7 +18,7 @@ class Index extends Base
     );
     public function index()
     {
-        //echo '系统维护中...';die;
+        echo '系统维护中...';die;
         //{:url('Cases/case_class',array('typeID'=>$vo['typeID']))}
         //案例
         $list = Db::name('type')->order('typeID asc')->limit(5)->select();
@@ -34,7 +34,7 @@ class Index extends Base
 //            ->where(['o.user_id' => $info['user_id']])
 //            ->where($where)->count();
         //$img = Db::name('img')->alias('i')->join('articles a','i.articlesID = a.articlesID')->order('i.orderby asc')->select();
-        $img = Db::name('img')->order('orderby asc')->select();
+        $img = Db::name('img')->where('imgID','<',4)->order('orderby asc')->select();
         foreach ($img as $k=>$v){
             if ($v['articlesID']){
                 $articles = Db::name('articles')->where('articlesID',$v['articlesID'])->find();

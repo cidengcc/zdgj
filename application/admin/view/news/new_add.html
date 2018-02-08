@@ -1,15 +1,8 @@
 {include file="public/layout" /}
 
-<!--<script type="text/javascript" src="/static/js/layer/laydate/laydate.js"></script>-->
 <body style="background-color: rgb(255, 255, 255); overflow: auto; cursor: default; -moz-user-select: inherit;">
-<script type="text/javascript" src="/static/uploadify/jquery.uploadify.min.js"></script>
-<link rel="stylesheet" href="/static/uploadify/uploadify.css">
 
-
-<link href="/static/zrc/css/iconfont.css" rel="stylesheet" type="text/css"/>
-<link href="/static/zrc/css/fileUpload.css" rel="stylesheet" type="text/css">
-<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="/static/zrc/js/fileUpload.js"></script>
+<link rel="stylesheet" href="/static/upload.css">
 
 <div id="append_parent"></div>
 <div id="ajaxwaitid"></div>
@@ -50,43 +43,46 @@
 
 
 			<dl class="row">
+				<dt class="tit">
+					<label><em>*</em>添加图片</label>
+				</dt>
 				<dd class="opt">
-					<div id="fileUploadContent" class="fileUploadContent"></div>
+					<dev id="uploadimg">
 
-					<!--<button onclick="testUpload()">提交</button>-->
+					</dev>
+					<div id="imgBox"></div>
+					<script src="/static/upload.js"></script>
+					<script>
+                        var upload = Upload('imgBox', {
+                            path: "/static/upload.php",//请求的地址
+                            type: "post",//请求方式,
+                            uploadSuccess:function(res){
+                                console.log(res)
+                                if(res.code==100){
+                                    res.results.forEach(function (item) {
+                                        var img  = document.createElement('img');
+                                        img.src = '/static/'+item;
+                                        document.getElementById('uploadimg').appendChild(img);
+                                        var str = '<input type="hidden" name="img[]" value = "'+item+'">';
+                                        $('#imgBox').append(str);
+                                    });
+                                    // location.reload();
+                                }else {
+                                    alert(res.msg);
+                                }
+                            },
+                            delImgFn:function(_this,parentNode,delFile,fileSrc,fileList,filterFile,index){
+                                //删除文件前的回调
+                                //下方是删除图片的操作，如需弹窗确定，可在本处执行并复制下列代码至确定事件内
+                                _this.delImg(parentNode,delFile,fileSrc,fileList,filterFile,index);
+                            }
+
+                        });
+                        console.log(upload)
+					</script>
 				</dd>
-				<script type="text/javascript">
-                    $("#fileUploadContent").initUpload({
-                        "uploadUrl":"/admin/upload/upload",//上传文件信息地址
-                        //"size":350,//文件大小限制，单位kb,默认不限制
-                        "maxFileNumber":10,//文件个数限制，为整数
-                        "filelSavePath":"/static/zrc",//文件上传地址，后台设置的根目录
-                        // "beforeUpload":beforeUploadFun,//在上传前执行的函数
-                        "onUpload":onUploadFun,//在上传后执行的函数
-                        autoCommit:false,//文件是否自动上传
-                        "fileType":['png','jpg','docx','doc']//文件类型限制，默认不限制，注意写的是文件后缀
-                    });
-                    function beforeUploadFun(opt){
-                        opt.otherData =[{"name":"name","value":"zxm"}];
-                    }
-                    function onUploadFun(opt,data){
-                        if(data.status == 1){
-                            uploadTools.uploadSuccess(opt);//显示上传成功
-                            var opt = uploadTools.getOpt("fileUploadContent");
-                            var str = '<input type="hidden" name="img[]" value = "'+data.path+'">';
-                            $('#fileUploadContent').append(str);
-                        }else{
-                            uploadTools.uploadError(opt);//显示上传错误
-                        }
-                    }
-
-
-                    function testUpload(){
-                        var opt = uploadTools.getOpt("fileUploadContent");
-                        uploadEvent.uploadFileEvent(opt);
-                    }
-				</script>
 			</dl>
+
 
 			<dl class="row">
 				<dt class="tit">

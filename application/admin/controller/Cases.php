@@ -36,29 +36,6 @@ class Cases extends Base
         $this->assign('list',$list);
         return $this->fetch();
     }
-    /**
-     * 案例详情
-     */
-    public function case_detail()
-    {
-        $info = info();
-        $where['articlesID'] = $info['articlesID'];
-        $list = Db::name('articles')
-            ->alias('a')
-            ->join('user u','a.userID = u.userID','left')
-            ->where($where)
-            ->find();
-        $type_name = Db::name('type')
-            ->where('typeID',$list['typeID'])
-            ->value('name');
-        //        dump($list);die;
-        $this->assign('type_name',$type_name);
-        $this->assign('list',$list);
-        //图片
-        $img = Db::name('article_img')->where($where)->order('orderby asc')->select();
-        $this->assign('img',$img);
-        return $this->fetch();
-    }
 
 
     public function case_del()

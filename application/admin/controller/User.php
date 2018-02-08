@@ -36,16 +36,15 @@ class User extends Base
 //            dump(info());die;
             $this->request->filter(['strip_tags', 'htmlspecialchars', 'trim']);
             $info = $this->request->only(['userID','name','img','position','job','age','idea','awards','orderby','style','xiangmu']);
-            if($info['userID'] == 0){  //新增
-                unset($info['userID']);
+            if ($info['img']){
                 $info['user_img'] = '/static/'.$info['img'][0];
                 unset($info['img']);
+            }
+            if($info['userID'] == 0){  //新增
+                unset($info['userID']);
                 $result = Db::name('user')->insert($info);
             }else{  //修改
-                if ($info['img']){
-                    $info['user_img'] = '/static/'.$info['img'][0];
-                    unset($info['img']);
-                }
+
                 $result = Db::name('user')->where(['userID'=>$info['userID']])->update($info);
             }
             if($result == false){
