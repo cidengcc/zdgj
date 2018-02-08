@@ -68,6 +68,7 @@ class Cases extends Base
         $where['articlesID'] = $info['id'];
         $data['deleting'] = 2;
         $re = Db::name('articles')->where($where)->update($data);
+        Db::name('img')->where($where)->delete();
         if ($re){
             $list['status'] = 1;
         }else{
@@ -88,8 +89,8 @@ class Cases extends Base
                 $result = Db::name('articles')->insertGetId($info);
                 if ($result){
                     foreach ($img as $k => $v){
-                        $data[]['url'] = '/static/'.$v;
-                        $data[]['articlesID'] = $result;
+                        $data[$k]['url'] = '/static/'.$v;
+                        $data[$k]['articlesID'] = $result;
                     }
                     Db::name('img')->insertAll($data);
                     Db::name('articles')->where(['articlesID'=>$result])->update(['url'=>$data[0]['url']]);
@@ -101,11 +102,13 @@ class Cases extends Base
                 }
                 $result = Db::name('articles')->where(['articlesID'=>$info['articlesID']])->update($info);
                 if ($result){
-                    foreach ($img as $k => $v){
-                        $data[]['url'] = '/static/'.$v;
-                        $data[]['articlesID'] = $info['articlesID'];
+                    if(!empty($info['img'])){
+                        foreach ($img as $k => $v){
+                            $data[$k]['url'] = '/static/'.$v;
+                            $data[$k]['articlesID'] = $info['articlesID'];
+                        }
+                        Db::name('img')->insertAll($data);
                     }
-                    Db::name('img')->insertAll($data);
                 }
             }
             if($result == false){
@@ -128,5 +131,18 @@ class Cases extends Base
         $this->assign('infos',$infos);
         $this->assign('imgs',$imgs);
         return $this->fetch();
+    }
+
+    public function img_del(){
+        $info =info();
+        if(empty($info['id'])){
+            $this->ajaxReturn(['status' => 0, 'msg' => '参数错误']);
+        }
+        $re = Db::name('img')->where(['imgID'=>$info['id']])->delete();
+        if($re){
+            $this->ajaxReturn(['status' => 1, 'msg' => '删除成功']);
+        }else{
+            $this->ajaxReturn(['status' => 0, 'msg' => '删除失败']);
+        }
     }
 }

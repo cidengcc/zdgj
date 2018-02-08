@@ -17,7 +17,7 @@ class User extends Base
     }
 
 
-    public function case_del()
+    public function user_del()
     {
         $info = info();
         $where['userID'] = $info['id'];
@@ -31,15 +31,21 @@ class User extends Base
     }
 
 
-    public  function  case_add(){
+    public  function  user_add(){
         if(request()->isPost()){
+//            dump(info());die;
             $this->request->filter(['strip_tags', 'htmlspecialchars', 'trim']);
-            $info = $this->request->only(['userID','name','url','position','job','age','idea','awards','orderby','style','xiangmu']);
-            $info['time'] = time();
+            $info = $this->request->only(['userID','name','img','position','job','age','idea','awards','orderby','style','xiangmu']);
             if($info['userID'] == 0){  //新增
                 unset($info['userID']);
+                $info['user_img'] = '/static/'.$info['img'][0];
+                unset($info['img']);
                 $result = Db::name('user')->insert($info);
             }else{  //修改
+                if ($info['img']){
+                    $info['user_img'] = '/static/'.$info['img'][0];
+                    unset($info['img']);
+                }
                 $result = Db::name('user')->where(['userID'=>$info['userID']])->update($info);
             }
             if($result == false){
@@ -47,7 +53,6 @@ class User extends Base
             }
             $this->ajaxReturn(['status'=>1,'msg'=>'操作成功']);
         }
-
         $info = $this->request->only(['userID']);
         if(!empty($info['userID'])){
             $infos = Db::name('user')->where(['userID'=>$info['userID']])->find();

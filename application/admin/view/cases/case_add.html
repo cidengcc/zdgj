@@ -105,6 +105,19 @@
 				</dd>
 			</dl>
 
+			{if condition="$infos['articlesID'] neq ''"}
+			<dl class="row">
+				<dt class="tit">
+					<label >案例图片</label>
+				</dt>
+				<dd class="opt">
+					{volist name="imgs" id="vo"}
+					<a href="JavaScript:;" onclick="img_del({$vo.imgID});"> <img src="{$vo.url}" height="" width="80" />删除</a>
+					{/volist}
+				</dd>
+			</dl>
+			{/if}
+
 			<dl class="row">
 				<dt class="tit">
 					<label><em>*</em>添加图片</label>
@@ -211,7 +224,31 @@
         }
         $(this).val(txt);
     })
+    function img_del(id) {
+        layer.confirm('确认删除？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+            $.ajax({
+                url:"{:url('Cases/img_del')}",
+                type:'post',
+                data: { id: id},
+                dataType:'json',
+                success:function(res){
+                    //      console.log(listId)
+                    if(res.status == 1){
+                        layer.msg( res.msg, {icon: 1});
+                        location.href = location.href;
+                    }else
+                    {
+                        layer.msg( res.msg, {icon: 2});
+                    }
+                }
+            });
+        }, function(){
+            // 取消
 
+        });
+    }
     function adsubmit(){
         var params = $('#adminHandle').serialize();
         if($('#title').val() == ''){

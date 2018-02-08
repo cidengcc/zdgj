@@ -1,0 +1,169 @@
+{include file="public/layout" /}
+
+<!--<script type="text/javascript" src="/static/js/layer/laydate/laydate.js"></script>-->
+<body style="background-color: rgb(255, 255, 255); overflow: auto; cursor: default; -moz-user-select: inherit;">
+<script type="text/javascript" src="/static/uploadify/jquery.uploadify.min.js"></script>
+<link rel="stylesheet" href="/static/upload.css">
+
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+	<form class="form-horizontal" id="adminHandle" action="" method="post">
+		<!--<input type="hidden" name="act" value="edit">-->
+		<!--<input type="hidden" name="admin_id" value="2">-->
+		<div class="ncap-form-default">
+			<dl class="row">
+				<dt class="tit">
+					<label for="name"><em>*</em>姓名:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="name" value="{$infos['name']}" id="name" class="input-txt">
+					<input type="hidden" name ='userID' value="{$infos['userID'] | default =0}">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="position"><em>*</em>职位:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="position" value="{$infos['position']}" id="position" class="input-txt">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="age"><em>*</em>工作年限:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="age" value="{$infos['age']}" id="age" class="input-txt">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="idea"><em>*</em>理念:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="idea" value="{$infos['idea']}" id="idea" class="input-txt">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="awards"><em>*</em>奖项:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="awards" value="{$infos['awards']}" id="awards" class="input-txt">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="style"><em>*</em>风格:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="style" value="{$infos['style']}" id="style" class="input-txt">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="xiangmu"><em>*</em>项目:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="xiangmu" value="{$infos['xiangmu']}" id="xiangmu" class="input-txt">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="orderby"><em>*</em>排序:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="orderby" value="{$infos['orderby']}" id="orderby" class="input-txt">
+				</dd>
+			</dl>
+
+
+			{if condition="$infos['userID'] neq ''"}
+			<dl class="row">
+				<dt class="tit">
+					<label >图片</label>
+				</dt>
+				<dd class="opt">
+					<img src="{$infos.user_img}" height="" width="200" />
+				</dd>
+			</dl>
+			{/if}
+
+			<dl class="row">
+				<dt class="tit">
+					<label><em>*</em>添加图片</label>
+				</dt>
+				<dd class="opt">
+					<dev id="uploadimg">
+
+					</dev>
+					<div id="imgBox"></div>
+					<script src="/static/upload.js"></script>
+					<script>
+                        var upload = Upload('imgBox', {
+                            path: "/static/upload.php",//请求的地址
+                            type: "post",//请求方式,
+                            uploadSuccess:function(res){
+                                console.log(res)
+                                if(res.code==100){
+                                    res.results.forEach(function (item) {
+                                        var img  = document.createElement('img');
+                                        img.src = '/static/'+item;
+                                        document.getElementById('uploadimg').appendChild(img);
+                                        var str = '<input type="hidden" name="img[]" value = "'+item+'">';
+                                        $('#imgBox').append(str);
+									});
+                                    // location.reload();
+								}else {
+                                    alert(res.msg);
+                                }
+							},
+                            delImgFn:function(_this,parentNode,delFile,fileSrc,fileList,filterFile,index){
+                                //删除文件前的回调
+                                //下方是删除图片的操作，如需弹窗确定，可在本处执行并复制下列代码至确定事件内
+                                _this.delImg(parentNode,delFile,fileSrc,fileList,filterFile,index);
+                            }
+
+						});
+                        console.log(upload)
+					</script>
+				</dd>
+			</dl>
+			<div class="bot"><a href="JavaScript:void(0);" onclick="adsubmit();" class="ncap-btn-big ncap-btn-green" id="submitBtn">确认提交</a></div>
+		</div>
+	</form>
+</div>
+</div>
+<script>
+    $("#sort").keyup(function (){
+        var reg = $(this).val().match(/^[1-9]\d*$/);
+        var txt = '';
+        if (reg != null) {
+            txt = reg[0];
+        }
+        $(this).val(txt);
+    })
+    function adsubmit(){
+        var params = $('#adminHandle').serialize();
+        if($('#name').val() == ''){
+            layer.msg('名称不能为空');
+            return false;
+        }
+        $.ajax({
+            url:"{:url('user/user_add')}",
+            type:'post',
+            data:params,
+            dataType:'json',
+            success:function(res){
+                layer.msg(res.msg,{time:1000},function(){
+                    if(res.status == 1){
+                        location.href= "{:url('user/index')}";
+                    }
+                });
+            }
+        });
+    }
+</script>
+</body>
+</html>
