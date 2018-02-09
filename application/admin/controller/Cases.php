@@ -79,12 +79,13 @@ class Cases extends Base
                 }
                 $result = Db::name('articles')->where(['articlesID'=>$info['articlesID']])->update($info);
                 if ($result){
-                    if(!empty($info['img'])){
+                    if(!empty($img)){
                         foreach ($img as $k => $v){
                             $data[$k]['url'] = '/static/'.$v;
                             $data[$k]['articlesID'] = $info['articlesID'];
                         }
                         Db::name('img')->insertAll($data);
+                        Db::name('articles')->where(['articlesID'=>$info['articlesID']])->update(['url'=>$data[0]['url']]);
                     }
                 }
             }
