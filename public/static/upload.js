@@ -128,6 +128,7 @@
                          var data = JSON.parse(xhr.responseText);
                          _this.config.uploadSuccess&&_this.config.uploadSuccess(data);
                          _this.fileList = [];
+                         _this.fileSrc = [];
                          formData = null;
                     }else{
                         _this.config.uploadError&&_this.config.uploadError(xhr,xhr.status);
