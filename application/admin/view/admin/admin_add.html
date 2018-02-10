@@ -1,0 +1,96 @@
+{include file="public/layout" /}
+
+<body style="background-color: rgb(255, 255, 255); overflow: auto; cursor: default; -moz-user-select: inherit;">
+
+<link rel="stylesheet" href="/static/upload.css">
+
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+	<form class="form-horizontal" id="adminHandle" action="" method="post">
+		<!--<input type="hidden" name="act" value="edit">-->
+		<!--<input type="hidden" name="admin_id" value="2">-->
+		<div class="ncap-form-default">
+			<dl class="row">
+				<dt class="tit">
+					<label for="user_name"><em>*</em>管理员登录名:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="user_name" value="{$infos['user_name']}" id="user_name" class="input-txt">
+					<input type="hidden" name ='adminID' value="{$infos['adminID'] | default =0}">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="email"><em>*</em>邮箱地址:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="email" value="{$infos['email']}" id="email" class="input-txt">
+				</dd>
+			</dl>
+			<dl class="row">
+				<dt class="tit">
+					<label for="level"><em>*</em>管理员类型</label>
+				</dt>
+				<dd class="opt">
+					<input type="radio" name="level" value="1" {if condition="$infos['level'] == 1"}checked{/if}>超级管理员
+					<input type="radio" name="level" value="2" {if condition="$infos['level'] === 2"}checked{/if}>普通管理员
+				</dd>
+			</dl>
+
+			<dl class="row">
+				<dt class="tit">
+					<label for="password"><em>*</em>新密码:</label>
+				</dt>
+				<dd class="opt">
+					<input type="text" name="password" value="" id="password" class="input-txt">
+				</dd>
+			</dl>
+
+			<div class="bot"><a href="JavaScript:void(0);" onclick="adsubmit();" class="ncap-btn-big ncap-btn-green" id="submitBtn">确认提交</a></div>
+		</div>
+	</form>
+</div>
+</div>
+<!-- 配置文件 -->
+<script type="text/javascript" src="/static/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="/static/ueditor/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var editor = UE.getEditor('container');
+</script>
+<script>
+    $("#sort").keyup(function (){
+        var reg = $(this).val().match(/^[1-9]\d*$/);
+        var txt = '';
+        if (reg != null) {
+            txt = reg[0];
+        }
+        $(this).val(txt);
+    })
+
+    function adsubmit(){
+
+        var params = $('#adminHandle').serialize();
+        if($('#user_name').val() == ''){
+            layer.msg('登录名称不能为空');
+            return false;
+        }
+        $.ajax({
+            url:"{:url('admin/admin_add')}",
+            type:'post',
+            data:params,
+            dataType:'json',
+            success:function(res){
+                layer.msg(res.msg,{time:1000},function(){
+                    if(res.status == 1){
+                        location.href= "{:url('admin/index')}";
+                    }
+                });
+            }
+        });
+    }
+</script>
+</body>
+</html>

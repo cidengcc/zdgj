@@ -18,7 +18,7 @@ class Index extends Base
     );
     public function index()
     {
-        echo '系统维护中...';die;
+//        echo '系统维护中...';die;
         //{:url('Cases/case_class',array('typeID'=>$vo['typeID']))}
         //案例
         $list = Db::name('type')->order('typeID asc')->limit(5)->select();

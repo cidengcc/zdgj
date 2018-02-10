@@ -48,14 +48,22 @@ class Login extends Controller
             }
             $where['user_name'] = $info['value_1'];
             $where['password'] = password($info['value_2']);
-            $list = Db::name('admin')->where($where)->field('adminID,user_name')->find();
+            $list = Db::name('admin')->where($where)->field('level,adminID,user_name')->find();
             if (!$list){
                 $this->error('账号或密码错误','');
             }
-            session('adminID',$list['adminID']);
-            session('user_name',$list['user_name']);
+            $data['login_time'] = time();
+            $data['login_ip'] = getIP();
+            Db::name('admin')->where($where)->update($data);
+            session('admin_info',$list);
             $this->redirect('index/index');
         }
         return $this->fetch();
+    }
+
+    public function login_out()
+    {
+        unset($_SESSION);
+        $this->redirect('Login/login');
     }
 }

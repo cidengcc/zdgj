@@ -27,8 +27,8 @@ class Base extends Controller
                 $this->redirect('Login/login');
                 //$this->error("登录页面跳转中",url('Login/login'));
             }
-            $this->assign('adminID',session('adminID'));
-            $this->assign('user_name',session('user_name'));
+            //dump(session('adminID_info'));die;
+            $this->assign('admin_info',session('admin_info'));
         }
     }
     /**

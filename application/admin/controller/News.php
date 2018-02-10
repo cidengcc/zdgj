@@ -57,10 +57,12 @@ class News extends Base
         if(request()->isPost()){
             //$this->request->filter(['strip_tags', 'htmlspecialchars', 'trim']);
             $info = $this->request->only(['newID','container','title','img','type','sketch','orderby']);
+
             if ($info['img']){
                 $info['new_url'] = '/static/'.$info['img'][0];
                 unset($info['img']);
             }
+
             $info['time'] = time();
             $info['conten'] = $info['container'];
             unset($info['container']);
